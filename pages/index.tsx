@@ -1,9 +1,10 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from '@next/font/google'
-import styles from '../styles/Home.module.css'
+import Navber from '../components/Home/Navber/Navbar'
+import Slider from '../components/Home/Slider/Slider'
+import Instructor from '../components/Home/Instructor/Instructor'
+import Categories from '../components/Home/Categories/Categories'
+import Advertisement from '../components/Home/Advertisement/Advertisement'
+import Footer from '../components/Home/Footer/Footer'
 
-const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
@@ -15,6 +16,12 @@ export default function Home() {
       <button className="btn btn-outline btn-primary">Button</button>
       <button className="btn btn-outline btn-secondary">Button</button>
       <button className="btn btn-outline btn-accent">Button</button>
+      <Navber />
+      <Slider />
+      <Instructor />
+      <Categories />
+      <Advertisement />
+      <Footer />
     </>
   )
 }
