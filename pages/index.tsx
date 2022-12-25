@@ -4,7 +4,6 @@ import Instructor from '../components/Home/Instructor/Instructor'
 import Categories from '../components/Home/Categories/Categories'
 import Advertisement from '../components/Home/Advertisement/Advertisement'
 import Footer from '../components/Home/Footer/Footer'
-import Newslatter from '../../Digital-Learning/components/Home/Newslatter/Newslatter'
 
 
 export default function Home() {
@@ -22,7 +21,6 @@ export default function Home() {
       <Instructor />
       <Categories />
       <Advertisement />
-      <Newslatter />
       <Footer />
     </>
   )
