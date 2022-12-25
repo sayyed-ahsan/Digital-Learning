@@ -8,31 +8,35 @@ import Footer from '../components/Home/Footer/Footer'
 import Countdown from './../components/Home/Countdown/Countdown'
 import Testimonials from './../components/Home/Testimonials/Testimonials'
 import Cupon from '../components/Home/Cupon/Cupon'
-export default function Home({catagories}) {
-	console.log(catagories);
+
+
+
+export default function Home({ catagories }) {
 	return (
 		<>
 			<Navber />
 			<Slider />
-			<Cupon/>
+			<Cupon />
 			<Instructor />
-			<Categories catagories={catagories}/>
+			<Categories catagories={catagories} />
 			<Advertisement />
 			<Countdown />
 			<Testimonials />
-			<Brand/>
+			<Brand />
 			<Footer />
 		</>
 	)
 }
+
+
 export const getStaticProps = async () => {
-    const res = await fetch('https://digital-learning-two.vercel.app/courses');
-    const data = await res.json();
+	const res = await fetch('https://digital-learning-two.vercel.app/courses');
+	const data = await res.json();
 
 
-    return {
-        props: {
-            catagories: data
-        }
-    }
+	return {
+		props: {
+			catagories: data
+		}
+	}
 }
