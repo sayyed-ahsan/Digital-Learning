@@ -1,5 +1,4 @@
 const Cupon = () => {
-  console.log("object");
   return (
     <div>
       <div className="p-6 py-12 dark:bg-violet-400 dark:text-gray-900">
