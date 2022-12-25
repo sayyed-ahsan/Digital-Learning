@@ -1,7 +1,7 @@
 const Cupon = () => {
   return (
     <div>
-      <div className="p-6 py-12 dark:bg-violet-400 dark:text-gray-900">
+      <div className="p-6 py-12 dark:bg-secondary dark:text-gray-900">
         <div className="container mx-auto">
           <div className="flex flex-col lg:flex-row items-center justify-between">
             <h2 className="text-center text-6xl tracking-tighter font-bold">

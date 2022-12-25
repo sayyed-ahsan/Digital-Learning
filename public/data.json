@@ -1,0 +1,30 @@
+[
+    {
+        "_id": "6380d651460053f520b9a6df",
+        "catagoryid": "1",
+        "courseCatagory": "Web Development",
+        "image": "https://thumbs.dreamstime.com/b/web-development-coding-programming-internet-technology-business-concept-web-development-coding-programming-internet-technology-121903546.jpg",
+        "intro": "Powered by the air-cooled, 149cc single-cylinder engine with closed loop fuel injection system, FZ-S FI V2 ensures better fuel efficiency and supreme balance, equipped with discs on both wheels. "
+    },
+    {
+        "_id": "6380d651460053f520b9a6e0",
+        "catagoryid": "2",
+        "courseCatagory": "Electrical Engineering",
+        "image": "https://images.wallpaperscraft.com/image/single/structure_fragments_rays_148125_1920x1080.jpg",
+        "intro": "Countrys Best Sport Bike Manufacturer; Rancon Motorbikes Limited, Suzukis New Gixxer Series & 100th Anniversary Limited Edition Bike is Now Available in Bangladesh"
+    },
+    {
+        "_id": "6380d651460053f520b9a6e1",
+        "catagoryid": "3",
+        "courseCatagory": "Computer Sciences and Engineering",
+        "image": "https://images.squarespace-cdn.com/content/v1/5fce63270356d927d7eecdbd/033e9988-2ac8-4cb9-8b9f-5bf05fb22dcb/gff.jpg",
+        "intro": "TVS Motor manufactures the largest range of 2-wheelers, starting from mopeds, to scooters, commuter motorcycles, to racing inspired bikes like the Apache series and the RR310. Whatever your requirement be, we have one for everyone."
+    },
+    {
+        "_id": "6380d651460053f520b9a6e2",
+        "catagoryid": "4",
+        "courseCatagory": "Microsoft Products",
+        "image": "https://wallpaperaccess.com/full/3719116.jpg",
+        "intro": "With more than 18 million motorcycles sold in over 70 countries, the Bajaj courseCatagory is truly ‘The World’s Favourite Indian’. It is India’s No.1 motorcycle exporter with two out of three bikes sold internationally carrying a Bajaj badge."
+    }
+]
