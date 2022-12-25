@@ -3,7 +3,6 @@ import Link from 'next/link';
 
 const Navbar = () => {
 
-
     return (
         <header>
             <div className="navbar font-semibold p-0 w-11/12 mx-auto text-black">
