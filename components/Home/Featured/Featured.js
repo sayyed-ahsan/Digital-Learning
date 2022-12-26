@@ -1,13 +1,32 @@
-import React from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import SwiperCore, { } from 'swiper';
+import 'swiper/css';
 
-const Featured = () => {
+export default function Featured() {
     return (
+        <>
+            <Swiper
+                slidesPerView={1.5}
+                loop={true}
+                autoplay={{
+                    delay: 2000
+                }}
+            >
+                <SwiperSlide>{card()}</SwiperSlide>
+                <SwiperSlide>{card()}</SwiperSlide>
+                <SwiperSlide>{card()}</SwiperSlide>
+            </Swiper>
+        </>
+    );
+};
 
+function card() {
+    return (
         <div className="flex  my-4 p-12 justify-center ">
             <div className="card lg:card-side shadow-xl">
                 <figure><img src="https://placeimg.com/400/400/arch" alt="Album" /></figure>
                 <div className="card-body">
-                    <h2 className="card-title text-4xl">Instractor titel and name</h2>
+                    <h2 className="card-title text-2xl">Instractor titel and name</h2>
                     {/*  */}
                     <div className="flex">
                         <div className="avatar online">
@@ -33,7 +52,7 @@ const Featured = () => {
                     {/*  */}
 
                     <div className="flex">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti saepe ipsum vero quam at, magni aspernatur! Soluta fugiat.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                     </div>
 
                     <div className="card-actions justify-start">
@@ -43,8 +62,5 @@ const Featured = () => {
                 </div>
             </div>
         </div>
-
-    );
-};
-
-export default Featured;
+    )
+}
