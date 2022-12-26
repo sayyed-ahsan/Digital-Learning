@@ -1,8 +1,8 @@
 import { BsFillCaretLeftFill, BsFillCaretRightFill } from 'react-icons/bs';
 
 const SingleSlide = ({ slide }) => {
-    const { id, picture, subHeading, heading, description, btnText, prev, next } = slide;
-    console.log(picture);
+    const { id, picture, heading, description, btnText, prev, next } = slide;
+
 
     return (
         <div id={`slide${ id }`} className="carousel-item relative w-full">
