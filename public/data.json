@@ -21,6 +21,20 @@
         "intro": "TVS Motor manufactures the largest range of 2-wheelers, starting from mopeds, to scooters, commuter motorcycles, to racing inspired bikes like the Apache series and the RR310. Whatever your requirement be, we have one for everyone."
     },
     {
+        "_id": "6380d651460053f520b9a6e1",
+        "catagoryid": "3",
+        "courseCatagory": "Computer Sciences and Engineering",
+        "image": "https://images.squarespace-cdn.com/content/v1/5fce63270356d927d7eecdbd/033e9988-2ac8-4cb9-8b9f-5bf05fb22dcb/gff.jpg",
+        "intro": "TVS Motor manufactures the largest range of 2-wheelers, starting from mopeds, to scooters, commuter motorcycles, to racing inspired bikes like the Apache series and the RR310. Whatever your requirement be, we have one for everyone."
+    },
+    {
+        "_id": "6380d651460053f520b9a6e1",
+        "catagoryid": "3",
+        "courseCatagory": "Computer Sciences and Engineering",
+        "image": "https://images.squarespace-cdn.com/content/v1/5fce63270356d927d7eecdbd/033e9988-2ac8-4cb9-8b9f-5bf05fb22dcb/gff.jpg",
+        "intro": "TVS Motor manufactures the largest range of 2-wheelers, starting from mopeds, to scooters, commuter motorcycles, to racing inspired bikes like the Apache series and the RR310. Whatever your requirement be, we have one for everyone."
+    },
+    {
         "_id": "6380d651460053f520b9a6e2",
         "catagoryid": "4",
         "courseCatagory": "Microsoft Products",
