@@ -1,5 +1,3 @@
-import React from "react";
-
 const Newsletter = () => {
   return (
     <div className="h-44 flex flex-col space-y-5 justify-center items-center bg-[#F9FAFE] p-3">

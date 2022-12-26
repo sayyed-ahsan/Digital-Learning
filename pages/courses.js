@@ -1,4 +1,3 @@
-import React from "react";
 import Navber from "../components/Home/Navbar/Navbar";
 
 const courses = () => {
