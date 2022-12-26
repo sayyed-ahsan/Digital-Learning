@@ -1,13 +1,13 @@
-import React from 'react';
-import Navber from '../components/Home/Navber/Navbar'
+import React from "react";
+import Navber from "../components/Home/Navbar/Navbar";
 
 const courses = () => {
-    return (
-        <div>
-            <Navber></Navber>
-            courses
-        </div>
-    );
+  return (
+    <div>
+      <Navber></Navber>
+      courses
+    </div>
+  );
 };
 
 export default courses;
