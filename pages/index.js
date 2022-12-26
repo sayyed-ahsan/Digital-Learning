@@ -9,8 +9,9 @@ import Footer from '../components/Home/Footer/Footer'
 import Countdown from './../components/Home/Countdown/Countdown'
 import Testimonials from './../components/Home/Testimonials/Testimonials'
 import Cupon from '../components/Home/Cupon/Cupon'
+import Blog from '../components/Home/Blogs/Blog'
 export default function Home({ catagories }) {
-
+	console.log(catagories);
 	return (
 		<>
 			<Navber />
@@ -22,6 +23,7 @@ export default function Home({ catagories }) {
 			<Featured />
 			<Countdown />
 			<Testimonials />
+			<Blog />
 			<Brand />
 			<Footer />
 		</>

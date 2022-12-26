@@ -5,7 +5,7 @@ const Instructor = () => {
         <div>
             <div className="hero ">
                 <div className="hero-content flex-col lg:flex-row">
-                    <img src="https://placeimg.com/260/400/arch" className="max-w-sm rounded-lg shadow-2xl" />
+                    <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=3&amp;h=750&amp;w=1260" className="max-w-sm rounded-lg shadow-2xl" />
                     <div>
                         <div className="indicator">
                             <div className="indicator-item indicator-bottom">

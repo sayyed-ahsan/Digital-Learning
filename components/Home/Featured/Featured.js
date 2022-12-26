@@ -52,7 +52,7 @@ function card() {
                     {/*  */}
 
                     <div className="flex">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti saepe ipsum vero quam at, magni aspernatur! Soluta fugiat.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                     </div>
 
                     <div className="card-actions justify-start">

@@ -14,9 +14,9 @@ const Navbar = () => {
                         <ul className="menu menu-horizontal p-0 gap-3">
                             <li><Link href="/">Home</Link></li>
                             <li><Link href="/about">About Us</Link></li>
-                            <li><Link href="/contact">Contact US</Link></li>
-                            <li><Link href="/contact">Courses</Link></li>
-                            <li><Link href="/contact">Login</Link></li>
+                            <li><Link href="/contactus">Contact US</Link></li>
+                            <li><Link href="/courses">Courses</Link></li>
+                            <li><Link href="/login">Login</Link></li>
                         </ul>
                     </div>
                     <div className="dropdown dropdown-bottom dropdown-end">
