@@ -1,5 +1,3 @@
-
-
 const Instructor = () => {
     return (
         <div>
@@ -34,11 +32,6 @@ const Instructor = () => {
                 </div>
             </div>
             {/* -------------- */}
-
-
-
-
-
         </div>
     );
 };

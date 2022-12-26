@@ -26,7 +26,7 @@ export default function Home({ catagories }) {
 			<Testimonials />
 			<Blog />
 			<Brand />
-			<Newslatter/>
+			<Newslatter />
 			<Footer />
 		</>
 	)
@@ -34,7 +34,7 @@ export default function Home({ catagories }) {
 
 
 export const getStaticProps = async () => {
-	const res = await fetch('https://digital-learning-two.vercel.app/courses');
+	const res = await fetch('http://localhost:5000/service');
 	const data = await res.json();
 
 

@@ -6,7 +6,7 @@ export default function Featured() {
     return (
         <>
             <Swiper
-                slidesPerView={1.5}
+                slidesPerView={1.4}
                 loop={true}
                 autoplay={{
                     delay: 2000
