@@ -32,8 +32,8 @@ const Slider = () => {
 
 
     return (
-        <div>
-            <h1>hello</h1>
+        <div className='text-black'>
+            slider
         </div>
     );
 };
