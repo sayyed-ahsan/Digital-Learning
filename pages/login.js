@@ -1,4 +1,3 @@
-import React from "react";
 import Navber from "../components/Home/Navbar/Navbar";
 import Login from "../components/Login/Login/Login";
 
