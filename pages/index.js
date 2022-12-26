@@ -10,8 +10,9 @@ import Countdown from './../components/Home/Countdown/Countdown'
 import Testimonials from './../components/Home/Testimonials/Testimonials'
 import Cupon from '../components/Home/Cupon/Cupon'
 import Blog from '../components/Home/Blogs/Blog'
+import Newslatter from '../components/Home/Newslatter/Newslatter'
 export default function Home({ catagories }) {
-	console.log(catagories);
+
 	return (
 		<>
 			<Navber />
@@ -25,6 +26,7 @@ export default function Home({ catagories }) {
 			<Testimonials />
 			<Blog />
 			<Brand />
+			<Newslatter/>
 			<Footer />
 		</>
 	)
