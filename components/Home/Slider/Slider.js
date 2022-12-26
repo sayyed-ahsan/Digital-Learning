@@ -1,5 +1,7 @@
 
 const Slider = () => {
+
+
     return (
         <div className='text-black'>
             slider
