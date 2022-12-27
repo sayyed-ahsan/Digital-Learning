@@ -12,31 +12,33 @@ import Cupon from "../components/Home/Cupon/Cupon";
 import Blog from "../components/Home/Blogs/Blog";
 import Newsletter from "../components/Home/Newsletter/Newsletter";
 export default function Home({ catagories }) {
-	return (
-		<>
-			<Navber />
-			<Slider />
-			<Cupon />
-			<Categories catagories={catagories} />
-			<Featured />
-			<Instructor />
-			<Countdown />
-			<Testimonials />
-			<Blog />
-			<Brand />
-			<Newsletter />
-			<Footer />
-		</>
-	);
+  return (
+    <>
+      <Navber />
+      <Slider />
+      <Cupon />
+      <Categories catagories={catagories} />
+      <Featured />
+      <Instructor />
+      <Countdown />
+      <Testimonials />
+      <Blog />
+      <Brand />
+      <Newsletter />
+      <Footer />
+    </>
+  );
 }
 
 export const getStaticProps = async () => {
-	const res = await fetch("https://digital-learning-two.vercel.app/courses");
-	const data = await res.json();
+  const res = await fetch(
+    "https://digital-learning-minhaj-murad.vercel.app/courses"
+  );
+  const data = await res.json();
 
-	return {
-		props: {
-			catagories: data,
-		},
-	};
+  return {
+    props: {
+      catagories: data,
+    },
+  };
 };
