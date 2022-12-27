@@ -1,13 +1,15 @@
-import React from 'react';
-import Navber from '../components/Home/Navber/Navbar'
+import Navber from "../components/Home/Navbar/Navbar";
+import Login from "../components/Login/Login/Login";
 
 const login = () => {
-    return (
-        <div>
-            <Navber></Navber>
-            <h1 className='text-3xl'>Login</h1>
-        </div>
-    );
+  return (
+    <div>
+      <Navber></Navber>
+      <div className="mt-10">
+        <Login />
+      </div>
+    </div>
+  );
 };
 
 export default login;
