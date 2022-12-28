@@ -5,7 +5,7 @@ const Navbar = () => {
     <header>
       <div className="navbar font-semibold p-0 w-11/12 mx-auto text-black">
         <div className="navbar-start">
-          <h3 className="text-2xl font-extrabold uppercase">PathShala</h3>
+          <h3 className="text-2xl font-extrabold uppercase"><Link href='/'>PathShala</Link></h3>
         </div>
         <div className="navbar-end">
           <div className="navbar-center hidden lg:flex">
@@ -14,13 +14,17 @@ const Navbar = () => {
                 <Link href="/">Home</Link>
               </li>
               <li>
+                <Link href="/courses">Courses</Link>
+              </li>
+              <li>
                 <Link href="/about">About Us</Link>
               </li>
               <li>
                 <Link href="/contactus">Contact Us</Link>
               </li>
+
               <li>
-                <Link href="/courses">Courses</Link>
+                <Link href="/dashboard">Dashboard</Link>
               </li>
               <li>
                 <Link href="/dashboard">Dashboard</Link>
@@ -52,16 +56,20 @@ const Navbar = () => {
                 <Link href="/">Home</Link>
               </li>
               <li>
+                <Link href="/courses">Courses</Link>
+              </li>
+              <li>
                 <Link href="/about">About Us</Link>
               </li>
               <li>
-                <Link href="/contact">Contact US</Link>
+                <Link href="/contactus">Contact Us</Link>
+              </li>
+
+              <li>
+                <Link href="/dashboard">Dashboard</Link>
               </li>
               <li>
-                <Link href="/contact">Courses</Link>
-              </li>
-              <li>
-                <Link href="/contact">Login</Link>
+                <Link href="/login">Login</Link>
               </li>
             </ul>
           </div>
