@@ -1,5 +1,4 @@
 import React from 'react'
-
 import CourseHeading from './CourseHeading';
 import CourseLeftContent from './CourseLeftContent';
 
