@@ -32,7 +32,7 @@ export default function Home({ catagories }) {
 
 
 export const getStaticProps = async () => {
-	const res = await fetch('https://digital-learning-two.vercel.app/courses');
+	const res = await fetch('https://digital-learning-minhaj-murad.vercel.app/courses');
 	const data = await res.json();
 
 
