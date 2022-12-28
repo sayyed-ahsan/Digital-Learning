@@ -1,13 +1,10 @@
-import Navber from "../components/Home/Navbar/Navbar";
+import Navber from "../components/Navbar/Navbar";
 import Login from "../components/Login/Login/Login";
 
 const login = () => {
   return (
-    <div>
-      <Navber></Navber>
-      <div className="mt-10">
-        <Login />
-      </div>
+    <div className="mt-10">
+      <Login />
     </div>
   );
 };

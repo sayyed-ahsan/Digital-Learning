@@ -1,12 +1,5 @@
-import Navber from "../components/Home/Navbar/Navbar";
-
 const courses = () => {
-  return (
-    <div>
-      <Navber></Navber>
-      courses
-    </div>
-  );
+  return <div>courses</div>;
 };
 
 export default courses;

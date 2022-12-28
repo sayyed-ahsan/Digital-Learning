@@ -1,13 +1,10 @@
-import Navbar from "../components/Home/Navbar/Navbar";
+import Navbar from "../components/Navbar/Navbar";
 import Signup from "../components/Login/Signup/Signup";
 
 const signup = () => {
   return (
     <div>
-      <Navbar />
-      <div>
-        <Signup />
-      </div>
+      <Signup />
     </div>
   );
 };
