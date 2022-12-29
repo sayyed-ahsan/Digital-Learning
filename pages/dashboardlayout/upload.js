@@ -3,7 +3,9 @@ import Layout from "./layout";
 const Upload = () => {
   return (
     <Layout>
-      <h2>Upload</h2>
+      <div className="text-black">
+        <h2>Upload</h2>
+      </div>
     </Layout>
   );
 };
