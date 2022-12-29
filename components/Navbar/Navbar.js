@@ -5,7 +5,9 @@ const Navbar = () => {
     <header>
       <div className="navbar font-semibold p-0 w-11/12 mx-auto text-black">
         <div className="navbar-start">
-          <h3 className="text-2xl font-extrabold uppercase"><Link href='/'>PathShala</Link></h3>
+          <h3 className="text-2xl font-extrabold uppercase">
+            <Link href="/">PathShala</Link>
+          </h3>
         </div>
         <div className="navbar-end">
           <div className="navbar-center hidden lg:flex">
@@ -22,12 +24,8 @@ const Navbar = () => {
               <li>
                 <Link href="/contactus">Contact Us</Link>
               </li>
-
               <li>
-                <Link href="/dashboard">Dashboard</Link>
-              </li>
-              <li>
-                <Link href="/dashboard">Dashboard</Link>
+                <Link href="/dashboardlayout/home">Dashboard</Link>
               </li>
               <li>
                 <Link href="/login">Login</Link>
