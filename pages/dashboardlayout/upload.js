@@ -61,7 +61,7 @@ const Upload = () => {
             </div>
             <div className="flex flex-col lg:flex-row gap-4 items-center pb-7">
               <p className="font-semibold w-64">Course Category</p>
-              <select className="select select-bordered w-full lg:w-[785px]">
+              <select className="select select-bordered w-full lg:w-[775px]">
                 <option disabled selected>
                   Select a category
                 </option>
@@ -80,7 +80,7 @@ const Upload = () => {
             <div className="divider"></div>
             <div className="flex flex-col lg:flex-row gap-4 items-center pb-7">
               <p className="font-semibold w-64">Course Dificulty Level</p>
-              <select className="select select-bordered w-full lg:w-[785px]">
+              <select className="select select-bordered w-full lg:w-[775px]">
                 <option disabled selected>
                   Select a category
                 </option>
@@ -108,7 +108,7 @@ const Upload = () => {
             <div className="divider"></div>
             <div className="flex flex-col lg:flex-row gap-4 items-center pb-7">
               <p className="font-semibold w-64">Learner's Accessibility</p>
-              <select className="select select-bordered w-full  lg:w-[785px]">
+              <select className="select select-bordered w-full  lg:w-[775px]">
                 <option disabled selected>
                   Select an access type
                 </option>
@@ -146,7 +146,7 @@ const Upload = () => {
                 placeholder="Bio"
               ></textarea>
             </div>
-            <div className="ml-12 lg:ml-[200px] flex gap-5">
+            <div className="ml-12 lg:ml-[210px] flex gap-5">
               <button className="btn btn-secondary text-white">Submit</button>
               <button className="btn btn-error">Cancel</button>
             </div>
