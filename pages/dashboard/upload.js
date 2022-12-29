@@ -1,9 +1,9 @@
 import Link from "next/link";
-import Layout from "./layout";
+import Dashboard from "./index";
 
 const Upload = () => {
   return (
-    <Layout>
+    <Dashboard>
       <div className="pt-5 lg:pt-10 px-5 lg:px-40 mt-10 bg-neutral">
         {/* title section */}
         <div className="flex justify-center lg:justify-between gap-2">
@@ -153,7 +153,7 @@ const Upload = () => {
           </form>
         </div>
       </div>
-    </Layout>
+    </Dashboard>
   );
 };
 
