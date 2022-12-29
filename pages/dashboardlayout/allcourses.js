@@ -11,9 +11,8 @@ const AllCourses = () => {
   return (
     <Layout >
 
-      <div className="bg-[#FBF9F6] py-10 px-40  mt-10">
+      <div className="bg-[#FBF9F6] py-10 px-40  mt-10 ">
         <div className=" md:flex justify-between ">
-
           <div className="">
             <h2 className="text-2xl text-black font-medium">Courses</h2>
             <p className="mt-2 text-sm text-gray-800">Welcome to Pathshala Courses</p>
@@ -25,9 +24,6 @@ const AllCourses = () => {
               <li><a>Courses</a></li>
             </ul>
           </div>
-
-
-
         </div>
 
 
