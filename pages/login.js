@@ -1,5 +1,3 @@
-import { toast } from "react-hot-toast";
-import Navber from "../components/Home/Navbar/Navbar";
 import Login from "../components/Login/Login/Login";
 const login = () => {
 
@@ -34,11 +32,8 @@ const login = () => {
 
 
   return (
-    <div>
-      <Navber></Navber>
-      <div className="mt-10">
-        <Login />
-      </div>
+    <div className="mt-10">
+      <Login  handleLogin={handleLogin}/>
     </div>
   );
 };

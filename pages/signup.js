@@ -1,10 +1,7 @@
-import { useRouter } from "next/router";
-import Navbar from "../components/Home/Navbar/Navbar";
 import Signup from "../components/Login/Signup/Signup";
 import { ToastContainer, toast } from 'react-nextjs-toast';
 const signup = () => {
 
-  const router = useRouter();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -29,6 +26,7 @@ const signup = () => {
         console.log(data);
         toast.notify("Signup Successfull Please Login");
         // router.push("/login");
+        e.target.reset();
       }
       );
 
@@ -36,10 +34,7 @@ const signup = () => {
 
   return (
     <div>
-      <Navbar />
-      <div>
-        <Signup handleSubmit={handleSubmit} />
-      </div>
+      <Signup  handleSubmit={handleSubmit}/>
       <ToastContainer />
     </div>
   );
