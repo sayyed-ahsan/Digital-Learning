@@ -19,13 +19,13 @@ const login = () => {
 
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         if (data.user_token) {
           localStorage.setItem("dl-access-token", data.user_token);
           window.location.href = "/";
         }
         else {
-           alert("Invalid Email or Password");
+          alert("Invalid Email or Password");
         }
       });
   };
@@ -33,7 +33,7 @@ const login = () => {
 
   return (
     <div className="mt-10">
-      <Login  handleLogin={handleLogin}/>
+      <Login handleLogin={handleLogin} />
     </div>
   );
 };

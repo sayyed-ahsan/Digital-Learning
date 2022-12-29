@@ -2,7 +2,7 @@
 
 const Courses = ({ allCourse }) => {
 
-    console.log(allCourse)
+
 
     return (
         <div>
