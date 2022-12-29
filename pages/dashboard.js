@@ -1,16 +1,11 @@
-import React from 'react';
-import Navbar from '../components/Home/Navbar/Navbar';
-import Footer from "../components/Home/Footer/Footer";
+import Layout from "./dashboardlayout/layout";
 
-
-const dashboard = () => {
-    return (
-        <div>
-            <Navbar></Navbar>
-            dashboard
-            <Footer></Footer>
-        </div>
-    );
+const Dashboard = () => {
+  return (
+    <div>
+      <Layout />
+    </div>
+  );
 };
 
-export default dashboard;
+export default Dashboard;
