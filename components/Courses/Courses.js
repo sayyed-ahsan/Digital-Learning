@@ -65,6 +65,8 @@ const Courses = () => {
                     CATEGORIES
                 </div>
                 <div className='lg:col-span-3 grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-3 grid-cols-1 gap-3 p-2 rounded-md'>
+
+
                     <div className='shadow-lg border border-slate-200'>
                         <a className="block relative h-48 overflow-hidden">
                             <img alt="ecommerce" className="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260" />
@@ -84,6 +86,9 @@ const Courses = () => {
                             <button>Buy Now</button>
                         </div>
                     </div>
+
+
+
                     <div className="bg-emerald-200">
                         <a className="block relative h-48 rounded overflow-hidden">
                             <img alt="ecommerce" className="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260" />
