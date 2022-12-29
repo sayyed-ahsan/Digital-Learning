@@ -1,6 +1,6 @@
 import Sidebar from "./sidebar";
 
-const Layout = ({ children }) => {
+const Dashboard = ({ children }) => {
   return (
     <div className="grid grid-cols-7 gap-4">
       <div>
@@ -11,4 +11,4 @@ const Layout = ({ children }) => {
   );
 };
 
-export default Layout;
+export default Dashboard;
