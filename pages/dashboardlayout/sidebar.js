@@ -17,7 +17,7 @@ const Sidebar = () => {
           <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
           <ul className="menu p-4 w-80 bg-base-100 text-base-content">
             <li>
-              <Link href={"/dashboardlayout/Home"}>Home</Link>
+              <Link href={"/dashboardlayout/home"}>Dashboard</Link>
             </li>
             <li>
               <Link href={"/dashboardlayout/allcourses"}>Courses</Link>
