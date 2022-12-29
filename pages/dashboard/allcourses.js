@@ -4,12 +4,11 @@ import { FaHtml5 } from "react-icons/fa";
 import { FaCss3Alt } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
 import { IoLogoReact } from "react-icons/io5";
-import Image from "next/image";
 
 const AllCourses = () => {
   return (
     <Dashboard>
-      <div className="bg-[#FBF9F6] py-10 px-40  mt-10">
+      <div className="bg-[#FBF9F6] py-10 px-40  mt-10 ">
         <div className=" md:flex justify-between ">
           <div className="">
             <h2 className="text-2xl text-black font-medium">Courses</h2>
