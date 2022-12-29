@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const Login = () => {
+const Login = ({handleLogin}) => {
   return (
     <div className="lg:w-9/12 w-11/12 grid grid-cols-1 lg:grid-cols-2 gap-5 mx-auto h-[88vh]">
       <div className="border border-solid-2 w-full shadow-md hidden lg:block">
@@ -9,9 +9,8 @@ const Login = () => {
       <div className="w-full h-full md:p-8 lg:p-8 space-y-3 border border-solid-2 shadow-md flex flex-col justify-center items-center">
         <h1 className="text-2xl font-bold text-center">Login</h1>
         <form
-          //   onSubmit={handleSubmit}
-          noValidate=""
-          action=""
+            onSubmit={handleLogin}
+         
           className="space-y-6 ng-untouched ng-pristine ng-valid w-[80%]"
         >
           <div className="space-y-1 text-sm">
