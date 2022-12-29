@@ -7,7 +7,6 @@ const Signup = ({ handleSubmit }) => {
         <h1 className="text-2xl font-bold text-center">Sign Up</h1>
         <form
           onSubmit={handleSubmit}
-
           className="space-y-6 ng-untouched ng-pristine ng-valid w-[80%] lg:w-[100%]"
         >
           <div className="space-y-1 text-sm">
@@ -27,8 +26,8 @@ const Signup = ({ handleSubmit }) => {
               Select Role
             </label>
             <select name="role" className="select select-bordered w-full">
-              <option value='Instructor'>Instructor</option>
-              <option value='Student'>Student</option>
+              <option value="Instructor">Instructor</option>
+              <option value="Student">Student</option>
             </select>
           </div>
           <div className="space-y-1 text-sm">
@@ -64,11 +63,9 @@ const Signup = ({ handleSubmit }) => {
         </form>
         <div className="flex items-center pt-4 space-x-1"></div>
         <div className="flex items-center pt-4 space-x-1">
-          <div className="flex-1 h-px sm:w-16 dark:bg-gray-700"></div>
-          <p className="px-3 text-sm dark:text-gray-400">
-            Login with social accounts
-          </p>
-          <div className="flex-1 h-px sm:w-16 dark:bg-gray-700"></div>
+          <div className="flex-1 h-px sm:w-16"></div>
+          <p className="px-3 text-sm">Login with social accounts</p>
+          <div className="flex-1 h-px sm:w-16"></div>
         </div>
         <div className="flex justify-center space-x-4">
           <button aria-label="Log in with Google" className="p-3 rounded-sm">
@@ -90,12 +87,12 @@ const Signup = ({ handleSubmit }) => {
             </svg>
           </button>
         </div>
-        <p className="text-xs text-center sm:px-6 dark:text-gray-400 ">
+        <p className="text-xs text-center sm:px-6">
           Don't have an account?
           <Link
             href="/login"
             rel="noopener noreferrer"
-            className="underline dark:text-gray-100 font-semibold ml-2 text-primary"
+            className="underline font-semibold ml-2 text-primary"
           >
             Login
           </Link>

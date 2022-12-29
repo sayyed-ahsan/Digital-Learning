@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const Login = ({handleLogin}) => {
+const Login = ({ handleLogin }) => {
   return (
     <div className="lg:w-9/12 w-11/12 grid grid-cols-1 lg:grid-cols-2 gap-5 mx-auto h-[88vh]">
       <div className="border border-solid-2 w-full shadow-md hidden lg:block">
@@ -9,8 +9,7 @@ const Login = ({handleLogin}) => {
       <div className="w-full h-full md:p-8 lg:p-8 space-y-3 border border-solid-2 shadow-md flex flex-col justify-center items-center">
         <h1 className="text-2xl font-bold text-center">Login</h1>
         <form
-            onSubmit={handleLogin}
-         
+          onSubmit={handleLogin}
           className="space-y-6 ng-untouched ng-pristine ng-valid w-[80%]"
         >
           <div className="space-y-1 text-sm">
@@ -46,11 +45,9 @@ const Login = ({handleLogin}) => {
         </form>
         <div className="flex items-center pt-4 space-x-1"></div>
         <div className="flex items-center pt-4 space-x-1">
-          <div className="flex-1 h-px sm:w-16 dark:bg-gray-700"></div>
-          <p className="px-3 text-sm dark:text-gray-400">
-            Login with social accounts
-          </p>
-          <div className="flex-1 h-px sm:w-16 dark:bg-gray-700"></div>
+          <div className="flex-1 h-px sm:w-16"></div>
+          <p className="px-3 text-sm">Login with social accounts</p>
+          <div className="flex-1 h-px sm:w-16 "></div>
         </div>
         <div className="flex justify-center space-x-4">
           <button aria-label="Log in with Google" className="p-3 rounded-sm">
@@ -72,12 +69,12 @@ const Login = ({handleLogin}) => {
             </svg>
           </button>
         </div>
-        <p className="text-xs text-center sm:px-6 dark:text-gray-400 ">
+        <p className="text-xs text-center sm:px-6 ">
           Don't have an account?
           <Link
             href="/signup"
             rel="noopener noreferrer"
-            className="underline dark:text-gray-100 font-semibold ml-2 text-primary"
+            className="underline font-semibold ml-2 text-primary"
           >
             Sign up
           </Link>
