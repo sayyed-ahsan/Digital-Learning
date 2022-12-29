@@ -1,11 +1,14 @@
-import Layout from "./layout";
+import React from 'react';
+import Layout from './layout';
 
-const dashboardhome = () => {
+const Home = () => {
   return (
     <Layout>
-      <h2>Home</h2>
+      <h3>
+        <h1 className='text-black'>Home</h1>
+      </h3>
     </Layout>
   );
 };
 
-export default dashboardhome;
+export default Home;
