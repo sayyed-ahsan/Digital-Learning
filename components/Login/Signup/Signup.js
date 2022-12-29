@@ -1,14 +1,13 @@
 import Link from "next/link";
 
-const Signup = () => {
+const Signup = ({ handleSubmit }) => {
   return (
     <div className="w-11/12 lg:w-9/12 grid grid-cols-1 lg:grid-cols-2 gap-5 mx-auto h-[88vh] mt-10">
       <div className="w-full h-full md:p-8 lg:p-8 space-y-3 border border-solid-2 shadow-md flex flex-col justify-center items-center">
         <h1 className="text-2xl font-bold text-center">Sign Up</h1>
         <form
-          //   onSubmit={handleSubmit}
-          noValidate=""
-          action=""
+          onSubmit={handleSubmit}
+
           className="space-y-6 ng-untouched ng-pristine ng-valid w-[80%] lg:w-[100%]"
         >
           <div className="space-y-1 text-sm">
@@ -27,9 +26,9 @@ const Signup = () => {
             <label htmlFor="photoURL" className="block text-gray-400">
               Select Role
             </label>
-            <select className="select select-bordered w-full">
-              <option>Instructor</option>
-              <option>Student</option>
+            <select name="role" className="select select-bordered w-full">
+              <option value='Instructor'>Instructor</option>
+              <option value='Student'>Student</option>
             </select>
           </div>
           <div className="space-y-1 text-sm">
