@@ -21,7 +21,8 @@ const Blog = () => {
                   />
                 </div>
                 <a
-                  tabindex="0"
+                  tabIndex="0"
+
                   className="focus:outline-none focus:opacity-75 hover:opacity-75 text-gray-800 cursor-pointer focus:underline"
                 >
                   <h2 className=" text-xl tracking-normal font-medium mb-1">
@@ -29,7 +30,7 @@ const Blog = () => {
                   </h2>
                 </a>
                 <a
-                  tabindex="0"
+                  tabIndex="0"
                   className="cursor-pointer hover:text-indigo-700 focus:underline focus:outline-none focus:text-indigo-700 flex text-gray-600 text-sm tracking-normal font-normal mb-3 text-center"
                 >
                   <span className="cursor-pointer mr-1 text-gray-600 ">
@@ -56,7 +57,7 @@ const Blog = () => {
                   />
                 </div>
                 <a
-                  tabindex="0"
+                  tabIndex="0"
                   className="focus:outline-none focus:opacity-75 hover:opacity-75 text-gray-800  cursor-pointer focus:underline"
                 >
                   <h2 className=" text-xl tracking-normal font-medium mb-1">
@@ -64,7 +65,7 @@ const Blog = () => {
                   </h2>
                 </a>
                 <a
-                  tabindex="0"
+                  tabIndex="0"
                   className="cursor-pointer hover:text-indigo-700 focus:underline focus:outline-none focus:text-indigo-700 flex text-gray-600 text-sm tracking-normal font-normal mb-3 text-center"
                 >
                   <span className="cursor-pointer mr-1 text-gray-600">
@@ -91,7 +92,7 @@ const Blog = () => {
                   />
                 </div>
                 <a
-                  tabindex="0"
+                  tabIndex="0"
                   className="focus:outline-none focus:opacity-75 hover:opacity-75 text-gray-800 cursor-pointer focus:underline"
                 >
                   <h2 className=" text-xl tracking-normal font-medium mb-1">
@@ -99,7 +100,7 @@ const Blog = () => {
                   </h2>
                 </a>
                 <a
-                  tabindex="0"
+                  tabIndex="0"
                   className="cursor-pointer hover:text-indigo-700 focus:underline focus:outline-none focus:text-indigo-700 flex text-gray-600 text-sm tracking-normal font-normal mb-3 text-center"
                 >
                   <span className="cursor-pointer mr-1 text-gray-600">

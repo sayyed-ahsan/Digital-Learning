@@ -8,7 +8,7 @@ const CourseRightContent = () => {
             <div className="bg-base-100 shadow-xl">
                 <div className='player-wrapper'>
                     <ReactPlayer
-                        width='450px'
+                        width='100%'
                         height='350px'
                         controls={true}
                         url='https://www.youtube.com/watch?v=v0ir_CwypVk' />

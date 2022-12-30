@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import Courses from '../components/Courses/Courses';
-import SingleCourse from '../components/SingleCourse/SingleCourse';
 
 const courses = () => {
 
@@ -15,7 +14,6 @@ const courses = () => {
   return (
     <div>
       <Courses allCourse={allCourse} />
-      <SingleCourse />
     </div>
   );
 };
