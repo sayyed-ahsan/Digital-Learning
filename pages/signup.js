@@ -11,7 +11,7 @@ const signup = () => {
     const role = e.target.role.value;
     const email = e.target.email.value;
     const password = e.target.password.value;
-    fetch("http://localhost:5000/api/register", {
+    fetch("https://digittal-learning-node-auth.vercel.app/api/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

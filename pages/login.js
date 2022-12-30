@@ -10,7 +10,7 @@ const login = () => {
     const email = e.target.email.value;
     const password = e.target.password.value;
 
-    fetch("http://localhost:5000/api/login", {
+    fetch("https://digittal-learning-node-auth.vercel.app/api/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
