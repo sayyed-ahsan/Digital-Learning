@@ -49,7 +49,6 @@ const Navbar = () => {
                       <ul tabIndex={0} className="mt-56 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-max">
                         <li><div className="justify-between">{user?.name}</div></li>
                         <li><button className="justify-between">Profile</button></li>
-                        <li><a href='ldksdj'>Settings</a></li>
                         <li><button onClick={handleLogout}>Logout</button></li>
                       </ul>
                     </div>
