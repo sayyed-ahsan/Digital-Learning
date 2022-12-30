@@ -4,9 +4,9 @@ import CourseLeftContent from './CourseLeftContent';
 import CourseRightContent from './CourseRightContent';
 
 
-const SingleCourse = () => {
+const Course = () => {
     return (
-        <div className='my-20'>
+        <div className='mb-10'>
             {/* single course top heading */}
             <CourseHeading />
             {/* single course body */}
@@ -19,4 +19,4 @@ const SingleCourse = () => {
     )
 }
 
-export default SingleCourse
+export default Course

@@ -10,7 +10,7 @@ const Instructor = () => {
                     Morbi ligula massa, commodo at nisl tincidunt, dignissim feugiat metus. Suspendisse placerat lacinia porttitor. Vivamus
                 </p>
             </div>
-            <div className="card lg:card-side text-black shadow-xl">
+            <div className="card rounded-none lg:card-side text-black shadow-xl">
                 <figure><img className='max-h-96' src="teacher.jpg" alt="Album" /></figure>
                 <div className="flex flex-col justify-center items-end m-10">
                     <div className='flex flex-col gap-2'>

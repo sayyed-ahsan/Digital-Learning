@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { BsFillGrid3X3GapFill, BsFillStarFill, BsList, BsStar } from "react-icons/bs";
 import { FaFilter, FaFolder } from "react-icons/fa";
 const Courses = ({ allCourse }) => {
@@ -84,7 +85,7 @@ const Courses = ({ allCourse }) => {
                                     </div>
                                     <h2 className="text-gray-900  text-2xl font-semibold">{course.courseName}</h2>
                                     <p className='my-5'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo temporibus voluptatibus laudantium aliquid tempora nemo repellat minus cupiditate explicabo ipsum.</p>
-                                    <button className='btn btn-secondary rounded-md btn-md text-white w-full'>Enroll Now</button>
+                                    <Link href={`/course/${ course._id }`} className='btn btn-secondary rounded-md btn-md text-white w-full'>Enroll Now</Link>
                                 </div>
                             </div>
                         })
