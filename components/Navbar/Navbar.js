@@ -3,7 +3,7 @@ import Link from "next/link";
 const Navbar = () => {
   return (
     <header>
-      <div className="navbar font-semibold p-0 w-11/12 mx-auto text-black">
+      <div className="navbar bg-transparent font-semibold p-0 w-11/12 mx-auto text-black">
         <div className="navbar-start">
           <h3 className="text-2xl font-extrabold uppercase">
             <Link href="/">PathShala</Link>
