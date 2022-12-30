@@ -1,6 +1,10 @@
+import { useRouter } from "next/router";
 import Login from "../components/Login/Login/Login";
-const login = () => {
+import useAuth from "../hook/useAuth";
 
+const login = () => {
+  const { user, loading, setLoading, loggedToken, setLoggedToken } = useAuth();
+  const router = useRouter();
   const handleLogin = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
@@ -21,8 +25,9 @@ const login = () => {
       .then((data) => {
         console.log(data);
         if (data.user_token) {
-          localStorage.setItem("dl-access-token", data.user_token);
-          window.location.href = "/";
+          setLoggedToken({ dl_token: data.user_token });
+          localStorage.setItem("dl-token", data.user_token);
+          router.push("/");
         }
         else {
            alert("Invalid Email or Password");

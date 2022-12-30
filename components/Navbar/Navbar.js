@@ -1,6 +1,16 @@
 import Link from "next/link";
+import useAuth from "../../hook/useAuth";
 
 const Navbar = () => {
+
+  const { user,setLoggedToken,setUser } = useAuth();
+
+  const handleLogout = () => {
+    localStorage.removeItem("dl-token");
+    setLoggedToken({});
+    setUser({});
+  };
+
   return (
     <header>
       <div className="navbar font-semibold p-0 w-11/12 mx-auto text-black">
@@ -27,9 +37,28 @@ const Navbar = () => {
               <li>
                 <Link href="/dashboardlayout/home">Dashboard</Link>
               </li>
-              <li>
-                <Link href="/login">Login</Link>
-              </li>
+              {
+                user._id ?
+                  <li>
+                    <div className="dropdown dropdown-end ">
+                      <label tabIndex={0} className="btn btn-ghost btn-circle avatar online placeholder">
+                        <div className="bg-neutral-focus text-neutral-content rounded-full w-10">
+                          <span className="text-xl">{user?.name.slice(0, 2)}</span>
+                        </div>
+                      </label>
+                      <ul tabIndex={0} className="mt-56 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-max">
+                        <li><div className="justify-between">{user?.name}</div></li>
+                        <li><button className="justify-between">Profile</button></li>
+                        <li><a href='ldksdj'>Settings</a></li>
+                        <li><button onClick={handleLogout}>Logout</button></li>
+                      </ul>
+                    </div>
+                  </li>
+                  :
+                  <li>
+                    <Link href="/login">Login</Link>
+                  </li>
+              }
             </ul>
           </div>
           <div className="dropdown dropdown-bottom dropdown-end">

@@ -1,7 +1,9 @@
 import Signup from "../components/Login/Signup/Signup";
 import { ToastContainer, toast } from 'react-nextjs-toast';
+import useAuth from "../hook/useAuth";
 const signup = () => {
 
+  const { user, loading, setLoading, loggedToken, setLoggedToken } = useAuth();
 
   const handleSubmit = (e) => {
     e.preventDefault();
