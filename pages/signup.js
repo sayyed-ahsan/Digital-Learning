@@ -1,7 +1,9 @@
 import Signup from "../components/Login/Signup/Signup";
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer, toast } from 'react-nextjs-toast';
+import useAuth from "../hook/useAuth";
 const signup = () => {
 
+  const { user, loading, setLoading, loggedToken, setLoggedToken } = useAuth();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -9,7 +11,7 @@ const signup = () => {
     const role = e.target.role.value;
     const email = e.target.email.value;
     const password = e.target.password.value;
-    fetch("http://localhost:5000/api/register", {
+    fetch("https://digittal-learning-node-auth.vercel.app/api/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
