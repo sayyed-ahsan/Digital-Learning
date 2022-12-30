@@ -1,5 +1,5 @@
 import Signup from "../components/Login/Signup/Signup";
-import { ToastContainer, toast } from 'react-nextjs-toast';
+import { ToastContainer, toast } from 'react-toastify';
 const signup = () => {
 
 
@@ -34,7 +34,7 @@ const signup = () => {
 
   return (
     <div>
-      <Signup  handleSubmit={handleSubmit}/>
+      <Signup handleSubmit={handleSubmit} />
       <ToastContainer />
     </div>
   );

@@ -30,8 +30,8 @@ function card() {
                 <figure>
                     <img src="https://placeimg.com/400/400/arch" alt="Album" />
                 </figure>
-                <div className="card-body">
-                    <h2 className="card-title text-2xl">Instractor titel and name</h2>
+                <div className="card-body text-black">
+                    <h2 className="card-title text-2xl">Instructor title and name</h2>
                     {/*  */}
                     <div className="flex">
                         <div className="avatar online">
