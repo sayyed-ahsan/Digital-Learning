@@ -17,13 +17,13 @@ const ContactUs = () => {
     emailjs.sendForm('service_bv0pf2q', 'template_3q5d7ti', e.target, "DbqUpRJBHDeY5xylY")
       .then((result) => {
         console.log(result.text);
-        
+
       }, (error) => {
         console.log(error.text);
       });
-      toast.success('Message sent successfully')
-      e.target.reset();
-    
+    toast.success('Message sent successfully')
+    e.target.reset();
+
   };
 
 

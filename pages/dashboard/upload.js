@@ -4,7 +4,7 @@ import Dashboard from "./index";
 const Upload = () => {
   return (
     <Dashboard>
-      <div className="pt-5 lg:pt-10 px-5 lg:px-40 mt-10 bg-neutral">
+      <div className="pt-5 lg:pt-10 px-5 lg:px-40 mt-10 bg-neutral text-black">
         {/* title section */}
         <div className="flex justify-center lg:justify-between gap-2">
           <div>

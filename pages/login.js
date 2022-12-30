@@ -32,7 +32,7 @@ const login = () => {
 
 
   return (
-    <div className="mt-10">
+    <div className="mt-10 text-black">
       <Login handleLogin={handleLogin} />
     </div>
   );

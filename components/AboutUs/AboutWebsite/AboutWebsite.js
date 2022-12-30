@@ -8,7 +8,7 @@ const AboutWebsite = () => {
               src="https://i.ibb.co/LS9qqS1/Screen-Shot-2022-12-26-at-1-24-21-PM.png"
               className="max-w-sm rounded-lg shadow-2xl"
             />
-            <div>
+            <div className='text-black'>
               <h1 className="font-semibold text-2xl">About our Website</h1>
               <h1 className="text-5xl font-bold">
                 Grow your skills learn with us <br /> from anywhere

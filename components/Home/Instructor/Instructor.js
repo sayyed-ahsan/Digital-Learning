@@ -11,7 +11,7 @@ const Instructor = () => {
                         className="max-w-sm rounded-lg shadow-2xl"
                     />
                     <div>
-                        <div className="indicator">
+                        <div className="indicator text-black">
                             <div className="indicator-item indicator-bottom">
                                 <button className="btn btn-primary">Show more</button>
                             </div>
