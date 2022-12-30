@@ -10,9 +10,9 @@ const Blog = () => {
       <div className="w-full py-10">
         <div className="container mx-auto px-6 flex items-start justify-center">
           <div aria-label="group of cards" className="w-full ">
-            <div className="flex flex-col lg:flex-row mx-auto bg-white dark:bg-gray-800 shadow rounded">
+            <div className="flex flex-col lg:flex-row mx-auto bg-white shadow rounded">
               <div className="w-full lg:w-1/3 px-12 flex flex-col items-center py-10">
-                <div className="w-24 h-24 mb-3 p-2 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
+                <div className="w-24 h-24 mb-3 p-2 rounded-full bg-gray-200 flex items-center justify-center">
                   <img
                     role="img"
                     className="w-full h-full overflow-hidden object-cover rounded-full"
@@ -21,18 +21,19 @@ const Blog = () => {
                   />
                 </div>
                 <a
-                  tabindex="0"
-                  className="focus:outline-none focus:opacity-75 hover:opacity-75 text-gray-800 dark:text-gray-100 cursor-pointer focus:underline"
+                  tabIndex="0"
+
+                  className="focus:outline-none focus:opacity-75 hover:opacity-75 text-gray-800 cursor-pointer focus:underline"
                 >
                   <h2 className=" text-xl tracking-normal font-medium mb-1">
                     Zayn Malik
                   </h2>
                 </a>
                 <a
-                  tabindex="0"
-                  className="cursor-pointer hover:text-indigo-700 focus:underline focus:outline-none focus:text-indigo-700 flex text-gray-600 dark:text-gray-100 text-sm tracking-normal font-normal mb-3 text-center"
+                  tabIndex="0"
+                  className="cursor-pointer hover:text-indigo-700 focus:underline focus:outline-none focus:text-indigo-700 flex text-gray-600 text-sm tracking-normal font-normal mb-3 text-center"
                 >
-                  <span className="cursor-pointer mr-1 text-gray-600 dark:text-gray-100">
+                  <span className="cursor-pointer mr-1 text-gray-600 ">
                     <img
                       src="https://tuk-cdn.s3.amazonaws.com/can-uploader/full_width_3_section_card-svg1.svg"
                       alt="icon"
@@ -40,14 +41,14 @@ const Blog = () => {
                   </span>
                   Chittagong,Bangladesh
                 </a>
-                <p className="text-gray-600 dark:text-gray-100 text-sm tracking-normal font-normal mb-8 text-center w-10/12">
+                <p className="text-gray-600  text-sm tracking-normal font-normal mb-8 text-center w-10/12">
                   The more I deal with the work as something that is my own, as
                   something that is personal, the more successful it is.
                 </p>
                 <button className="btn btn-secondary">See More</button>
               </div>
               <div className="w-full lg:w-1/3 px-12 border-t border-b lg:border-t-0 lg:border-b-0 lg:border-l lg:border-r border-gray-300 flex flex-col items-center py-10">
-                <div className="w-24 h-24 mb-3 p-2 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
+                <div className="w-24 h-24 mb-3 p-2 rounded-full bg-gray-200  flex items-center justify-center">
                   <img
                     role="img"
                     className="w-full h-full overflow-hidden object-cover rounded-full"
@@ -56,18 +57,18 @@ const Blog = () => {
                   />
                 </div>
                 <a
-                  tabindex="0"
-                  className="focus:outline-none focus:opacity-75 hover:opacity-75 text-gray-800 dark:text-gray-100 cursor-pointer focus:underline"
+                  tabIndex="0"
+                  className="focus:outline-none focus:opacity-75 hover:opacity-75 text-gray-800  cursor-pointer focus:underline"
                 >
                   <h2 className=" text-xl tracking-normal font-medium mb-1">
                     Shakib Al Hasan
                   </h2>
                 </a>
                 <a
-                  tabindex="0"
-                  className="cursor-pointer hover:text-indigo-700 focus:underline focus:outline-none focus:text-indigo-700 flex text-gray-600 dark:text-gray-100 text-sm tracking-normal font-normal mb-3 text-center"
+                  tabIndex="0"
+                  className="cursor-pointer hover:text-indigo-700 focus:underline focus:outline-none focus:text-indigo-700 flex text-gray-600 text-sm tracking-normal font-normal mb-3 text-center"
                 >
-                  <span className="cursor-pointer mr-1 text-gray-600 dark:text-gray-100">
+                  <span className="cursor-pointer mr-1 text-gray-600">
                     <img
                       src="https://tuk-cdn.s3.amazonaws.com/can-uploader/full_width_3_section_card-svg1.svg"
                       alt="icon"
@@ -75,14 +76,14 @@ const Blog = () => {
                   </span>
                   Magura,Bangladesh
                 </a>
-                <p className="text-gray-600 dark:text-gray-100 text-sm tracking-normal font-normal mb-8 text-center w-10/12">
+                <p className="text-gray-600 text-sm tracking-normal font-normal mb-8 text-center w-10/12">
                   The more I deal with the work as something that is my own, as
                   something that is personal, the more successful it is.
                 </p>
                 <button className="btn btn-secondary">See More</button>
               </div>
               <div className="w-full lg:w-1/3 flex-col flex justify-center items-center px-12 py-8">
-                <div className="w-24 h-24 mb-3 p-2 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
+                <div className="w-24 h-24 mb-3 p-2 rounded-full bg-gray-200 flex items-center justify-center">
                   <img
                     role="img"
                     className="w-full h-full overflow-hidden object-cover rounded-full"
@@ -91,18 +92,18 @@ const Blog = () => {
                   />
                 </div>
                 <a
-                  tabindex="0"
-                  className="focus:outline-none focus:opacity-75 hover:opacity-75 text-gray-800 dark:text-gray-100 cursor-pointer focus:underline"
+                  tabIndex="0"
+                  className="focus:outline-none focus:opacity-75 hover:opacity-75 text-gray-800 cursor-pointer focus:underline"
                 >
                   <h2 className=" text-xl tracking-normal font-medium mb-1">
                     David Beckham
                   </h2>
                 </a>
                 <a
-                  tabindex="0"
-                  className="cursor-pointer hover:text-indigo-700 focus:underline focus:outline-none focus:text-indigo-700 flex text-gray-600 dark:text-gray-100 text-sm tracking-normal font-normal mb-3 text-center"
+                  tabIndex="0"
+                  className="cursor-pointer hover:text-indigo-700 focus:underline focus:outline-none focus:text-indigo-700 flex text-gray-600 text-sm tracking-normal font-normal mb-3 text-center"
                 >
-                  <span className="cursor-pointer mr-1 text-gray-600 dark:text-gray-100">
+                  <span className="cursor-pointer mr-1 text-gray-600">
                     <img
                       src="https://tuk-cdn.s3.amazonaws.com/can-uploader/full_width_3_section_card-svg1.svg"
                       alt="icon"
@@ -110,7 +111,7 @@ const Blog = () => {
                   </span>
                   London,England
                 </a>
-                <p className="text-gray-600 dark:text-gray-100 text-sm tracking-normal font-normal mb-8 text-center w-10/12">
+                <p className="text-gray-600 text-sm tracking-normal font-normal mb-8 text-center w-10/12">
                   The more I deal with the work as something that is my own, as
                   something that is personal, the more successful it is.
                 </p>

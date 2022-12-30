@@ -25,7 +25,7 @@ const signup = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         toast.notify("Signup Successfull Please Login");
         // router.push("/login");
         e.target.reset();
@@ -36,7 +36,7 @@ const signup = () => {
 
   return (
     <div>
-      <Signup  handleSubmit={handleSubmit}/>
+      <Signup handleSubmit={handleSubmit} />
       <ToastContainer />
     </div>
   );

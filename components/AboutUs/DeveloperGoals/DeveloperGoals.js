@@ -6,7 +6,7 @@ const DeveloperGoals = () => {
       <div className="">
         <div className="px-4 py-16 bg-yellow-100">
           <div className="flex">
-            <div className="px-12 mt-4 w-3/4 text-center">
+            <div className="px-12 mt-4 w-3/4 text-center text-black">
               <h1 className="flex justify-center  text-3xl mb-2 font-semibold">
                 Deveopers Goal
               </h1>
@@ -23,7 +23,7 @@ const DeveloperGoals = () => {
               dolorem neque perferendis praesentium dolorum, ipsa voluptatum?
             </div>
             <div>
-              <ul className="steps steps-vertical">
+              <ul className="steps steps-vertical text-black">
                 <li className="step step-primary">Register</li>
                 <li className="step step-primary">Choose plan</li>
                 <li className="step step-primary">Purchase</li>

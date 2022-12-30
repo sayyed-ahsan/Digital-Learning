@@ -23,22 +23,22 @@ const login = () => {
 
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         if (data.user_token) {
           setLoggedToken({ dl_token: data.user_token });
           localStorage.setItem("dl-token", data.user_token);
           router.push("/");
         }
         else {
-           alert("Invalid Email or Password");
+          alert("Invalid Email or Password");
         }
       });
   };
 
 
   return (
-    <div className="mt-10">
-      <Login  handleLogin={handleLogin}/>
+    <div className="mt-10 text-black">
+      <Login handleLogin={handleLogin} />
     </div>
   );
 };

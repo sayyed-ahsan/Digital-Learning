@@ -5,8 +5,8 @@ import "swiper/css";
 export default function Featured() {
     return (
         <>
-            <div>
-                <h2 className="text-4xl text-center font-semibold">Featured</h2>
+            <div className='my-10'>
+                <h2 className="text-4xl text-center text-black font-bold">Featured</h2>
             </div>
             <Swiper
                 slidesPerView={1.5}
@@ -30,8 +30,8 @@ function card() {
                 <figure>
                     <img src="https://placeimg.com/400/400/arch" alt="Album" />
                 </figure>
-                <div className="card-body">
-                    <h2 className="card-title text-2xl">Instractor titel and name</h2>
+                <div className="card-body text-black">
+                    <h2 className="card-title text-2xl">Instructor title and name</h2>
                     {/*  */}
                     <div className="flex">
                         <div className="avatar online">
@@ -52,7 +52,6 @@ function card() {
                                         type="radio"
                                         name="rating-2"
                                         className="mask mask-star-2 bg-orange-400"
-                                        checked
                                     />
                                     <input
                                         type="radio"
