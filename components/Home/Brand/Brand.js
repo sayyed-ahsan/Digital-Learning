@@ -1,7 +1,7 @@
 const Brand = () => {
   return (
     <div>
-      <section className="">
+      <section className="text-black pb-10">
         <div className="container p-6 mx-auto space-y-6 text-center lg:p-8 lg:space-y-8">
           <h2 className="text-3xl font-bold">Our Trusted Partner</h2>
           <div className="flex flex-wrap justify-center lg:justify-between">
