@@ -25,6 +25,12 @@ const Sidebar = () => {
             <li>
               <Link href={"/dashboard/upload"}>Upload</Link>
             </li>
+            <li>
+              <Link href={"/dashboard/myreviews"}>My Reviews</Link>
+            </li>
+            <li>
+              <Link href={"/dashboard/publishBlog"}>Publish Blogs</Link>
+            </li>
           </ul>
         </div>
       </div>

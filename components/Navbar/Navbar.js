@@ -3,7 +3,7 @@ import useAuth from "../../hook/useAuth";
 
 const Navbar = () => {
 
-  const { user,setLoggedToken,setUser } = useAuth();
+  const { user, setLoggedToken, setUser } = useAuth();
 
   const handleLogout = () => {
     localStorage.removeItem("dl-token");
@@ -29,13 +29,16 @@ const Navbar = () => {
                 <Link href="/courses">Courses</Link>
               </li>
               <li>
+                <Link href="/blog">Blog</Link>
+              </li>
+              <li>
                 <Link href="/about">About Us</Link>
               </li>
               <li>
                 <Link href="/contactus">Contact Us</Link>
               </li>
               <li>
-                <Link href="/dashboard/home">Dashboard</Link>
+                <Link href="/dashboard">Dashboard</Link>
               </li>
               {
                 user._id ?
@@ -85,12 +88,14 @@ const Navbar = () => {
                 <Link href="/courses">Courses</Link>
               </li>
               <li>
+                <Link href="/blog">Blogs</Link>
+              </li>
+              <li>
                 <Link href="/about">About Us</Link>
               </li>
               <li>
                 <Link href="/contactus">Contact Us</Link>
               </li>
-
               <li>
                 <Link href="/dashboard">Dashboard</Link>
               </li>

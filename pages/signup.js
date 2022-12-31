@@ -1,5 +1,5 @@
 import Signup from "../components/Login/Signup/Signup";
-import { ToastContainer, toast } from 'react-nextjs-toast';
+import { ToastContainer, toast } from 'react-toastify';
 import useAuth from "../hook/useAuth";
 const signup = () => {
 
@@ -26,7 +26,7 @@ const signup = () => {
       .then((res) => res.json())
       .then((data) => {
         // console.log(data);
-        toast.notify("Signup Successfull Please Login");
+        toast("Signup Successfull Please Login");
         // router.push("/login");
         e.target.reset();
       }
