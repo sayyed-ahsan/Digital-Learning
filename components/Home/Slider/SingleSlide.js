@@ -30,7 +30,6 @@ const SingleSlide = ({ slide }) => {
                         </p>
                         <button className='btn btn-primary'>{btnText}</button>
                     </div>
-
                 </div>
             </div>
         </div>

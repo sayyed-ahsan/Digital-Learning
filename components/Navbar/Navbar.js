@@ -1,9 +1,9 @@
 import Link from "next/link";
 import useAuth from "../../hook/useAuth";
+import { useRouter } from "next/router";
 
 
 const Navbar = () => {
-
   const { user, setLoggedToken, setUser } = useAuth();
   console.log(user);
 
@@ -107,45 +107,98 @@ export default Navbar;
         <div className="navbar-end">
           <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal p-0 gap-3">
-              <li>
+              <li
+                className={`${
+                  router.asPath === "/" ? "bg-primary text-white rounded" : ""
+                }`}
+              >
                 <Link href="/">Home</Link>
               </li>
-              <li>
+              <li
+                className={`${
+                  router.asPath === "/courses"
+                    ? "bg-primary text-white rounded"
+                    : ""
+                }`}
+              >
                 <Link href="/courses">Courses</Link>
               </li>
-              <li>
+              <li
+                className={`${
+                  router.asPath === "/blog"
+                    ? "bg-primary text-white rounded"
+                    : ""
+                }`}
+              >
                 <Link href="/blog">Blog</Link>
               </li>
-              <li>
+              <li
+                className={`${
+                  router.asPath === "/about"
+                    ? "bg-primary text-white rounded"
+                    : ""
+                }`}
+              >
                 <Link href="/about">About Us</Link>
               </li>
-              <li>
+              <li
+                className={`${
+                  router.asPath === "/contactus"
+                    ? "bg-primary text-white rounded"
+                    : ""
+                }`}
+              >
                 <Link href="/contactus">Contact Us</Link>
               </li>
-              <li>
-                <Link href="/dashboard">Dashboard</Link>
+              <li
+                className={`${
+                  router.asPath === "/dashboard/home"
+                    ? "bg-primary text-white rounded"
+                    : ""
+                }`}
+              >
+                <Link href="/dashboard/home">Dashboard</Link>
               </li>
-              {
-                user._id ?
-                  <li>
-                    <div className="dropdown dropdown-end ">
-                      <label tabIndex={0} className="btn btn-ghost btn-circle avatar online placeholder">
-                        <div className="bg-neutral-focus text-neutral-content rounded-full w-10">
-                          <span className="text-xl">{user?.name.slice(0, 2)}</span>
-                        </div>
-                      </label>
-                      <ul tabIndex={0} className="mt-56 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-max">
-                        <li><div className="justify-between">{user?.name}</div></li>
-                        <li><button className="justify-between">Profile</button></li>
-                        <li><button onClick={handleLogout}>Logout</button></li>
-                      </ul>
-                    </div>
-                  </li>
-                  :
-                  <li>
-                    <Link href="/login">Login</Link>
-                  </li>
-              }
+              {user._id ? (
+                <li>
+                  <div className="dropdown dropdown-end ">
+                    <label
+                      tabIndex={0}
+                      className="btn btn-ghost btn-circle avatar online placeholder"
+                    >
+                      <div className="bg-neutral-focus text-neutral-content rounded-full w-10">
+                        <span className="text-xl">
+                          {user?.name.slice(0, 2)}
+                        </span>
+                      </div>
+                    </label>
+                    <ul
+                      tabIndex={0}
+                      className="mt-56 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-max"
+                    >
+                      <li>
+                        <div className="justify-between">{user?.name}</div>
+                      </li>
+                      <li>
+                        <button className="justify-between">Profile</button>
+                      </li>
+                      <li>
+                        <button onClick={handleLogout}>Logout</button>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              ) : (
+                <li
+                  className={`${
+                    router.asPath === "/login"
+                      ? "bg-primary text-white rounded"
+                      : ""
+                  }`}
+                >
+                  <Link href="/login">Login</Link>
+                </li>
+              )}
             </ul>
           </div>
           <div className="dropdown dropdown-bottom dropdown-end">
@@ -182,7 +235,7 @@ export default Navbar;
                 <Link href="/contactus">Contact Us</Link>
               </li>
               <li>
-                <Link href="/dashboard">Dashboard</Link>
+                <Link href="/dashboard/home">Dashboard</Link>
               </li>
               <li>
                 <Link href="/login">Login</Link>

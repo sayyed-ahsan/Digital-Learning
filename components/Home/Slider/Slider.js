@@ -1,4 +1,3 @@
-import React from "react";
 //These are Third party packages for smooth slideshow
 import { Zoom } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
@@ -8,6 +7,7 @@ import image03 from '../../../public/slider03.jpg';
 import image04 from '../../../public/slider04.jpg';
 import image05 from '../../../public/slider05.jpg';
 import image06 from '../../../public/slider06.jpg';
+
 import { BsArrowRight } from 'react-icons/bs';
 import { BsArrowLeft } from 'react-icons/bs';
 
@@ -16,7 +16,7 @@ const Slider = () => {
         image01,
         image02,
         image03,
-        image04,
+        // image04,
         image05,
         image06
     ]
@@ -26,7 +26,7 @@ const Slider = () => {
     const zoomInProperties = {
 
         scale: 1.2,
-        duration: 5000,
+        duration: 3000,
         transitionDuration: 500,
         infinite: true,
         prevArrow: (
@@ -46,11 +46,24 @@ const Slider = () => {
             <Zoom {...zoomInProperties}>
 
                 {slides.map((img, index) => (
-                    <div key={index} className="flex justify-center w-full h-[95vh]">
+                    <div key={index} className="flex justify-center w-full h-[95vh] bg-gradient-to-t from-black">
                         <img
-                            className="w-full object-cover shadow-2xl"
+                            className="mix-blend-overlay w-full object-cover shadow-2xl relative"
                             src={img.src}
                         />
+
+                        <div className='absolute top-0 left-0 right-0 bottom-0 bg-black/40 z-[2]' />
+
+                        <div className='absolute top-[50%] left-[50%] -translate-x-2/4 -translate-y-2/4 space-y-6 text-center z-10'>
+                            <h1 className='text-7xl font-semibold text-white  mb-0'>From Starters To Pro... </h1>
+
+                            <div className='w-full text-center'>
+                                <p className='text-[16px]   text-white w-3/4 inline-block
+                            '>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat fuga recusandae maiores id quasi rem impedit. Beatae quis incidunt nemo.</p>
+                            </div>
+
+                            <button className="btn btn-primary">Shop Now</button>
+                        </div>
                     </div>
                 ))}
 
