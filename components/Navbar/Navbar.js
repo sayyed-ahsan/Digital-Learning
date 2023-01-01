@@ -67,12 +67,12 @@ const Navbar = () => {
               </li>
               <li
                 className={`${
-                  router.asPath === "/dashboard"
+                  router.asPath === "/dashboard/home"
                     ? "bg-primary text-white rounded"
                     : ""
                 }`}
               >
-                <Link href="/dashboard">Dashboard</Link>
+                <Link href="/dashboard/home">Dashboard</Link>
               </li>
               {user._id ? (
                 <li>
@@ -150,7 +150,7 @@ const Navbar = () => {
                 <Link href="/contactus">Contact Us</Link>
               </li>
               <li>
-                <Link href="/dashboard">Dashboard</Link>
+                <Link href="/dashboard/home">Dashboard</Link>
               </li>
               <li>
                 <Link href="/login">Login</Link>

@@ -9,25 +9,7 @@ import { AiOutlineQuestion } from "react-icons/ai";
 import { RxCross1 } from "react-icons/rx";
 import { FiCheck } from "react-icons/fi";
 
-import Chart from "react-apexcharts";
-import { useState } from "react";
 const Home = () => {
-  const [state, setState] = useState({
-    options: {
-      chart: {
-        id: "basic-bar"
-      },
-      xaxis: {
-        categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002]
-      }
-    },
-    series: [
-      {
-        name: "series-1",
-        data: [30, 35, 40, 45, 50, 55, 60, 65, 70, 80, 91, 97]
-      }
-    ]
-  })
   return (
     <Dashboard>
       <div className="bg-[#FBF9F6] py-10 px-40  my-10">
@@ -45,11 +27,11 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1  lg:grid-cols-3 gap-8 mt-3">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-3">
 
-          <div className="bg-[#F1416C] text-white  w-full ">
+          <div className="bg-[#F1416C] text-white  w-full md:max-w-xl ">
 
-            <div className="m-4 w-full">
+            <div className="m-4 ">
               <div className="flex items-center">
                 <div className="bg-[#F1537A]  text-4xl p-3 rounded-md">
                   <HiOutlineUsers />
@@ -68,7 +50,7 @@ const Home = () => {
                 <h2> Paid: 980 Students</h2>
               </div>
 
-              <progress className="hidden progress progress-neutral  w-96" value="90" max="100"></progress>
+              <progress className="progress progress-neutral  w-96" value="90" max="100"></progress>
             </div>
 
           </div>
@@ -80,9 +62,9 @@ const Home = () => {
 
 
 
-          <div className="bg-[#FFFFFF] text-white  w-full ">
+          <div className="bg-[#FFFFFF] text-white  w-full md:max-w-xl ">
 
-            <div className="m-4 w-full">
+            <div className="m-4 ">
               <div className="flex items-center">
                 <div className="bg-[#FFF4CC] text-amber-400  text-4xl p-3 rounded-md">
                   <BsPlusSquare />
@@ -101,7 +83,7 @@ const Home = () => {
                 <h2> Paid: 123 students</h2>
               </div>
 
-              <progress className="hidden progress progress-error w-96" value="80" max="100"></progress>
+              <progress className="progress progress-error w-96" value="80" max="100"></progress>
             </div>
 
           </div>
@@ -119,9 +101,9 @@ const Home = () => {
 
 
 
-          <div className="bg-[#FFFFFF] text-white  w-full ">
+          <div className="bg-[#FFFFFF] text-white  w-full md:max-w-xl ">
 
-            <div className="m-4 w-full">
+            <div className="m-4 ">
               <div className="flex items-center">
                 <div className="bg-[#FCD9E2] text-pink-600  text-4xl p-3 rounded-md">
                   <RxLayers />
@@ -140,7 +122,7 @@ const Home = () => {
                 <h2> Paid: 26 courses</h2>
               </div>
 
-              <progress className="hidden progress progress-success w-96" value="60" max="100"></progress>
+              <progress className="progress progress-success w-96" value="60" max="100"></progress>
             </div>
 
           </div>
@@ -149,20 +131,12 @@ const Home = () => {
 
         </div>
 
-        <div className="grid grid-cols-5 gap-5 mt-6 ">
-          <div className=" col-span-5 lg:col-span-3 bg-[#FFFFFF] max-h-fit max-w-full  px-10 py-6">
-            {/* <h2 className="text-xl font-semibold text-black">Earnings</h2>
-            <div className="mixed-chart ">
-              <Chart
-                options={state.options}
-                series={state.series}
-                type="bar"
-                width="620"
-              />
-            </div> */}
+        <div className="grid grid-cols-5 gap-5 mt-6">
+          <div className=" col-span-5 lg:col-span-3 bg-[#FFFFFF] h-96">
+            {/* <h3 className="text-black text-2xl">Graph</h3> */}
           </div>
 
-          <div className=" col-span-5 lg:col-span-2 bg-[#FFFFFF] max-h-fit ">
+          <div className=" col-span-5 lg:col-span-2 bg-[#FFFFFF] h-full ">
             <div className="flex justify-between m-5">
               <h2 className="text-slate-900 text-xl font-bold">Recent Notification</h2>
               <button className="bg-[#20D489] hover:bg-[#16b975] text-white font-medium px-3 py-1 rounded">View all</button>
@@ -176,13 +150,14 @@ const Home = () => {
 
                 <div>
                   <h2 className="text-xl font-semibold text-black">2FA verification failed</h2>
-                  <p className="text-gray-600 font-light">020-11-04 12:00:23</p>
+                  <p className="text-gray-600 font-semibold">020-11-04 12:00:23</p>
                 </div>
               </div>
 
               <div className="text-green-400 font-medium">
                 <h2>3 min ago</h2>
               </div>
+
 
             </div>
             <hr />
@@ -223,6 +198,7 @@ const Home = () => {
               </div>
 
             </div>
+
             <hr />
 
             <div className="flex justify-between items-center m-5">
@@ -242,6 +218,7 @@ const Home = () => {
               </div>
 
             </div>
+
           </div>
 
         </div>
