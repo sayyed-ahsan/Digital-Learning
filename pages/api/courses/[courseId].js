@@ -11,7 +11,7 @@ export default async (req, res) => {
         const client = await clientPromise;
         const db = client.db("partsala");
         const query = { _id: ObjectId(courseId) }
-        const course = await db.collection("allCourses").findOne(query);
+        const course = await db.collection("courses").findOne(query);
         res.json(course);
     } catch (e) {
         console.error(e);
