@@ -68,7 +68,7 @@ const Courses = ({ allCourse }) => {
         </div>
         <div className="grid xl:grid-cols-3 lg:grid-cols-2 lg:col-span-3 md:grid-cols-2 grid-cols-1 gap-5 p-2 rounded-md">
           {allCourse.map((course) => {
-            const { _id, price, subtitle, title, id, thumbnail, details } = course
+            const { _id, price, subtitle, title, id, thumbnail, details, category } = course
             return (
               <div
                 key={_id}
@@ -88,8 +88,8 @@ const Courses = ({ allCourse }) => {
                 </div>
                 <div className="my-4 px-5 py-3">
                   <div className="flex justify-between items-center mx-2">
-                    <div className="text-lg inline p-1 rounded-md text-secondary border border-secondary">
-                      Category Name
+                    <div className="text-lg inline p-1 py-2 rounded-md text-secondary border border-secondary capitalize">
+                      {category}
                     </div>
                     <div className="flex items-center gap-2 font-bold text-amber-500 my-5">
                       <span>{details.rating}</span>

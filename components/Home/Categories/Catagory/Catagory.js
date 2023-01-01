@@ -53,7 +53,7 @@ const Catagory = ({ catagory }) => {
     //     </button>
     //   </div>
     // </div>
-    <div className="shadow-sm">
+    <div className="shadow-sm text-black">
       <div className="bg-neutral">
         <img className="w-full h-48" src={image} alt="" />
 
@@ -63,7 +63,7 @@ const Catagory = ({ catagory }) => {
           Reprehenderit, rem.
         </p>
         <div className="flex justify-between p-2">
-          <button className="btn btn-primary rounded-sm btn-md">
+          <button className="btn btn-secondary text-white btn-md">
             See Details
           </button>
           <p className="text-sm flex items-center">
