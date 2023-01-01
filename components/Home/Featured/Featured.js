@@ -6,7 +6,7 @@ export default function Featured() {
   return (
     <>
       <div>
-        <h2 className="text-4xl text-center font-semibold">Featured</h2>
+        {/* <h2 className="text-4xl text-center font-semibold">Featured</h2> */}
       </div>
       <Swiper
         slidesPerView={1.7}
@@ -25,7 +25,7 @@ export default function Featured() {
 
 function card() {
   return (
-    <div className="flex my-4 p-12 justify-center ">
+    <div className="flex my-4 p-12 justify-center" data-aos="fade-left">
       <div className="flex gap-5 shadow-xl">
         <figure className="w-1/3">
           <img className="rounded" src="https://placeimg.com/400/400/arch" alt="Album" />
