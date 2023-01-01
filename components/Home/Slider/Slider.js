@@ -26,7 +26,7 @@ const Slider = () => {
     const zoomInProperties = {
 
         scale: 1.2,
-        duration: 5000,
+        duration: 2000,
         transitionDuration: 500,
         infinite: true,
         prevArrow: (

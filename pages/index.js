@@ -8,17 +8,21 @@ import Testimonials from "./../components/Home/Testimonials/Testimonials";
 import Cupon from "../components/Home/Cupon/Cupon";
 import Blog from "../components/Home/Blogs/Blog";
 import Newsletter from "../components/Home/Newsletter/Newsletter";
+import Trust from "../components/Home/Trust/Trust";
+import OurCulture from "../components/Home/OurCulture/OurCulture";
 export default function Home({ catagories }) {
   return (
     <>
       <Slider />
       <Cupon />
-      <Categories catagories={catagories} />
       <Featured />
+      <OurCulture></OurCulture>
+      <Categories catagories={catagories} />
+      <Trust />
+      <Blog />
       <Instructor />
       <Countdown />
       <Testimonials />
-      <Blog />
       <Brand />
       <Newsletter />
     </>

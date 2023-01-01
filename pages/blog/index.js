@@ -1,10 +1,47 @@
+import Link from 'next/link';
 import React from 'react';
+import { FaFilter, FaFolder } from "react-icons/fa";
+import { ToastContainer, toast } from 'react-toastify';
+import useAuth from "../../hook/useAuth";
 
-const index = () => {
+const index = ({ blogs }) => {
+    console.log(blogs[0]._id);
+    const { user, loading, setLoading, loggedToken, setLoggedToken } = useAuth();
+
+
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const name = e.target.name.value;
+        const email = e.target.email.value;
+        const password = e.target.password.value;
+        fetch("https://digittal-learning-node-auth.vercel.app/api/register", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                name,
+                email,
+                role: "student",
+                password,
+            }),
+        })
+            .then((res) => res.json())
+            .then((data) => {
+                // console.log(data);
+                toast("Signup Successfull Please Login");
+                // router.push("/login");
+                e.target.reset();
+            }
+            );
+
+    };
+
     return (
 
         <section>
-            {/*  */}
+            {/* banner */}
             <section>
                 <div className="relative">
                     <img
@@ -54,39 +91,23 @@ const index = () => {
                                         <h3 className="mb-4 text-xl font-semibold sm:text-center sm:mb-6 sm:text-2xl">
                                             Sign up for updates
                                         </h3>
-                                        <form>
+                                        <form onSubmit={handleSubmit}>
                                             <div className="mb-1 sm:mb-2">
                                                 <label
                                                     htmlFor="firstName"
                                                     className="inline-block mb-1 font-medium"
                                                 >
-                                                    First name
+                                                    Name
                                                 </label>
                                                 <input
                                                     placeholder="John"
                                                     required
                                                     type="text"
                                                     className="flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-white border border-gray-300 rounded shadow-sm appearance-none focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline"
-                                                    id="firstName"
-                                                    name="firstName"
+                                                    name="name"
                                                 />
                                             </div>
-                                            <div className="mb-1 sm:mb-2">
-                                                <label
-                                                    htmlFor="lastName"
-                                                    className="inline-block mb-1 font-medium"
-                                                >
-                                                    Last name
-                                                </label>
-                                                <input
-                                                    placeholder="Doe"
-                                                    required
-                                                    type="text"
-                                                    className="flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-white border border-gray-300 rounded shadow-sm appearance-none focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline"
-                                                    id="lastName"
-                                                    name="lastName"
-                                                />
-                                            </div>
+
                                             <div className="mb-1 sm:mb-2">
                                                 <label
                                                     htmlFor="email"
@@ -103,6 +124,24 @@ const index = () => {
                                                     name="email"
                                                 />
                                             </div>
+
+                                            <div className="mb-1 sm:mb-2">
+                                                <label
+                                                    htmlFor="passward"
+                                                    className="inline-block mb-1 font-medium"
+                                                >
+                                                    Passward
+                                                </label>
+                                                <input
+                                                    placeholder="*******"
+                                                    required
+                                                    type="password"
+                                                    className="flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-white border border-gray-300 rounded shadow-sm appearance-none focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline"
+
+                                                    name="password"
+                                                />
+                                            </div>
+
                                             <div className="mt-4 mb-2 sm:mb-4">
                                                 <button className="btn w-full btn-outline btn-info">Sign up</button>
                                             </div>
@@ -110,6 +149,7 @@ const index = () => {
                                                 We respect your privacy. Unsubscribe at any time.
                                             </p>
                                         </form>
+                                        <ToastContainer />
                                     </div>
                                 </div>
                             </div>
@@ -117,131 +157,7 @@ const index = () => {
                     </div>
                 </div>
             </section>
-            {/* Blogs card */}
-            <section>
-                <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
-                    <div className="grid gap-8 lg:grid-cols-3 sm:max-w-sm sm:mx-auto lg:max-w-full">
-                        <div className="overflow-hidden transition-shadow duration-300 bg-white rounded shadow-sm">
-                            <img
-                                src="https://images.pexels.com/photos/2408666/pexels-photo-2408666.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;w=500"
-                                className="object-cover w-full h-64"
-                                alt=""
-                            />
-                            <div className="p-5 border border-t-0">
-                                <p className="mb-3 text-xs font-semibold tracking-wide uppercase">
-                                    <a
-                                        href="/"
-                                        className="transition-colors duration-200 text-blue-gray-900 hover:text-deep-purple-accent-700"
-                                        aria-label="Category"
-                                        title="traveling"
-                                    >
-                                        traveling
-                                    </a>
-                                    <span className="text-gray-600">— 28 Dec 2020</span>
-                                </p>
-                                <a
-                                    href="/"
-                                    aria-label="Category"
-                                    title="Visit the East"
-                                    className="inline-block mb-3 text-2xl font-bold leading-5 transition-colors duration-200 hover:text-deep-purple-accent-700"
-                                >
-                                    Visit the East
-                                </a>
-                                <p className="mb-2 text-gray-700">
-                                    Sed ut perspiciatis unde omnis iste natus error sit sed quia
-                                    consequuntur magni voluptatem doloremque.
-                                </p>
-                                <a
-                                    href="/"
-                                    aria-label=""
-                                    className="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
-                                >
-                                    Learn more
-                                </a>
-                            </div>
-                        </div>
-                        <div className="overflow-hidden transition-shadow duration-300 bg-white rounded shadow-sm">
-                            <img
-                                src="https://images.pexels.com/photos/447592/pexels-photo-447592.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
-                                className="object-cover w-full h-64"
-                                alt=""
-                            />
-                            <div className="p-5 border border-t-0">
-                                <p className="mb-3 text-xs font-semibold tracking-wide uppercase">
-                                    <a
-                                        href="/"
-                                        className="transition-colors duration-200 text-blue-gray-900 hover:text-deep-purple-accent-700"
-                                        aria-label="Category"
-                                        title="traveling"
-                                    >
-                                        traveling
-                                    </a>
-                                    <span className="text-gray-600">— 28 Dec 2020</span>
-                                </p>
-                                <a
-                                    href="/"
-                                    aria-label="Category"
-                                    title="Simple is better"
-                                    className="inline-block mb-3 text-2xl font-bold leading-5 transition-colors duration-200 hover:text-deep-purple-accent-700"
-                                >
-                                    Simple is better
-                                </a>
-                                <p className="mb-2 text-gray-700">
-                                    Sed ut perspiciatis unde omnis iste natus error sit sed quia
-                                    consequuntur magni voluptatem doloremque.
-                                </p>
-                                <a
-                                    href="/"
-                                    aria-label=""
-                                    className="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
-                                >
-                                    Learn more
-                                </a>
-                            </div>
-                        </div>
-                        <div className="overflow-hidden transition-shadow duration-300 bg-white rounded shadow-sm">
-                            <img
-                                src="https://images.pexels.com/photos/139829/pexels-photo-139829.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
-                                className="object-cover w-full h-64"
-                                alt=""
-                            />
-                            <div className="p-5 border border-t-0">
-                                <p className="mb-3 text-xs font-semibold tracking-wide uppercase">
-                                    <a
-                                        href="/"
-                                        className="transition-colors duration-200 text-blue-gray-900 hover:text-deep-purple-accent-700"
-                                        aria-label="Category"
-                                        title="traveling"
-                                    >
-                                        traveling
-                                    </a>
-                                    <span className="text-gray-600">— 28 Dec 2020</span>
-                                </p>
-                                <a
-                                    href="/"
-                                    aria-label="Category"
-                                    title="Film It!"
-                                    className="inline-block mb-3 text-2xl font-bold leading-5 transition-colors duration-200 hover:text-deep-purple-accent-700"
-                                >
-                                    Film It!
-                                </a>
-                                <p className="mb-2 text-gray-700">
-                                    Sed ut perspiciatis unde omnis iste natus error sit sed quia
-                                    consequuntur magni voluptatem doloremque.
-                                </p>
-                                <a
-                                    href="/"
-                                    aria-label=""
-                                    className="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
-                                >
-                                    Learn more
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            {/*  */}
+            {/* categories */}
             <section>
                 <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
                     <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
@@ -388,32 +304,103 @@ const index = () => {
                             <h6 className="mb-2 font-semibold leading-5">News</h6>
                         </div>
                     </div>
-                    <div className="text-center">
-                        <a
-                            href="/"
-                            className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-                        >
-                            Learn more
-                            <span className="ml-1 -mr-2">
-                                <svg
-                                    className="w-8 h-8 text-white"
-                                    stroke="currentColor"
-                                    viewBox="0 0 52 52"
-                                >
-                                    <polygon
-                                        strokeWidth="3"
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        fill="none"
-                                        points="29 13 14 29 25 29 23 39 38 23 27 23"
-                                    />
-                                </svg>
-                            </span>
-                        </a>
+
+                </div>
+            </section>
+            {/* bread */}
+            <section>
+                {/* Course heading */}
+                <div className="hero" style={{ backgroundImage: `url("page-title.webp")` }}>
+                    <div className="hero-overlay bg-slate-700 bg-opacity-70"></div>
+                    <div className="hero-content py-10 text-left text-neutral-content">
+                        <div className="max-w-md text-white">
+                            <div className="text-sm breadcrumbs">
+                                <h1 className='text-center text-5xl font-bold'>Get Your Blog</h1>
+                                <h1 className='text-center py-2'>Find out about events and other news </h1>
+                            </div>
+                            <div className="form-control">
+                                <div className="input-group">
+                                    <input type="text" placeholder="Search…" className="input input-bordered" />
+                                    <button className="btn btn-square">
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
-            {/*  */}
+            {/* Blogs card */}
+            <section>
+                <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+                    <div className="grid gap-8 lg:grid-cols-3 sm:max-w-sm sm:mx-auto lg:max-w-full">
+
+                        {
+                            blogs.length > 0 &&
+                            blogs.map(blog => {
+                                return <div className="overflow-hidden transition-shadow duration-300 bg-white rounded shadow-sm">
+                                    <img
+                                        src="https://images.pexels.com/photos/447592/pexels-photo-447592.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
+                                        className="object-cover w-full h-64"
+                                        alt=""
+                                    />
+                                    <div className="p-5 border border-t-0">
+                                        <p className="mb-3 text-xs font-semibold tracking-wide uppercase">
+                                            <a
+                                                href=""
+                                                className="transition-colors duration-200 text-blue-gray-900 hover:text-deep-purple-accent-700"
+                                                aria-label="Category"
+                                                title="traveling"
+                                            >
+                                                traveling
+                                            </a>
+                                            <span className="text-gray-600">— 28 Dec 2020</span>
+                                        </p>
+                                        <a
+                                            href="/"
+                                            aria-label="Category"
+                                            title="Simple is better"
+                                            className="inline-block mb-3 text-2xl font-bold leading-5 transition-colors duration-200 hover:text-deep-purple-accent-700"
+                                        >
+                                            Simple is better
+                                        </a>
+                                        <p className="mb-2 text-gray-700">
+                                            Sed ut perspiciatis unde omnis iste natus error sit sed quia
+                                            consequuntur magni voluptatem doloremque.
+                                        </p>
+
+                                        <Link className='text-cyan-500 font-semibold' href={`blog/${blog._id}`}>
+                                            Learn more
+                                        </Link>
+                                    </div>
+                                </div>
+                            })
+                        }
+
+                    </div>
+                </div>
+            </section>
+            {/* pagination */}
+            <section>
+                <div className="flex justify-center space-x-1 dark:text-gray-100 mb-10">
+                    <button title="previous" type="button" className="inline-flex items-center justify-center w-8 h-8 py-0 border rounded-md shadow-md dark:bg-gray-900 dark:border-gray-800">
+                        <svg viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" className="w-4">
+                            <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                    </button>
+                    <button type="button" title="Page 1" className="inline-flex items-center justify-center w-8 h-8 text-sm font-semibold border rounded shadow-md dark:bg-gray-900 dark:text-violet-400 dark:border-violet-400">1</button>
+                    <button type="button" className="inline-flex items-center justify-center w-8 h-8 text-sm border rounded shadow-md dark:bg-gray-900 dark:border-gray-800" title="Page 2">2</button>
+                    <button type="button" className="inline-flex items-center justify-center w-8 h-8 text-sm border rounded shadow-md dark:bg-gray-900 dark:border-gray-800" title="Page 3">3</button>
+                    <button type="button" className="inline-flex items-center justify-center w-8 h-8 text-sm border rounded shadow-md dark:bg-gray-900 dark:border-gray-800" title="Page 4">4</button>
+                    <button title="next" type="button" className="inline-flex items-center justify-center w-8 h-8 py-0 border rounded-md shadow-md dark:bg-gray-900 dark:border-gray-800">
+                        <svg viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" className="w-4">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </button>
+                </div>
+
+            </section>
+            {/* -------- */}
             <section>
                 <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
                     <div className="grid gap-8 row-gap-5 md:grid-cols-2">
@@ -654,5 +641,14 @@ const index = () => {
 
     );
 };
+
+export async function getServerSideProps() {
+    // Fetch data from external API
+    const res = await fetch(`http://localhost:3000/api/blogs/blogs`)
+    const blogs = await res.json()
+
+    // Pass data to the page via props
+    return { props: { blogs } }
+}
 
 export default index;

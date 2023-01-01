@@ -5,29 +5,33 @@ import "swiper/css";
 export default function Featured() {
     return (
         <>
-            <div className='my-10'>
-                <h2 className="text-4xl text-center text-black font-bold">Featured</h2>
+            <div className='my-10 px-10'>
+                {/* <h2 className="text-4xl text-center text-black font-bold">Featured</h2> */}
             </div>
+
             <Swiper
-                slidesPerView={1.5}
+                slidesPerView={1.7}
                 loop={true}
                 autoplay={{
                     delay: 2000,
+                    disableOnInteraction: false,
                 }}
             >
                 <SwiperSlide>{card()}</SwiperSlide>
                 <SwiperSlide>{card()}</SwiperSlide>
                 <SwiperSlide>{card()}</SwiperSlide>
             </Swiper>
+
         </>
     );
 }
 
 function card() {
     return (
+
         <div className="flex my-4 p-12 justify-center ">
             <div className="card lg:card-side shadow-xl">
-                <figure>
+                <figure className="w-1/3">
                     <img src="https://placeimg.com/400/400/arch" alt="Album" />
                 </figure>
                 <div className="card-body text-black">
@@ -75,14 +79,22 @@ function card() {
                     {/*  */}
 
                     <div className="flex">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Thsis is ipsum dolor sit amet, consectetur adipisicing elit.
+                        <br />
+                        our consectetur adipisicing elit.is ipsum dolor sit amet,
+                        <br />
+                        Lorem ipsum dolor sit amet consectetur...
                     </div>
 
-                    <div className="card-actions justify-start">
-                        <button className="btn btn-primary">Listen</button>
+                    <div>
+                        <button className="btn glass btn-outline btn-success">Glass button</button>
                     </div>
+
                 </div>
             </div>
         </div>
     );
 }
+
+
+
