@@ -1,3 +1,4 @@
+import Link from "next/link";
 import {
   BsFillGrid3X3GapFill,
   BsFillStarFill,
@@ -112,9 +113,12 @@ const Courses = ({ allCourse }) => {
                     temporibus voluptatibus laudantium aliquid tempora nemo
                     repellat minus cupiditate explicabo ipsum.
                   </p>
-                  <button className="btn btn-secondary rounded-md btn-md text-white w-full">
+                  <Link
+                    href={`/course/${course._id}`}
+                    className="btn btn-secondary rounded-md btn-md text-white w-full"
+                  >
                     Enroll Now
-                  </button>
+                  </Link>
                 </div>
               </div>
             );
