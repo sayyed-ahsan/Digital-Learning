@@ -25,8 +25,8 @@ export default function Featured() {
 
 function card() {
     return (
-        <div className="flex my-4 p-12 justify-center ">
-            <div className="card lg:card-side shadow-xl">
+        <div className="flex my-4 p-12 justify-center " >
+            <div className="card lg:card-side shadow-xl" data-aos="zoom-in-down">
                 <figure>
                     <img src="https://placeimg.com/400/400/arch" alt="Album" />
                 </figure>

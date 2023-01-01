@@ -7,7 +7,7 @@ const Catagories = ({ catagories }) => {
         Our Featured Courses Updated
       </h1>{" "}
       <hr />
-      <div className="max-w-fit mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6 p-8">
+      <div className="max-w-fit mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6 p-8 " data-aos="zoom-in">
         {catagories.map((catagory) => (
           <Catagory catagory={catagory} key={catagory._id}></Catagory>
         ))}

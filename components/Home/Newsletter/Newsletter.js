@@ -8,7 +8,8 @@ const Newsletter = () => {
       backgroundImage: `url(${newslatter.src})`,
       
     }}
-      className="  bg-center bg-cover bg-gradient-to-tr from-gray-800 to-black-500 h-[40vh] relative flex flex-col space-y-8 md:space-y-10 lg:space-y-12 justify-center items-center">
+      className="  bg-center bg-cover bg-gradient-to-tr from-gray-800 to-black-500 h-[40vh] relative flex flex-col space-y-8 md:space-y-10 lg:space-y-12 justify-center items-center" data-aos="fade-up"
+      data-aos-anchor-placement="top-bottom">
 
       <div className='absolute top-0 left-0 right-0 bottom-0 bg-black/20 z-[2]' />
 
