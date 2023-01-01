@@ -13,7 +13,7 @@ const Login = ({ handleLogin }) => {
           className="space-y-6 ng-untouched ng-pristine ng-valid w-[80%]"
         >
           <div className="space-y-1 text-sm">
-            <label htmlFor="email" className="block text-gray-400">
+            <label htmlhtmlFor="email" className="block text-gray-400">
               Email
             </label>
             <input
@@ -25,7 +25,7 @@ const Login = ({ handleLogin }) => {
             />
           </div>
           <div className="space-y-1 text-sm">
-            <label htmlFor="password" className="block text-gray-400">
+            <label htmlhtmlFor="password" className="block text-gray-400">
               Password
             </label>
             <input
