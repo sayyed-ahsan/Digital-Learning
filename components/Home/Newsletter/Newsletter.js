@@ -1,36 +1,39 @@
-import Image from 'next/image';
-import newslatter from '../../../public/newslatter.jpg'
-
 
 const Newsletter = () => {
   return (
-    <div style={{
-      backgroundImage: `url(${ newslatter.src })`,
+    <section class="bg-secondary text-white">
+      <div class="p-8 md:p-12 lg:px-16 lg:py-24">
+        <div class="mx-auto max-w-lg text-center">
+          <h2 class="text-2xl font-bold md:text-3xl">Newsletter Sign Up</h2>
+          <p class="hidden text-base sm:mt-4 sm:block">
+            Want to keep up to date with all our latest news and information? Enter your email below to be added to our mailing list.</p>
+        </div>
 
-    }}
-      className="  bg-center bg-cover bg-gradient-to-tr from-gray-800 to-black-500 h-[40vh] relative flex flex-col space-y-8 md:space-y-10 lg:space-y-12 justify-center items-center">
+        <div class="mx-auto mt-8 max-w-xl">
+          <form action="#" class="sm:flex sm:gap-4">
+            <div class="sm:flex-1">
+              <label for="email" class="sr-only">Email</label>
+              <input type="email" placeholder="Email address" class="w-full rounded-md border-gray-200 bg-white p-3 text-gray-700 shadow-sm transition focus:border-white focus:outline-none focus:ring focus:ring-primary" />
+            </div>
 
-      <div className='absolute top-0 left-0 right-0 bottom-0 bg-black/20 z-[2]' />
-
-      {/* <Image src={newslatter} width={420} height={200} className='opacity-80 w-full h-full object-cover absolute mix-blend-overlay z-2'></Image> */}
-
-      <h3 className="text-4xl font-bold text-white z-40" >
-        Subscribe Our Newsletter
-      </h3>
-
-      <form className=" bg-white w-4/5  md:w-1/2 shadow-lg  text-2xl rounded-md   h-11 z-40">
-        <input
-          type="email"
-          placeholder="Enter Your Email"
-          className=" bg-white w-full outline-none focus:outline p-3  text-black text-base rounded-md"
-        />
-      </form>
-
-      <button className="bg-secondary text-white text-lg mb-5 py-2 rounded z-40 font-semibold uppercase">
-        Subscribe Now
-      </button>
-
-    </div>
+            <button type="submit" class="group mt-4 flex w-full items-center justify-center rounded-md bg-rose-600 px-5 py-3 text-white transition focus:outline-none  sm:mt-0 sm:w-auto"
+            >
+              <span class="text-sm font-medium"> Sign Up</span>
+              <svg
+                class="ml-3 h-5 w-5"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"
+                />
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
   );
 };
 
