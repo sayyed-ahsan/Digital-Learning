@@ -57,14 +57,12 @@ const index = ({ blogs }) => {
             <div className="relative px-4 py-16 mx-auto overflow-hidden sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
               <div className="flex flex-col items-center justify-between xl:flex-row">
                 <div className="w-full max-w-xl mb-12 xl:mb-0 xl:pr-16 xl:w-7/12">
-                  <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-white sm:text-4xl sm:leading-none">
-                    The quick, brown fox <br className="hidden md:block" />
-                    jumps over a lazy dog
+                  <h2 className="max-w-lg mb-6 font-sans text-4xl font-bold tracking-tight text-white sm:text-4xl sm:leading-none">
+                    See our thoughts, <br className="hidden md:block" />
+                    stories and ideas.
                   </h2>
-                  <p className="max-w-xl mb-4 text-base text-gray-200 md:text-lg">
-                    Sed ut perspiciatis unde omnis iste natus error sit
-                    voluptatem accusantium doloremque laudan, totam rem aperiam,
-                    eaque ipsa quae.
+                  <p className=" max-w-xl mb-4 text-base text-gray-200 md:text-lg">
+                    The trick to getting more done is to have the freedom to roam around.
                   </p>
                   <a
                     href="/"
@@ -81,10 +79,10 @@ const index = ({ blogs }) => {
                     </svg>
                   </a>
                 </div>
-                <div className="w-full max-w-xl xl:px-8 xl:w-5/12">
+                <div data-aos="flip-right" className="w-full max-w-xl xl:px-8 xl:w-5/12">
                   <div className="bg-white rounded shadow-2xl p-7 sm:p-10">
                     <h3 className="mb-4 text-xl font-semibold sm:text-center sm:mb-6 sm:text-2xl">
-                      Sign up for updates
+                      Start Bloging
                     </h3>
                     <form onSubmit={handleSubmit}>
                       <div className="mb-1 sm:mb-2">
@@ -190,7 +188,7 @@ const index = ({ blogs }) => {
               accusantium doloremque rem aperiam, eaque ipsa quae.
             </p>
           </div>
-          <div className="grid grid-cols-2 gap-5 row-gap-6 mb-10 sm:grid-cols-3 lg:grid-cols-6">
+          <div data-aos="zoom-in-down" className="grid grid-cols-2 gap-5 row-gap-6 mb-10 sm:grid-cols-3 lg:grid-cols-6">
             <div className="text-center">
               <div className="flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-full bg-indigo-50 sm:w-24 sm:h-24">
                 <svg
@@ -306,6 +304,7 @@ const index = ({ blogs }) => {
       <section>
         {/* Course heading */}
         <div
+          data-aos="zoom-out-down"
           className="hero"
           style={{ backgroundImage: `url("page-title.webp")` }}
         >
@@ -356,7 +355,7 @@ const index = ({ blogs }) => {
             {blogs.length > 0 &&
               blogs.map((blog) => {
                 return (
-                  <div className="overflow-hidden transition-shadow duration-300 bg-white rounded shadow-sm">
+                  <div data-aos="flip-right" className="overflow-hidden transition-shadow duration-300 bg-white rounded shadow-sm">
                     <img
                       src="https://images.pexels.com/photos/447592/pexels-photo-447592.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
                       className="object-cover w-full h-64"
