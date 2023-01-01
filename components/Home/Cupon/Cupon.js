@@ -1,6 +1,6 @@
 const Cupon = () => {
   return (
-    <div>
+    <div className='bg-secondary'>
       <div className="p-6 py-12">
         <div className="container mx-auto">
           <div className="flex flex-col lg:flex-row items-center justify-between">

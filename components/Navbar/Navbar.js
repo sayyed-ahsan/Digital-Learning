@@ -1,9 +1,19 @@
 import Link from "next/link";
+import useAuth from "../../hook/useAuth";
 
 const Navbar = () => {
+
+  const { user, setLoggedToken, setUser } = useAuth();
+
+  const handleLogout = () => {
+    localStorage.removeItem("dl-token");
+    setLoggedToken({});
+    setUser({});
+  };
+
   return (
     <header>
-      <div className="navbar font-semibold p-0 w-11/12 mx-auto text-black">
+      <div className="navbar bg-transparent font-semibold p-0 w-11/12 mx-auto text-black">
         <div className="navbar-start">
           <h3 className="text-2xl font-extrabold uppercase">
             <Link href="/">PathShala</Link>
@@ -19,17 +29,38 @@ const Navbar = () => {
                 <Link href="/courses">Courses</Link>
               </li>
               <li>
+                <Link href="/blog">Blog</Link>
+              </li>
+              <li>
                 <Link href="/about">About Us</Link>
               </li>
               <li>
                 <Link href="/contactus">Contact Us</Link>
               </li>
               <li>
-                <Link href="/dashboard/home">Dashboard</Link>
+                <Link href="/dashboard">Dashboard</Link>
               </li>
-              <li>
-                <Link href="/login">Login</Link>
-              </li>
+              {
+                user._id ?
+                  <li>
+                    <div className="dropdown dropdown-end ">
+                      <label tabIndex={0} className="btn btn-ghost btn-circle avatar online placeholder">
+                        <div className="bg-neutral-focus text-neutral-content rounded-full w-10">
+                          <span className="text-xl">{user?.name.slice(0, 2)}</span>
+                        </div>
+                      </label>
+                      <ul tabIndex={0} className="mt-56 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-max">
+                        <li><div className="justify-between">{user?.name}</div></li>
+                        <li><button className="justify-between">Profile</button></li>
+                        <li><button onClick={handleLogout}>Logout</button></li>
+                      </ul>
+                    </div>
+                  </li>
+                  :
+                  <li>
+                    <Link href="/login">Login</Link>
+                  </li>
+              }
             </ul>
           </div>
           <div className="dropdown dropdown-bottom dropdown-end">
@@ -57,12 +88,14 @@ const Navbar = () => {
                 <Link href="/courses">Courses</Link>
               </li>
               <li>
+                <Link href="/blog">Blogs</Link>
+              </li>
+              <li>
                 <Link href="/about">About Us</Link>
               </li>
               <li>
                 <Link href="/contactus">Contact Us</Link>
               </li>
-
               <li>
                 <Link href="/dashboard">Dashboard</Link>
               </li>
