@@ -1,10 +1,11 @@
 import Link from "next/link";
 import useAuth from "../../hook/useAuth";
+import { useRouter } from 'next/router'
 
 const Navbar = () => {
 
   const { user, setLoggedToken, setUser } = useAuth();
-
+  const router = useRouter()
   const handleLogout = () => {
     localStorage.removeItem("dl-token");
     setLoggedToken({});
@@ -17,27 +18,28 @@ const Navbar = () => {
         <div className="navbar-start">
           <h3 className="text-2xl font-extrabold uppercase">
             <Link href="/">PathShala</Link>
+
           </h3>
         </div>
         <div className="navbar-end">
           <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal p-0 gap-3">
-              <li>
+              <li className={`${router.asPath === '/' ? 'bg-primary text-white rounded' : ''}`}>
                 <Link href="/">Home</Link>
               </li>
-              <li>
+              <li className={`${router.asPath === '/courses' ? 'bg-primary text-white rounded' : ''}`}>
                 <Link href="/courses">Courses</Link>
-              </li>
-              <li>
+              </li >
+              <li className={`${router.asPath === '/blog' ? 'bg-primary text-white rounded' : ''}`}>
                 <Link href="/blog">Blog</Link>
               </li>
-              <li>
+              <li className={`${router.asPath === '/about' ? 'bg-primary text-white rounded' : ''}`}>
                 <Link href="/about">About Us</Link>
               </li>
-              <li>
+              <li className={`${router.asPath === '/contactus' ? 'bg-primary text-white rounded' : ''}`}>
                 <Link href="/contactus">Contact Us</Link>
               </li>
-              <li>
+              <li className={`${router.asPath === '/dashboard' ? 'bg-primary text-white rounded' : ''}`}>
                 <Link href="/dashboard">Dashboard</Link>
               </li>
               {
@@ -57,7 +59,7 @@ const Navbar = () => {
                     </div>
                   </li>
                   :
-                  <li>
+                  <li className={`${router.asPath === '/login' ? 'bg-primary text-white rounded' : ''}`}>
                     <Link href="/login">Login</Link>
                   </li>
               }

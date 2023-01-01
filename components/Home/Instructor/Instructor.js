@@ -3,44 +3,118 @@ import { BsFillCheckCircleFill } from "react-icons/bs";
 
 const Instructor = () => {
     return (
-        <div className='lg:w-1/2 mx-auto'>
-            <div className='text-black text-center my-10'>
-                <h2 className="text-center text-4xl font-semibold">Meet Our Teachers</h2>
-                <p className="mt-5 text-xl font-normal">
-                    Morbi ligula massa, commodo at nisl tincidunt, dignissim feugiat metus. Suspendisse placerat lacinia porttitor. Vivamus
-                </p>
-            </div>
-            <div className="card rounded-none lg:card-side text-black shadow-xl">
-                <figure><img className='max-h-96' src="teacher.jpg" alt="Album" /></figure>
-                <div className="flex flex-col justify-center items-end m-10">
-                    <div className='flex flex-col gap-2'>
-                        <li className='list-none flex items-center gap-5'>
-                            <BsFillCheckCircleFill className='text-2xl text-secondary' />
-                            <span>Rerum reiciendis beatae tenetur excepturi</span>
-                        </li>
-                        <li className='list-none flex items-center gap-2'>
-                            <BsFillCheckCircleFill className='text-2xl text-secondary' />
-                            <span>Rerum reiciendis beatae tenetur excepturi</span>
-                        </li>
-                        <li className='list-none flex items-center gap-2'>
-                            <BsFillCheckCircleFill className='text-2xl text-secondary' />
-                            <span>Rerum reiciendis beatae tenetur excepturi</span>
-                        </li>
-                        <li className='list-none flex items-center gap-2'>
-                            <BsFillCheckCircleFill className='text-2xl text-secondary' />
-                            <span>Rerum reiciendis beatae tenetur excepturi</span>
-                        </li>
-                        <li className='list-none flex items-center gap-2'>
-                            <BsFillCheckCircleFill className='text-2xl text-secondary' />
-                            <span>Rerum reiciendis beatae tenetur excepturi</span>
-                        </li>
+        <section>
+            <section className="dark:bg-gray-800 dark:text-gray-100">
+                <div className="container max-w-xl p-6 py-12 mx-auto space-y-24 lg:px-8 lg:max-w-7xl">
+                    <div>
+                        <h2 className="text-3xl font-bold tracking-tight text-center sm:text-5xl dark:text-gray-50">About 0ur Instractors </h2>
+                        <p className="max-w-3xl mx-auto mt-4 text-xl text-center dark:text-gray-400">Quando cetero his ne, eum admodum sapientem ut.</p>
                     </div>
-                    <div className="card-actions justify-end mt-10">
-                        <button className="btn btn-secondary text-white">Read More</button>
+                    <div className="grid lg:gap-8 lg:grid-cols-2 lg:items-center">
+                        <div>
+                            <h3 className="text-2xl font-bold tracking-tight sm:text-3xl dark:text-gray-50">We belive quality.</h3>
+                            <p className="mt-3 text-lg dark:text-gray-400">Ne dicta praesent ocurreret has, diam theophrastus at pro. Eos etiam regione ut, persius eripuit quo id. Sit te euismod tacimates.</p>
+                            <div className="mt-12 space-y-12">
+                                <div className="flex">
+                                    <div className="flex-shrink-0">
+                                        <div className="flex items-center justify-center w-12 h-12 rounded-md dark:bg-violet-400 dark:text-gray-900">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-7 h-7">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div className="ml-4">
+                                        <h4 className="text-lg font-medium leading-6 dark:text-gray-50">Per ei quaeque sensibus</h4>
+                                        <p className="mt-2 dark:text-gray-400">Ex usu illum iudico molestie. Pro ne agam facete mediocritatem, ridens labore facete mea ei. Pro id apeirian dignissim.</p>
+                                    </div>
+                                </div>
+                                <div className="flex">
+                                    <div className="flex-shrink-0">
+                                        <div className="flex items-center justify-center w-12 h-12 rounded-md dark:bg-violet-400 dark:text-gray-900">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-7 h-7">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div className="ml-4">
+                                        <h4 className="text-lg font-medium leading-6 dark:text-gray-50">Cu imperdiet posidonium sed</h4>
+                                        <p className="mt-2 dark:text-gray-400">Amet utinam aliquando ut mea, malis admodum ocurreret nec et, elit tibique cu nec. Nec ex maluisset inciderint, ex quis.</p>
+                                    </div>
+                                </div>
+                                <div className="flex">
+                                    <div className="flex-shrink-0">
+                                        <div className="flex items-center justify-center w-12 h-12 rounded-md dark:bg-violet-400 dark:text-gray-900">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-7 h-7">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div className="ml-4">
+                                        <h4 className="text-lg font-medium leading-6 dark:text-gray-50">Nulla omittam sadipscing mel ne</h4>
+                                        <p className="mt-2 dark:text-gray-400">At sed possim oporteat probatus, justo graece ne nec, minim commodo legimus ut vix. Ut eos iudico quando soleat, nam modus.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div aria-hidden="true" className="mt-10 lg:mt-0">
+                            <img src="https://snipstock.com/assets/cdn/png/25fd279b9166b98602efc9f92e2975ef.png" alt="" className="mx-auto rounded-lg shadow-lg dark:bg-gray-500" />
+                        </div>
+                    </div>
+                    <div>
+                        <div className="grid lg:gap-8 lg:grid-cols-2 lg:items-center">
+                            <div className="lg:col-start-2">
+                                <h3 className="text-2xl font-bold tracking-tight sm:text-3xl dark:text-gray-50">Eam nibh gloriatur ex</h3>
+                                <p className="mt-3 text-lg dark:text-gray-400">Per odio fabellas consulatu cu. Utroque detracto mel ea, quo te latine theophrastus. Ea his tale nibh dissentias, mei exerci tamquam euripidis cu.</p>
+                                <div className="mt-12 space-y-12">
+                                    <div className="flex">
+                                        <div className="flex-shrink-0">
+                                            <div className="flex items-center justify-center w-12 h-12 rounded-md dark:bg-violet-400 dark:text-gray-900">
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-7 h-7">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div className="ml-4">
+                                            <h4 className="text-lg font-medium leading-6 dark:text-gray-50">Cibo augue offendit has ad</h4>
+                                            <p className="mt-2 dark:text-gray-400">An per velit appellantur, ut utinam minimum nominavi sit, odio nostro habemus ne nec. Ne sonet regione contentiones est.</p>
+                                        </div>
+                                    </div>
+                                    <div className="flex">
+                                        <div className="flex-shrink-0">
+                                            <div className="flex items-center justify-center w-12 h-12 rounded-md dark:bg-violet-400 dark:text-gray-900">
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-7 h-7">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div className="ml-4">
+                                            <h4 className="text-lg font-medium leading-6 dark:text-gray-50">At eum ferri luptatum lobortis</h4>
+                                            <p className="mt-2 dark:text-gray-400">Te per quidam maiorum ocurreret, etiam delicatissimi usu ad. Ne has quod periculis. Te sit primis iisque efficiantur.</p>
+                                        </div>
+                                    </div>
+                                    <div className="flex">
+                                        <div className="flex-shrink-0">
+                                            <div className="flex items-center justify-center w-12 h-12 rounded-md dark:bg-violet-400 dark:text-gray-900">
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-7 h-7">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div className="ml-4">
+                                            <h4 className="text-lg font-medium leading-6 dark:text-gray-50">Dicunt verterem evertitur eu sea</h4>
+                                            <p className="mt-2 dark:text-gray-400">Audire principes rationibus eam an, autem nominavi luptatum per te. Sumo fabulas vim eu, sonet saperet eleifend ut vix.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="mt-10 lg:mt-0 lg:col-start-1 lg:row-start-1">
+                                <img src="https://snipstock.com/assets/cdn/png/69d72855ca1b535225621702ef7533c8.png" alt="" className="mx-auto rounded-lg shadow-lg dark:bg-gray-500" />
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
+            </section>
+        </section>
     );
 };
 
