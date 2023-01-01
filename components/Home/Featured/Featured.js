@@ -6,7 +6,7 @@ export default function Featured() {
   return (
     <>
       <div>
-        <h2 className="text-4xl text-center font-semibold">Featured</h2>
+        {/* <h2 className="text-4xl text-center font-semibold">Featured</h2> */}
       </div>
       <Swiper
         slidesPerView={1.7}
