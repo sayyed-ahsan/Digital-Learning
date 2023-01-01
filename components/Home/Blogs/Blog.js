@@ -1,13 +1,16 @@
 const Blog = () => {
   return (
     <div>
-      <div className="w-9/12 mx-auto">
+      <div className="w-9/12 mx-auto" data-aos="fade-right"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine">
+
         <h1 className="  text-gray-900 font-semibold text-4xl mt-6 text-center mb-6">
           Our Latest Blogs{" "}
         </h1>{" "}
         <hr />
       </div>
-      <div className="w-full py-10">
+      <div className="w-full py-10" data-aos="zoom-in-up">
         <div className="container mx-auto px-6 flex items-start justify-center">
           <div aria-label="group of cards" className="w-full ">
             <div className="flex flex-col lg:flex-row mx-auto bg-white shadow rounded">

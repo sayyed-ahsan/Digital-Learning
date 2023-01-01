@@ -133,10 +133,10 @@ const Home = () => {
 
         <div className="grid grid-cols-5 gap-5 mt-6">
           <div className=" col-span-5 lg:col-span-3 bg-[#FFFFFF] h-96">
-            <h3 className="text-black text-2xl">Graph</h3>
+            {/* <h3 className="text-black text-2xl">Graph</h3> */}
           </div>
 
-          <div className=" col-span-5 lg:col-span-2 bg-[#FFFFFF] h-96 ">
+          <div className=" col-span-5 lg:col-span-2 bg-[#FFFFFF] h-full ">
             <div className="flex justify-between m-5">
               <h2 className="text-slate-900 text-xl font-bold">Recent Notification</h2>
               <button className="bg-[#20D489] hover:bg-[#16b975] text-white font-medium px-3 py-1 rounded">View all</button>
@@ -158,7 +158,67 @@ const Home = () => {
                 <h2>3 min ago</h2>
               </div>
 
+
             </div>
+            <hr />
+
+            <div className="flex justify-between items-center m-5">
+              <div className="flex items-center">
+                <div className="mr-3">
+                  <FiCheck className="bg-[#CCEDFF] text-blue-400  text-5xl  rounded-md p-3" />
+                </div>
+
+                <div>
+                  <h2 className="text-xl font-semibold text-black">Device confirmation completed</h2>
+                  <p className="text-gray-600 font-light">020-11-04 12:00:23</p>
+                </div>
+              </div>
+
+              <div className="text-green-400 font-medium">
+                <h2>3 min ago</h2>
+              </div>
+
+            </div>
+            <hr />
+
+            <div className="flex justify-between items-center m-5">
+              <div className="flex items-center">
+                <div className="mr-3">
+                  <RxCross1 className="bg-[#FCD9E2] text-pink-600  text-5xl  rounded-md p-3" />
+                </div>
+
+                <div>
+                  <h2 className="text-xl font-semibold text-black">2FA verification failed</h2>
+                  <p className="text-gray-600 font-light">020-11-04 12:00:23</p>
+                </div>
+              </div>
+
+              <div className="text-green-400 font-medium">
+                <h2>3 min ago</h2>
+              </div>
+
+            </div>
+
+            <hr />
+
+            <div className="flex justify-between items-center m-5">
+              <div className="flex items-center">
+                <div className="mr-3">
+                  <AiOutlineQuestion className="bg-[#FFF4CC] text-yellow-500  text-5xl  rounded-md p-3" />
+                </div>
+
+                <div>
+                  <h2 className="text-xl font-semibold text-black">Phone verificationi pending</h2>
+                  <p className="text-gray-600 font-light">020-11-04 12:00:23</p>
+                </div>
+              </div>
+
+              <div className="text-green-400 font-medium">
+                <h2>3 min ago</h2>
+              </div>
+
+            </div>
+
           </div>
 
         </div>
