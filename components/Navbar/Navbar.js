@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 
 const Navbar = () => {
   const { user, setLoggedToken, setUser } = useAuth();
-  console.log(user);
+
 
   const handleLogout = () => {
     localStorage.removeItem("dl-token");

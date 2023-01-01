@@ -1,12 +1,10 @@
 import Link from "next/link";
-import {
-  BsFillGrid3X3GapFill,
-  BsFillStarFill,
-  BsList,
-  BsStar,
-} from "react-icons/bs";
+import { BsFillGrid3X3GapFill, BsFillStarFill, BsList, BsStar } from "react-icons/bs";
 import { FaFilter, FaFolder } from "react-icons/fa";
+
 const Courses = ({ allCourse }) => {
+  console.log(allCourse);
+
   return (
     <div>
       {/* Course heading */}
@@ -38,9 +36,7 @@ const Courses = ({ allCourse }) => {
       {/* Course Search bar */}
       <div className="text-info lg:my-20 w-11/12 mx-auto flex lg:flex-row md:flex-row flex-col gap-5 lg:gap-0 md:gap-0 justify-between items-center bg-neutral px-2 py-3 rounded-lg">
         <div>
-          <h3 className="text-lg font-semibold">
-            We found{" "}
-            <span className="text-accent font-bold">{allCourse.length}</span>{" "}
+          <h3 className="text-lg font-semibold">We found<span className="text-accent font-bold mx-1">{allCourse.length}</span>
             courses available for you
           </h3>
         </div>
@@ -72,9 +68,10 @@ const Courses = ({ allCourse }) => {
         </div>
         <div className="grid xl:grid-cols-3 lg:grid-cols-2 lg:col-span-3 md:grid-cols-2 grid-cols-1 gap-5 p-2 rounded-md">
           {allCourse.map((course) => {
+            const { _id, price, subtitle, title, id, thumbnail, details } = course
             return (
               <div
-                key={course._id}
+                key={_id}
                 className="shadow-lg border border-slate-200"
               >
                 <div className="relative">
@@ -82,11 +79,11 @@ const Courses = ({ allCourse }) => {
                     <img
                       alt="ecommerce"
                       className="object-cover object-center w-full h-full block"
-                      src={course.image}
+                      src={thumbnail}
                     />
                   </a>
                   <p className="text-xl absolute right-2 text-white bottom-2 badge badge-secondary py-4 rounded-sm">
-                    ${course.price}
+                    ${price}
                   </p>
                 </div>
                 <div className="my-4 px-5 py-3">
@@ -95,7 +92,7 @@ const Courses = ({ allCourse }) => {
                       Category Name
                     </div>
                     <div className="flex items-center gap-2 font-bold text-amber-500 my-5">
-                      <span>{course.courseRating}</span>
+                      <span>{details.rating}</span>
                       <div className="flex gap-1">
                         <BsFillStarFill />
                         <BsFillStarFill />
@@ -106,15 +103,13 @@ const Courses = ({ allCourse }) => {
                     </div>
                   </div>
                   <h2 className="text-gray-900  text-2xl font-semibold">
-                    {course.courseName}
+                    {title}
                   </h2>
                   <p className="my-5">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
-                    temporibus voluptatibus laudantium aliquid tempora nemo
-                    repellat minus cupiditate explicabo ipsum.
+                    {subtitle}
                   </p>
                   <Link
-                    href={`/course/${course._id}`}
+                    href={`/course/${ _id }`}
                     className="btn btn-secondary rounded-md btn-md text-white w-full"
                   >
                     Enroll Now
@@ -131,16 +126,15 @@ const Courses = ({ allCourse }) => {
 
 export default Courses;
 
-// ----------------
+
 // export async function getServerSideProps() {
-//     try {
-//         let response = await fetch('http://localhost:3000/api/allCorses');
-//         let posts = await response.json();
-//         console.log(posts)
-//         return {
-//             props: { posts: JSON.parse(JSON.stringify(posts)) },
-//         };
-//     } catch (e) {
-//         console.error(e);
-//     }
+//   try {
+//     let response = await fetch('http://localhost:3000/api/courses');
+//     let posts = await response.json();
+//     return {
+//       props: { posts: JSON.parse(JSON.stringify(posts)) },
+//     };
+//   } catch (e) {
+//     console.error(e);
+//   }
 // }
