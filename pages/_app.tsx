@@ -6,14 +6,14 @@ import { AuthProvider } from '../context/AuthProvider';
 import toast, { Toaster } from 'react-hot-toast';
 
 export default function App({ Component, pageProps }: AppProps) {
-    return (
-        <AuthProvider>
-            <>
-                <Navbar />
-                <Component {...pageProps} />
-                <Footer />
-                <Toaster />
-            </>
-        </AuthProvider>
-    )
+	return (
+		<AuthProvider>
+			<>
+				<Navbar />
+				<Component {...pageProps} />
+				<Footer />
+				<Toaster />
+			</>
+		</AuthProvider>
+	)
 }
