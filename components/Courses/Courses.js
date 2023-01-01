@@ -85,7 +85,7 @@ const Courses = ({ allCourse }) => {
                                     </div>
                                     <h2 className="text-gray-900  text-2xl font-semibold">{course.courseName}</h2>
                                     <p className='my-5'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo temporibus voluptatibus laudantium aliquid tempora nemo repellat minus cupiditate explicabo ipsum.</p>
-                                    <Link href={`/course/${ course._id }`} className='btn btn-secondary rounded-md btn-md text-white w-full'>Enroll Now</Link>
+                                    <Link href={`/course/${course._id}`} className='btn btn-secondary rounded-md btn-md text-white w-full'>Enroll Now</Link>
                                 </div>
                             </div>
                         })
