@@ -5,6 +5,7 @@ import { AiFillStar } from "react-icons/ai";
 import { VscMortarBoard } from "react-icons/vsc";
 import { BsBarChartLine, BsClock, BsFillFileTextFill, BsFillTrophyFill, BsFillCartFill, BsYoutube } from "react-icons/bs";
 import ReactPlayer from 'react-player/lazy'
+import useAuth from '../../hook/useAuth';
 
 
 
@@ -13,6 +14,31 @@ const CourseDetails = ({ singleCourse }) => {
     const id = router.query.courseId;
     const { title, subtitle, thumbnail, details, price } = singleCourse
     const { lists } = singleCourse.details[1];
+
+    const { user } = useAuth()
+    console.log(user)
+
+    const handleEnroll = () => {
+        const postData = async () => {
+            const enrollCourse = {
+                price: price,
+                course_name: title,
+                customer_name: user?.name,
+                customer_email: user?.email,
+                payment_status: false
+            }
+            const res = await fetch(`/api/payment/enroll`, {
+                method: 'POST',
+                body: JSON.stringify(enrollCourse),
+            })
+            return res.json()
+        }
+        postData().then(data => {
+            console.log(data);
+            window.location.replace(data.url)
+        })
+
+    }
 
 
     return (
@@ -283,9 +309,9 @@ const CourseDetails = ({ singleCourse }) => {
                             </div>
 
                             <div className="card-actions justify-end ">
-                                <button className='my-10 flex btn btn-secondary text-white w-full uppercase font-bold rounded-full gap-1'>
+                                <button onClick={handleEnroll} className='my-10 flex btn btn-secondary text-white w-full uppercase font-bold rounded-full gap-1'>
                                     <BsFillCartFill />
-                                    <span>Add to cart</span>
+                                    <span >Add to cart</span>
                                 </button>
                             </div>
                         </div>
@@ -299,7 +325,7 @@ const CourseDetails = ({ singleCourse }) => {
 export async function getServerSideProps(context) {
     const { courseId } = context.query;
     // Fetch data from external API
-    const res = await fetch(`http://localhost:3000/api/courses/${ courseId }`);
+    const res = await fetch(`http://localhost:3000/api/courses/${courseId}`);
     const singleCourse = await res.json();
     // Pass data to the page via props
     return { props: { singleCourse } };

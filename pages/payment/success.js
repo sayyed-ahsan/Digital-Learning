@@ -1,14 +1,39 @@
 import { useRouter } from "next/router";
+import { userAgent } from "next/server";
+import { useEffect, useState } from "react";
+import { AiOutlineCheckCircle } from 'react-icons/ai'
 
-
-const Success = () => {
+const Success = ({ trans_info }) => {
+    console.log(trans_info);
     const router = useRouter()
     const { transaction_id } = router.query;
     console.log(transaction_id);
 
+    const [paymentInfo, setPaymentInfo] = useState([])
+
+    useEffect(() => {
+        fetch(`http://localhost:3000/api/payment/${transaction_id}`)
+            .then(res => res.json())
+            .then(data => setPaymentInfo(data))
+    }, [transaction_id])
+
     return (
-        <div>
-            <h1 className="text-3xl text-slate-900">Success</h1>
+        <div className="w-1/3 flex mx-auto my-10">
+
+
+
+            <div className="mt-4 text-gray-500 sm:pr-8">
+                <AiOutlineCheckCircle className="text-5xl " />
+
+
+                <h3 className="mt-4 text-xl font-bold text-green-500">Payment Successfull</h3>
+
+                <p className="mt-2 hidden text-sm sm:block">
+                    {paymentInfo?.customer_name}
+                </p>
+            </div>
+
+
         </div>
     );
 };
@@ -21,4 +46,5 @@ const Success = () => {
 //     // Pass data to the page via props
 //     return { props: { trans_info } };
 // }
+
 export default Success;
