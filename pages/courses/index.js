@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Link from "next/link";
 import { BsFillGrid3X3GapFill, BsFillStarFill, BsList, BsStar } from "react-icons/bs";
 import { FaFilter, FaFolder } from "react-icons/fa";
@@ -6,8 +6,22 @@ import { FaFilter, FaFolder } from "react-icons/fa";
 
 const index = ({ allCourses }) => {
 
+    const [categories, setCategories] = useState([])
+
+
+    useEffect(() => {
+        fetch('http://localhost:3000/api/categories/categories')
+            .then(res => res.json())
+            .then(data => setCategories(data))
+
+    }, [])
+
+
+
+
+
     return (
-        <div>
+        <div className='mb-10'>
             {/* Course heading */}
             <div
                 className="hero"
@@ -64,8 +78,19 @@ const index = ({ allCourses }) => {
             </div>
             {/* Course Search bar */}
             <div className="text-black mx-auto w-11/12 grid lg:grid-cols-4 gap-5">
-                <div className="lg:col-span-1 bg-primary text-white p-2 rounded-md max-h-96">
-                    CATEGORIES
+                <div className="lg:col-span-1 shadow-lg text-white p-2 rounded-md max-h-96">
+                    <h3 className='text-center font-semibold text-black mb-2'>Top Catagories</h3>
+
+                    {categories.map(category => {
+                        return <div key={category._id} className="py-1">
+                            <input type="radio" name="DeliveryOption" value="DeliveryStandard" id="DeliveryStandard" class="peer hidden"
+                            /><label htmlFor="DeliveryStandard" class="flex cursor-pointer items-center rounded-lg border border-gray-100 p-2 text-sm font-medium shadow-sm hover:border-secondary peer-checked:border-secondary peer-checked:ring-1 peer-checked:ring-secondary"
+                            >
+                                <p class="text-gray-700 font-semibold">{category.category_name}</p>
+                            </label>
+                        </div>
+                    })
+                    }
                 </div>
                 <div className="grid xl:grid-cols-3 lg:grid-cols-2 lg:col-span-3 md:grid-cols-2 grid-cols-1 gap-5 p-2 rounded-md">
                     {allCourses.map((course) => {
@@ -89,11 +114,11 @@ const index = ({ allCourses }) => {
                                 </div>
                                 <div className="my-4 px-5 py-3">
                                     <div className="flex justify-between items-center mx-2">
-                                        <div className="text-lg inline p-1 py-2 rounded-md text-secondary border border-secondary capitalize">
+                                        <div className="inline p-1 rounded-md text-secondary border border-secondary capitalize">
                                             {category}
                                         </div>
                                         <div className="flex items-center gap-2 font-bold text-amber-500 my-5">
-                                            <span>{details.rating}</span>
+                                            <span>{details[0].rating}</span>
                                             <div className="flex gap-1">
                                                 <BsFillStarFill />
                                                 <BsFillStarFill />
@@ -103,7 +128,7 @@ const index = ({ allCourses }) => {
                                             </div>
                                         </div>
                                     </div>
-                                    <h2 className="text-gray-900  text-2xl font-semibold">
+                                    <h2 className="text-gray-900  text-xl font-semibold">
                                         {title}
                                     </h2>
                                     <p className="my-5">
