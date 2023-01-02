@@ -30,7 +30,7 @@ const Sidebar = () => {
                         <span className="flex items-center space-x-1">
 
                           <li className="pr-2 text-xs dark:text-gray-400">
-                            <Link href={"/dashboard/viewprofile"}>View Profile</Link>
+                            <Link href={"/dashboard/viewprofile"}>View</Link>
                           </li>
                         </span>
                       </div>
