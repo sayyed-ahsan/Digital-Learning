@@ -83,10 +83,10 @@ const index = ({ allCourses }) => {
 
                     {categories.map(category => {
                         return <div key={category._id} className="py-1">
-                            <input type="radio" name="DeliveryOption" value="DeliveryStandard" id="DeliveryStandard" class="peer hidden"
-                            /><label htmlFor="DeliveryStandard" class="flex cursor-pointer items-center rounded-lg border border-gray-100 p-2 text-sm font-medium shadow-sm hover:border-secondary peer-checked:border-secondary peer-checked:ring-1 peer-checked:ring-secondary"
+                            <input type="radio" name="DeliveryOption" value="DeliveryStandard" id="DeliveryStandard" className="peer hidden"
+                            /><label htmlFor="DeliveryStandard" className="flex cursor-pointer items-center rounded-lg border border-gray-100 p-2 text-sm font-medium shadow-sm hover:border-secondary peer-checked:border-secondary peer-checked:ring-1 peer-checked:ring-secondary"
                             >
-                                <p class="text-gray-700 font-semibold">{category.category_name}</p>
+                                <p className="text-gray-700 font-semibold">{category.category_name}</p>
                             </label>
                         </div>
                     })
