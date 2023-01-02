@@ -194,7 +194,7 @@ const publishBlog = () => {
               <div className="grid grid-cols-6 gap-4 col-span-full lg:col-span-3">
                 <div className="col-span-full sm:col-span-3">
                   <label for="firstname" className="text-sm">First name</label>
-                  <input id="firstname" type="text" placeholder="First name" className="w-full rounded-md focus:ring focus:ring-opacity-75 focus:ring-violet-400 dark:border-gray-700 dark:text-gray-900" />
+                  <input id="firstname" type="text" placeholder="First name" className="w-full rounded-md focus:ring focus:ring-opacity-75 focus:ring-violet-400 border-gray-700 text-gray-900" />
                 </div>
                 <div className="col-span-full sm:col-span-3">
                   <label for="lastname" className="text-sm">Last name</label>
