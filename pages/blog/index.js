@@ -387,7 +387,7 @@ const index = ({ blogs }) => {
 
                       <Link
                         className="text-cyan-500 font-semibold"
-                        href={`blog/${ blog._id }`}
+                        href={`blog/${blog._id}`}
                       >
                         Learn more
                       </Link>

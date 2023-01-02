@@ -134,7 +134,7 @@ const index = ({ allCourses }) => {
                                     <p className="my-5">
                                         {subtitle}
                                     </p>
-                                    <Link href={`/courses/${ _id }`} className="btn btn-secondary rounded-md btn-md text-white w-full"
+                                    <Link href={`/courses/${_id}`} className="btn btn-secondary rounded-md btn-md text-white w-full"
                                     >
                                         Enroll Now
                                     </Link>
