@@ -12,7 +12,7 @@ import { FiCheck } from "react-icons/fi";
 const Home = () => {
   return (
     <Dashboard>
-      <div className="bg-[#FBF9F6] py-10 px-40  my-10">
+      <div className="bg-[#FBF9F6] pt-5 lg:pt-10 px-5 lg:px-40 mt-10">
         <div className=" md:flex justify-between ">
           <div className="mb-2">
             <h2 className="text-2xl text-black font-medium mb-1">Dashboard</h2>
@@ -27,9 +27,9 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-3">
+        <div className="grid grid-cols-1  lg:grid-cols-3 gap-8 mt-3">
 
-          <div className="bg-[#F1416C] text-white  w-full md:max-w-xl ">
+          <div className="bg-[#F1416C] text-white  w-full  ">
 
             <div className="m-4 ">
               <div className="flex items-center">
@@ -50,7 +50,7 @@ const Home = () => {
                 <h2> Paid: 980 Students</h2>
               </div>
 
-              <progress className="progress progress-neutral  w-96" value="90" max="100"></progress>
+              <progress className="progress progress-neutral w-full lg:w-96" value="90" max="100"></progress>
             </div>
 
           </div>
@@ -62,7 +62,7 @@ const Home = () => {
 
 
 
-          <div className="bg-[#FFFFFF] text-white  w-full md:max-w-xl ">
+          <div className="bg-[#FFFFFF] text-white  w-full ">
 
             <div className="m-4 ">
               <div className="flex items-center">
@@ -83,7 +83,7 @@ const Home = () => {
                 <h2> Paid: 123 students</h2>
               </div>
 
-              <progress className="progress progress-error w-96" value="80" max="100"></progress>
+              <progress className="progress progress-error  w-full lg:w-96" value="80" max="100"></progress>
             </div>
 
           </div>
@@ -101,7 +101,7 @@ const Home = () => {
 
 
 
-          <div className="bg-[#FFFFFF] text-white  w-full md:max-w-xl ">
+          <div className="bg-[#FFFFFF] text-white  w-full ">
 
             <div className="m-4 ">
               <div className="flex items-center">
@@ -122,7 +122,7 @@ const Home = () => {
                 <h2> Paid: 26 courses</h2>
               </div>
 
-              <progress className="progress progress-success w-96" value="60" max="100"></progress>
+              <progress className="progress progress-success  w-full lg:w-96" value="60" max="100"></progress>
             </div>
 
           </div>
