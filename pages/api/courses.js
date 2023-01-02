@@ -1,10 +1,14 @@
-import * as fs from 'fs';
+import clientPromise from '../../middleware/database';
 
-export default async function handler(req, res) {
-    fs.readFile('courses.json', (err, data) => {
-        if (err) throw err;
-        let student = JSON.parse(data);
-        console.log(student);
-    });
+export default async (req, res) => {
+    try {
+        const client = await clientPromise;
+        const db = client.db("partsala");
+        const courses = await db.collection("courses").find({}).toArray();
+        res.json(courses);
 
-}
+    } catch (e) {
+        console.error(e);
+        throw new Error(e).message;
+    }
+};

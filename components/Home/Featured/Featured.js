@@ -1,92 +1,48 @@
-import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Autoplay } from "swiper";
-import "swiper/css";
+import React, { useEffect, useState } from 'react'
 
-export default function Featured() {
+const Featured = () => {
+  const [categories, setCategories] = useState([])
+
+
+  useEffect(() => {
+    fetch('http://localhost:3000/api/categories/categories')
+      .then(res => res.json())
+      .then(data => setCategories(data))
+
+  }, [])
+
+
+
+
   return (
-    <>
-      <div>
-        {/* <h2 className="text-4xl text-center font-semibold">Featured</h2> */}
-      </div>
-      <Swiper
-        slidesPerView={1.7}
-        loop={true}
-        autoplay={{
-          delay: 2000,
-        }}
-      >
-        <SwiperSlide>{card()}</SwiperSlide>
-        <SwiperSlide>{card()}</SwiperSlide>
-        <SwiperSlide>{card()}</SwiperSlide>
-      </Swiper>
-    </>
-  );
-}
-
-function card() {
-  return (
-    <div className="flex my-4 p-12 justify-center" data-aos="fade-left">
-      <div className="flex gap-5 shadow-xl">
-        <figure className="w-1/3">
-          <img className="rounded" src="https://placeimg.com/400/400/arch" alt="Album" />
-        </figure>
-        <div className="">
-          <h2 className="text-3xl font-semibold pb-3">Instractor</h2>
-          <div className="flex my-4">
-
-            <div className="relative flex-shrink-0">
-              <span className="absolute bottom-0 right-0 flex items-center justify-center w-4 h-4 dark:bg-red-600 border rounded-full dark:border-gray-900 dark:text-gray-900">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" className="w-2 h-3 fill-current">
-                  <rect width="368" height="32" x="72" y="240"></rect>
-                </svg>
-              </span>
-              <img src="https://source.unsplash.com/50x50/?portrait?2" alt="" className="w-12 h-12 border rounded-full dark:bg-gray-500 dark:border-gray-700" />
+    <div className='bg-white py-10 lg:py-20'>
+      <div className='w-9/12 mx-auto'>
+        <div className='text-center text-black'>
+          <h2 className='text-3xl font-bold'>What We Have</h2>
+          <p className='w-1/2 mx-auto my-2'>Morbi ligula massa, commodo at nisl tincidunt, dignissim feugiat metus.
+            Suspendisse placerat lacinia porttitor. Vivamus</p>
+        </div>
+        <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10'>
+          {
+            categories.map(category => <div className='w-95 flex items-center bg-white rounded-md p-5 py-10 text-black justify-around shadow-xl hover:bg-secondary transition-all duration-500'>
+              <img className='w-16 h-16' src={category.pic} alt="" />
+              <h3 className='text-2xl font-bold'>{category.category_name}</h3>
             </div>
-
-            <div className="ml-2">
-              <div>
-                <p className="text-2xl">Mr. Jasim</p>
-                <div className="rating h-4">
-                  <input
-                    type="radio"
-                    name="rating-5"
-                    className="mask mask-star-2 bg-orange-400"
-                  />
-                  <input
-                    type="radio"
-                    name="rating-2"
-                    className="mask mask-star-2 bg-orange-400"
-                    checked
-                  />
-                  <input
-                    type="radio"
-                    name="rating-2"
-                    className="mask mask-star-2 bg-orange-400"
-                  />
-                  <input
-                    type="radio"
-                    name="rating-2"
-                    className="mask mask-star-2 bg-orange-400"
-                  />
-                  <input
-                    type="radio"
-                    name="rating-2"
-                    className="mask mask-star-2 bg-orange-400"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="flex py-2">
-            This is one of the best... is one of the best...
-          </div>
-
-          <div className="flex justify-start mb-2">
-            <div><button className="btn-sm rounded btn-success">Enrole</button></div>
-          </div>
+            )
+          }
         </div>
       </div>
     </div>
-  );
+  )
 }
+// export async function getStaticProps() {
+//   // Fetch data from external API
+//   const res = await fetch(`http://localhost:3000/api/categories/categories`);
+//   const catagories = await res.json();
+
+//   // Pass data to the page via props
+//   return { props: { catagories } };
+// }
+
+export default Featured;
+

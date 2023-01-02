@@ -33,112 +33,112 @@ const AllCourses = () => {
           <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3">
             <div className="col-span-2">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                <div class="">
+                <div className="">
                   {/* <!--Card 1--> */}
-                  <div class="w-full rounded overflow-hidden shadow-lg">
+                  <div className="w-full rounded overflow-hidden shadow-lg">
                     <img
-                      class="w-full"
+                      className="w-full"
                       src="https://images.unsplash.com/photo-1499914485622-a88fac536970?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
                     />
-                    <div class="px-6 py-4">
-                      <div class="font-bold text-xl mb-2 text-black">
+                    <div className="px-6 py-4">
+                      <div className="font-bold text-xl mb-2 text-black">
                         Python Bootcamp Zero to Hero
                       </div>
-                      <p class="text-gray-700 text-base">
+                      <p className="text-gray-700 text-base">
                         Lorem ipsum dolor sit amet, consectetur adipisicing
                         elit. Voluptatibus quia, Nonea! Maiores et perferendis
                         eaque, exercitationem praesentium nihil.
                       </p>
                     </div>
-                    <div class="px-6 pt-4 pb-2">
-                      <button class="inline-block bg-green-500 rounded px-3 py-1 text-sm font-normal text-gray-50 mr-2 mb-2">
+                    <div className="px-6 pt-4 pb-2">
+                      <button className="inline-block bg-green-500 rounded px-3 py-1 text-sm font-normal text-gray-50 mr-2 mb-2">
                         Edit
                       </button>
-                      <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+                      <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
                         Reviews
                       </span>
                     </div>
                   </div>
                 </div>
 
-                <div class="">
+                <div className="">
                   {/* <!--Card 1--> */}
-                  <div class=" rounded overflow-hidden shadow-lg">
+                  <div className=" rounded overflow-hidden shadow-lg">
                     <img
-                      class="w-full"
+                      className="w-full"
                       src="https://images.unsplash.com/photo-1452830978618-d6feae7d0ffa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fGNvdXJzZSUyMGluJTIwbGFwdG9wfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
                     />
-                    <div class="px-6 py-4">
-                      <div class="font-bold text-xl mb-2 text-black">
+                    <div className="px-6 py-4">
+                      <div className="font-bold text-xl mb-2 text-black">
                         Amazon Web Services Certification
                       </div>
-                      <p class="text-gray-700 text-base">
+                      <p className="text-gray-700 text-base">
                         Lorem ipsum dolor sit amet, consectetur adipisicing
                         elit. Voluptatibus quia, Nonea! Maiores et perferendis
                         eaque, exercitationem praesentium nihil.
                       </p>
                     </div>
-                    <div class="px-6 pt-4 pb-2">
-                      <button class="inline-block bg-green-500 rounded px-3 py-1 text-sm font-normal text-gray-50 mr-2 mb-2">
+                    <div className="px-6 pt-4 pb-2">
+                      <button className="inline-block bg-green-500 rounded px-3 py-1 text-sm font-normal text-gray-50 mr-2 mb-2">
                         Edit
                       </button>
-                      <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+                      <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
                         Reviews
                       </span>
                     </div>
                   </div>
                 </div>
 
-                <div class="">
+                <div className="">
                   {/* <!--Card 1--> */}
-                  <div class=" rounded overflow-hidden shadow-lg">
+                  <div className=" rounded overflow-hidden shadow-lg">
                     <img
-                      class="w-full"
+                      className="w-full"
                       src="https://images.unsplash.com/photo-1448932223592-d1fc686e76ea?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGNvdXJzZSUyMGluJTIwbGFwdG9wfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
                     />
-                    <div class="px-6 py-4">
-                      <div class="font-bold text-xl mb-2 text-black">
+                    <div className="px-6 py-4">
+                      <div className="font-bold text-xl mb-2 text-black">
                         Data Science Exercises Included.
                       </div>
-                      <p class="text-gray-700 text-base">
+                      <p className="text-gray-700 text-base">
                         Lorem ipsum dolor sit amet, consectetur adipisicing
                         elit. Voluptatibus quia, Nonea! Maiores et perferendis
                         eaque, exercitationem praesentium nihil.
                       </p>
                     </div>
-                    <div class="px-6 pt-4 pb-2">
-                      <button class="inline-block bg-green-500 rounded px-3 py-1 text-sm font-normal text-gray-50 mr-2 mb-2">
+                    <div className="px-6 pt-4 pb-2">
+                      <button className="inline-block bg-green-500 rounded px-3 py-1 text-sm font-normal text-gray-50 mr-2 mb-2">
                         Edit
                       </button>
-                      <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+                      <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
                         Reviews
                       </span>
                     </div>
                   </div>
                 </div>
 
-                <div class="">
+                <div className="">
                   {/* <!--Card 1--> */}
-                  <div class=" rounded overflow-hidden shadow-lg">
+                  <div className=" rounded overflow-hidden shadow-lg">
                     <img
-                      class="w-full"
+                      className="w-full"
                       src="https://images.unsplash.com/photo-1484807352052-23338990c6c6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fGNvdXJzZSUyMGluJTIwbGFwdG9wfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
                     />
-                    <div class="px-6 py-4">
-                      <div class="font-bold text-xl mb-2 text-black">
+                    <div className="px-6 py-4">
+                      <div className="font-bold text-xl mb-2 text-black">
                         The Web Developer Bootcamp
                       </div>
-                      <p class="text-gray-700 text-base">
+                      <p className="text-gray-700 text-base">
                         Lorem ipsum dolor sit amet, consectetur adipisicing
                         elit. Voluptatibus quia, Nonea! Maiores et perferendis
                         eaque, exercitationem praesentium nihil.
                       </p>
                     </div>
-                    <div class="px-6 pt-4 pb-2">
-                      <button class="inline-block bg-green-500 rounded px-3 py-1 text-sm font-normal text-gray-50 mr-2 mb-2">
+                    <div className="px-6 pt-4 pb-2">
+                      <button className="inline-block bg-green-500 rounded px-3 py-1 text-sm font-normal text-gray-50 mr-2 mb-2">
                         Edit
                       </button>
-                      <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+                      <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
                         Reviews
                       </span>
                     </div>

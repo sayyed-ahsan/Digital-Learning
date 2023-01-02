@@ -2,8 +2,8 @@ import React from 'react';
 
 const Trust = () => {
     return (
-        <div>
-            <div data-aos="zoom-in-up" className="px-4 bg-green-100 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+        <div className='bg-slate-200'>
+            <div data-aos="zoom-in-up" className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
                 <div className="flex flex-col mb-6 lg:flex-row md:mb-10">
                     <div className="lg:w-1/2">
                         <h2 className="max-w-md mb-6 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none xl:max-w-lg">
@@ -19,8 +19,8 @@ const Trust = () => {
                     </div>
                 </div>
                 <div className="grid gap-8 row-gap-10 sm:grid-cols-2 lg:grid-cols-4">
-                    <div>
-                        <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-indigo-50">
+                    <div className='bg-white shadow-md text-black p-5 rounded-md'>
+                        <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-secondary">
                             <svg
                                 className="w-7 h-7 text-deep-purple-accent-400"
                                 strokeLinecap="round"
@@ -104,8 +104,8 @@ const Trust = () => {
                             Learn more
                         </a>
                     </div>
-                    <div>
-                        <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-indigo-50">
+                    <div className='bg-white shadow-md text-black p-5 rounded-md'>
+                        <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-secondary">
                             <svg
                                 className="w-7 h-7 text-deep-purple-accent-400"
                                 viewBox="0 0 24 24"
@@ -199,8 +199,8 @@ const Trust = () => {
                             Learn more
                         </a>
                     </div>
-                    <div>
-                        <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-indigo-50">
+                    <div className='bg-white shadow-md text-black p-5 rounded-md'>
+                        <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-secondary">
                             <svg
                                 className="w-7 h-7 text-deep-purple-accent-400"
                                 strokeLinecap="round"
@@ -301,8 +301,8 @@ const Trust = () => {
                             Learn more
                         </a>
                     </div>
-                    <div>
-                        <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-indigo-50">
+                    <div className='bg-white shadow-md text-black p-5 rounded-md'>
+                        <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-secondary">
                             <svg
                                 className="w-7 h-7 text-deep-purple-accent-400"
                                 strokeLinecap="round"

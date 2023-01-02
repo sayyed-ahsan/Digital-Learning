@@ -1,6 +1,5 @@
 import Link from "next/link";
 import React from "react";
-import { FaFilter, FaFolder } from "react-icons/fa";
 import { ToastContainer, toast } from "react-toastify";
 import useAuth from "../../hook/useAuth";
 
@@ -87,7 +86,7 @@ const index = ({ blogs }) => {
                     <form onSubmit={handleSubmit}>
                       <div className="mb-1 sm:mb-2">
                         <label
-                          htmlFor="firstName"
+                          htmlhtmlFor="firstName"
                           className="inline-block mb-1 font-medium"
                         >
                           Name
@@ -103,7 +102,7 @@ const index = ({ blogs }) => {
 
                       <div className="mb-1 sm:mb-2">
                         <label
-                          htmlFor="email"
+                          htmlhtmlFor="email"
                           className="inline-block mb-1 font-medium"
                         >
                           E-mail
@@ -120,7 +119,7 @@ const index = ({ blogs }) => {
 
                       <div className="mb-1 sm:mb-2">
                         <label
-                          htmlFor="passward"
+                          htmlhtmlFor="passward"
                           className="inline-block mb-1 font-medium"
                         >
                           Passward
@@ -388,7 +387,7 @@ const index = ({ blogs }) => {
 
                       <Link
                         className="text-cyan-500 font-semibold"
-                        href={`blog/${blog._id}`}
+                        href={`blog/${ blog._id }`}
                       >
                         Learn more
                       </Link>

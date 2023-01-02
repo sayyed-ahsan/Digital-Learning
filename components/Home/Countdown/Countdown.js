@@ -1,6 +1,6 @@
 const Countdown = () => {
   return (
-    <section className="py-10 my-10 bg-secondary" data-aos="fade-up"
+    <section className="py-10 bg-secondary" data-aos="fade-up"
       data-aos-duration="3000">
       <div className="container mx-auto grid justify-center grid-cols-2 text-center lg:grid-cols-4 items-center">
         <div className="flex flex-col justify-start m-2 lg:m-6">
