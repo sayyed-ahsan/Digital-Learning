@@ -1,6 +1,8 @@
+import Link from 'next/link';
+
 const Footer = () => {
   return (
-    <div className="relative mt-16 bg-deep-purple-accent-400">
+    <div className="relative bg-slate-600 text-white">
       <svg
         className="absolute top-0 w-full h-6 -mt-5 sm:-mt-10 sm:h-16 bg-deep-purple-accent-400"
         preserveAspectRatio="none"
@@ -11,39 +13,12 @@ const Footer = () => {
       <div className="px-4 pt-12 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
         <div className="grid gap-16 row-gap-10 mb-8 lg:grid-cols-6">
           <div className="md:max-w-md lg:col-span-2">
-            <a
-              href="/"
-              aria-label="Go home"
-              title="Company"
-              className="inline-flex items-center"
-            >
-              <svg
-                className="w-8 text-teal-accent-400"
-                viewBox="0 0 24 24"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeMiterlimit="10"
-                stroke="currentColor"
-                fill="none"
-              >
-                <rect x="3" y="1" width="7" height="12" />
-                <rect x="3" y="17" width="7" height="6" />
-                <rect x="14" y="1" width="7" height="6" />
-                <rect x="14" y="11" width="7" height="12" />
-              </svg>
-              <span className="ml-2 text-xl font-bold tracking-wide text-gray-100 uppercase">
-                Company
-              </span>
-            </a>
+            <Link href="/">
+              <img className='w-36' src='pathshala-logo-white.png' alt="logo" />
+            </Link>
             <div className="mt-4 lg:max-w-sm">
-              <p className="text-sm text-deep-purple-50">
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque laudantium, totam rem aperiam.
-              </p>
-              <p className="mt-4 text-sm text-deep-purple-50">
-                Eaque ipsa quae ab illo inventore veritatis et quasi architecto
-                beatae vitae dicta sunt explicabo.
+              <p className="text-base text-justify font-normal">
+                PathShala, Inc. is a global destination for teaching and learning online. It was founded in May 2022. As of November 2022, the platform has more than 57 million students, 213,000 courses, and 74,000 instructors teaching courses in over 75 languages.
               </p>
             </div>
           </div>

@@ -1,87 +1,48 @@
-import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Autoplay } from "swiper";
-import "swiper/css";
+import React, { useEffect, useState } from 'react'
 
-export default function Featured() {
+const Featured = () => {
+  const [categories, setCategories] = useState([])
+
+
+  useEffect(() => {
+    fetch('http://localhost:3000/api/categories/categories')
+      .then(res => res.json())
+      .then(data => setCategories(data))
+
+  }, [])
+
+
+
+
   return (
-    <>
-      <div>
-        <h2 className="text-4xl text-center font-semibold">Featured</h2>
-      </div>
-      <Swiper
-        slidesPerView={3}
-        loop={true}
-        autoplay={{
-          delay: 2000,
-        }}
-      >
-        <SwiperSlide>{card()}</SwiperSlide>
-        <SwiperSlide>{card()}</SwiperSlide>
-        <SwiperSlide>{card()}</SwiperSlide>
-      </Swiper>
-    </>
-  );
-}
-
-function card() {
-  return (
-    <div className="flex my-4 p-12 justify-center ">
-      <div className="flex gap-5 shadow-xl">
-        <figure>
-          <img src="https://placeimg.com/400/400/arch" alt="Album" />
-        </figure>
-        <div className="">
-          <h2 className="text-3xl font-semibold pb-3">Instractor</h2>
-          <div className="flex my-4">
-            <div className="avatar online">
-              <div className="w-14 rounded-full">
-                <img src="https://placeimg.com/192/192/people" />
-              </div>
+    <div className='bg-white py-10 lg:py-20'>
+      <div className='w-9/12 mx-auto'>
+        <div className='text-center text-black'>
+          <h2 className='text-3xl font-bold'>What We Have</h2>
+          <p className='w-1/2 mx-auto my-2'>Morbi ligula massa, commodo at nisl tincidunt, dignissim feugiat metus.
+            Suspendisse placerat lacinia porttitor. Vivamus</p>
+        </div>
+        <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10'>
+          {
+            categories.map(category => <div className='w-95 flex items-center bg-white rounded-md p-5 py-10 text-black justify-around shadow-xl hover:bg-secondary transition-all duration-500'>
+              <img className='w-16 h-16' src={category.pic} alt="" />
+              <h3 className='text-2xl font-bold'>{category.category_name}</h3>
             </div>
-            <div className="ml-2">
-              <div>
-                <p className="text-2xl">Mr. Jasim</p>
-                <div className="rating h-4">
-                  <input
-                    type="radio"
-                    name="rating-5"
-                    className="mask mask-star-2 bg-orange-400"
-                  />
-                  <input
-                    type="radio"
-                    name="rating-2"
-                    className="mask mask-star-2 bg-orange-400"
-                    checked
-                  />
-                  <input
-                    type="radio"
-                    name="rating-2"
-                    className="mask mask-star-2 bg-orange-400"
-                  />
-                  <input
-                    type="radio"
-                    name="rating-2"
-                    className="mask mask-star-2 bg-orange-400"
-                  />
-                  <input
-                    type="radio"
-                    name="rating-2"
-                    className="mask mask-star-2 bg-orange-400"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="flex py-2">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-          </div>
-
-          <div className="justify-start">
-            <button className="btn btn-primary rounded-sm">Listen</button>
-          </div>
+            )
+          }
         </div>
       </div>
     </div>
-  );
+  )
 }
+// export async function getStaticProps() {
+//   // Fetch data from external API
+//   const res = await fetch(`http://localhost:3000/api/categories/categories`);
+//   const catagories = await res.json();
+
+//   // Pass data to the page via props
+//   return { props: { catagories } };
+// }
+
+export default Featured;
+

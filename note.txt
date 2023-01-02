@@ -1,0 +1,11 @@
+title
+subtitle
+img
+price
+Category name
+Category id
+courseRating
+instructor name: get from user login => name, img,
+last update
+Description: 3 paragraph
+
