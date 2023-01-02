@@ -14,7 +14,7 @@ const Footer = () => {
         <div className="grid gap-16 row-gap-10 mb-8 lg:grid-cols-6">
           <div className="md:max-w-md lg:col-span-2">
             <Link href="/">
-              <img className='w-36' src='pathshala-logo-white.png' alt="logo" />
+              <img className='w-36' src='https://i.ibb.co/18wGd73/pathshala-logo-white.png' alt="logo" />
             </Link>
             <div className="mt-4 lg:max-w-sm">
               <p className="text-base text-justify font-normal">

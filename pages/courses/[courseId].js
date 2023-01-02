@@ -4,7 +4,6 @@ import Link from 'next/link';
 import { AiFillStar } from "react-icons/ai";
 import { VscMortarBoard } from "react-icons/vsc";
 import { BsBarChartLine, BsClock, BsFillFileTextFill, BsFillTrophyFill, BsFillCartFill, BsYoutube } from "react-icons/bs";
-import ReactPlayer from 'react-player/lazy'
 import useAuth from '../../hook/useAuth';
 
 
@@ -12,13 +11,14 @@ import useAuth from '../../hook/useAuth';
 const CourseDetails = ({ singleCourse }) => {
     const router = useRouter();
     const id = router.query.courseId;
-    const { title, subtitle, thumbnail, details, price } = singleCourse
+    const { title, subtitle, details, price } = singleCourse
     const { lists } = singleCourse.details[1];
 
     const { user } = useAuth()
-    console.log(user)
+
 
     const handleEnroll = () => {
+
         const postData = async () => {
             const enrollCourse = {
                 price: price,
@@ -260,12 +260,14 @@ const CourseDetails = ({ singleCourse }) => {
                 {/* single course Left side */}
                 <div className='lg:absolute lg:right-0 lg:-top-52'>
                     <div className="bg-base-100 shadow-xl">
+                        {/*
                         <ReactPlayer
                             width='100%'
                             height='350px'
                             controls={true}
                             url='https://www.youtube.com/watch?v=v0ir_CwypVk' >
                         </ReactPlayer>
+                        */}
 
                         <div className='m-5'>
                             <h2 className="text-3xl font-bold">${price}</h2>
@@ -325,7 +327,7 @@ const CourseDetails = ({ singleCourse }) => {
 export async function getServerSideProps(context) {
     const { courseId } = context.query;
     // Fetch data from external API
-    const res = await fetch(`http://localhost:3000/api/courses/${courseId}`);
+    const res = await fetch(`http://localhost:3000/api/courses/${ courseId }`);
     const singleCourse = await res.json();
     // Pass data to the page via props
     return { props: { singleCourse } };
