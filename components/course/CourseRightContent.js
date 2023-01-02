@@ -1,18 +1,47 @@
+import { useRef } from "react";
 import { BsBarChartLine, BsClock, BsFillFileTextFill, BsFillTrophyFill, BsFillCartFill } from "react-icons/bs";
-import ReactPlayer from 'react-player/lazy'
+// import ReactPlayer from 'react-player/lazy'
+
 
 
 const CourseRightContent = () => {
+    const price = 40;
+
+    const handleEnroll = () => {
+        const postData = async () => {
+            const enrollCourse = {
+                price: 20,
+                course_name: 'Web Development',
+                customer_name: 'Tom',
+                customer_email: 'tom@gmail.com',
+                payment_status: false
+            }
+            const res = await fetch(`/api/payment/enroll`, {
+                method: 'POST',
+                body: JSON.stringify(enrollCourse),
+            })
+            return res.json()
+        }
+        postData().then(data=>{
+            console.log(data);
+            window.location.replace(data.url) 
+        })
+
+
+    }
+    // const ref = useRef()
+
+
     return (
         <div className='lg:absolute lg:right-0 lg:-top-52'>
             <div className="bg-base-100 shadow-xl">
-                <div className='player-wrapper'>
+                {/* <div className='player-wrapper'>
                     <ReactPlayer
                         width='100%'
                         height='350px'
                         controls={true}
                         url='https://www.youtube.com/watch?v=v0ir_CwypVk' />
-                </div>
+                </div> */}
                 <div className='m-5'>
                     <h2 className="text-3xl font-bold">$84.99</h2>
                     {/* featured section */}
@@ -55,7 +84,7 @@ const CourseRightContent = () => {
                     </div>
 
                     <div className="card-actions justify-end ">
-                        <button className='my-10 flex btn btn-secondary text-white w-full uppercase font-bold rounded-full gap-1'>
+                        <button onClick={handleEnroll} className='my-10 flex btn btn-secondary text-white w-full uppercase font-bold rounded-full gap-1'>
                             <BsFillCartFill />
                             <span>Add to cart</span>
                         </button>

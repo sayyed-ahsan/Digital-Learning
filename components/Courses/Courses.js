@@ -7,6 +7,7 @@ import {
 } from "react-icons/bs";
 import { FaFilter, FaFolder } from "react-icons/fa";
 const Courses = ({ allCourse }) => {
+  console.log(allCourse)
   return (
     <div>
       {/* Course heading */}

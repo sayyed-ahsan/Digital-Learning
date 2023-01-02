@@ -5,7 +5,7 @@ import { ToastContainer, toast } from "react-toastify";
 import useAuth from "../../hook/useAuth";
 
 const index = ({ blogs }) => {
-  console.log(blogs[0]._id);
+  // console.log(blogs[0]._id);
   const { user, loading, setLoading, loggedToken, setLoggedToken } = useAuth();
 
   const handleSubmit = (e) => {
