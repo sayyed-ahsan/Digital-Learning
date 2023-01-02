@@ -9,9 +9,9 @@ const myreviews = () => {
                 {/* title section */}
                 <div className="flex justify-center lg:justify-between gap-2">
                     <div>
-                        <h2 className="text-xl lg:text-3xl font-semibold">My Reviews</h2>
+                        <h2 className="text-xl lg:text-3xl font-semibold">My Blogs</h2>
                         <p className="py-2 mb-5 w-28 lg:w-full text-xs lg:text-base">
-                            Welcome to PathShala, Here is all of your Reviews.
+                            Welcome to PathShala, Here is all of your Blogs.
                         </p>
                     </div>
                     <div className="text-xs lg:text-sm breadcrumbs">

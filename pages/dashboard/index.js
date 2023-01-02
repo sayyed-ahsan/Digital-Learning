@@ -1,8 +1,9 @@
 import Sidebar from "./sidebar";
 
 const Dashboard = ({ children }) => {
+
   return (
-    <div className="grid grid-cols-7 gap-4">
+    <div className="grid grid-cols-7 gap-5">
       <div>
         <Sidebar />
       </div>
