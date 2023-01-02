@@ -1,6 +1,5 @@
 import Link from "next/link";
 import React from "react";
-import { FaFilter, FaFolder } from "react-icons/fa";
 import { ToastContainer, toast } from "react-toastify";
 import useAuth from "../../hook/useAuth";
 
