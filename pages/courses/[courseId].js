@@ -11,9 +11,8 @@ import ReactPlayer from 'react-player/lazy'
 const CourseDetails = ({ singleCourse }) => {
     const router = useRouter();
     const id = router.query.courseId;
-    const { title, subtitle, thumbnail } = singleCourse
-
-
+    const { title, subtitle, thumbnail, details, price } = singleCourse
+    const { lists } = singleCourse.details[1];
 
 
     return (
@@ -23,10 +22,10 @@ const CourseDetails = ({ singleCourse }) => {
                 <div className="hero-overlay bg-slate-700 bg-opacity-70"></div>
                 <div className="hero-content py-16 text-left text-neutral-content">
                     <div className="text-white">
-                        <h1 className="mb-5 text-5xl font-bold">The Complete 2023 Web Development Bootcamp</h1>
-                        <p className="py-2">Become a Full-Stack Web Developer with just ONE course. HTML, CSS, Javascript, Node, React, MongoDB, Web3 and DApps</p>
+                        <h1 className="mb-5 text-5xl font-bold">{title}</h1>
+                        <p className="py-2">{subtitle}</p>
                         <div className='flex items-center gap-2 text-xl text-orange-300'>
-                            <span>4.7</span>
+                            <span>{details[0].rating}</span>
                             <div className='flex items-center'>
                                 <AiFillStar />
                                 <AiFillStar />
@@ -51,32 +50,22 @@ const CourseDetails = ({ singleCourse }) => {
                     <h3 className="text-2xl font-semibold mb-4">Description</h3>
                     <div className="text-info text-lg flex flex-col gap-3">
                         <p>
-                            How do consumers see your brand relative to your competitors? How
-                            should a new product be positioned when it’s launched? Which customer
-                            segments are most interested in our current offerings?
+                            {details[1].description1}
                         </p>
                         <p>
-                            For these questions and many others, surveys remain the tried and true
-                            method for gaining marketing insights.
+                            {details[1].description2}
                         </p>
                         <p>
-                            From one-off customer satisfaction surveys to brand tracking surveys
-                            that are administered on a continuous basis, they provide the
-                            information that marketers need to understand how their products,
-                            services and brands are seen by consumers.
+                            {details[1].description3}
                         </p>
                     </div>
                     <h3 className="text-2xl font-semibold mb-4">What you will learn</h3>
-                    <ul className="list-disc list-inside flex flex-col gap-3 font-medium">
-                        <li>Where Ever Home is –Is where we will be able to provide Service</li>
-                        <li>
-                            Ut nulla tellus, eleifend euismod pellentesque vel, sagittis vel justo
-                        </li>
-                        <li>
-                            How should a new product be positioned when it’s launched? Which
-                            customer segments
-                        </li>
-                        <li>Where Ever Home is –Is where we will be able to provide Service</li>
+                    <ul className="list-disc list-inside flex flex-col gap-3">
+                        <li>{lists.list1}</li>
+                        <li>{lists.list2}</li>
+                        <li>{lists.list3}</li>
+                        <li>{lists.list4}</li>
+                        <li>{lists.list5}</li>
                     </ul>
                     <div className="my-5">
                         <div className="flex items-center justify-between">
@@ -245,15 +234,15 @@ const CourseDetails = ({ singleCourse }) => {
                 {/* single course Left side */}
                 <div className='lg:absolute lg:right-0 lg:-top-52'>
                     <div className="bg-base-100 shadow-xl">
-                        <img className='w-fit' src={thumbnail} alt="" />
-                        {/* <div className='player-wrapper'>
-                            <ReactPlayer
-                                width='100%'
-                                height='350px'
-                                controls={true}
-                                url='https://www.youtube.com/watch?v=v0ir_CwypVk' /></div>*/}
+                        <ReactPlayer
+                            width='100%'
+                            height='350px'
+                            controls={true}
+                            url='https://www.youtube.com/watch?v=v0ir_CwypVk' >
+                        </ReactPlayer>
+
                         <div className='m-5'>
-                            <h2 className="text-3xl font-bold">$84.99</h2>
+                            <h2 className="text-3xl font-bold">${price}</h2>
                             {/* featured section */}
                             <div>
                                 <div className='flex justify-between my-5 font-semibold border-b-2 pb-2'>
@@ -268,28 +257,28 @@ const CourseDetails = ({ singleCourse }) => {
                                         <BsClock />
                                         <span>Duration:</span>
                                     </p>
-                                    <p>02h 40m 32s</p>
+                                    <p>{details[0].duration}</p>
                                 </div>
                                 <div className='flex justify-between my-5 font-semibold border-b-2 pb-2'>
                                     <p className='flex items-center gap-2'>
                                         <BsFillFileTextFill />
                                         <span>articles:</span>
                                     </p>
-                                    <p>Total 20</p>
+                                    <p>{details[0].articles}</p>
                                 </div>
                                 <div className='flex justify-between my-5 font-semibold border-b-2 pb-2'>
                                     <p className='flex items-center gap-2'>
                                         <BsFillFileTextFill />
                                         <span> downloadable resources:</span>
                                     </p>
-                                    <p>10</p>
+                                    <p>{details[0].resources}</p>
                                 </div>
                                 <div className='flex justify-between my-5 font-semibold border-b-2 pb-2'>
                                     <p className='flex items-center gap-2'>
                                         <BsFillTrophyFill />
                                         <span>Certificate:</span>
                                     </p>
-                                    <p>Available</p>
+                                    <p>{details[0].certificate}</p>
                                 </div>
                             </div>
 
