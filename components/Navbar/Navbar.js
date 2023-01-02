@@ -39,7 +39,7 @@ const Navbar = () => {
               <Link href="/contactus">Contact Us</Link>
             </li>
             <li>
-              <Link href="/dashboard">Dashboard</Link>
+              <Link href="/dashboard/viewprofile">Dashboard</Link>
             </li>
           </ul>
         </div>

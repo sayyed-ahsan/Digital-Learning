@@ -134,7 +134,7 @@ const index = ({ allCourses }) => {
                                     <p className="my-5">
                                         {subtitle}
                                     </p>
-                                    <Link href={`/courses/${ _id }`} className="btn btn-secondary rounded-md btn-md text-white w-full"
+                                    <Link href={`/courses/${_id}`} className="btn btn-secondary rounded-md btn-md text-white w-full"
                                     >
                                         Enroll Now
                                     </Link>
@@ -150,7 +150,7 @@ const index = ({ allCourses }) => {
 
 export async function getServerSideProps() {
     // Fetch data from external API
-    const res = await fetch('http://localhost:3000/api/courses');
+    const res = await fetch('http://localhost:3000/api/courses/courses');
     const allCourses = await res.json();
 
     // Pass data to the page via props
