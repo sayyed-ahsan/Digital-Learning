@@ -7,6 +7,35 @@ import useAuth from '../../hook/useAuth'
 const viewprofile = () => {
     const { user, loggedToken, setLoggedToken } = useAuth();
 
+    const handleUpdate = (event) => {
+        event.preventDefault();
+        const form = event.target;
+        const id = user?._id;
+        const bio = form.bio.value;
+        const data = {
+            bio
+        };
+        console.log(data);
+        const url = `http://localhost:3000/api/updateUser/${id}`;
+        fetch(url, {
+            method: 'PUT',
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data),
+        })
+
+            .then(response => response.json())
+            .then(data => {
+                //toast here
+                // console.log('Updated successfully');
+                console.log(data)
+            }
+            )
+            .catch(err => console.log(err))
+
+    };
+
     return (
         <Dashboard>
             <div className="pt-5 lg:pt-10 px-5 lg:px-40 mt-10 bg-neutral text-black">
@@ -66,7 +95,7 @@ const viewprofile = () => {
                 </section>
                 {/* upload section */}
                 <section className="p-6 dark:bg-gray-800 dark:text-gray-50">
-                    <form novalidate="" action="" className="container flex flex-col mx-auto space-y-12 ng-untouched ng-pristine ng-valid">
+                    <form onSubmit={handleUpdate} novalidate="" action="" className="container flex flex-col mx-auto space-y-12 ng-untouched ng-pristine ng-valid">
                         <fieldset className="grid grid-cols-4 gap-6 p-6 rounded-md shadow-sm dark:bg-gray-900">
                             <div className="space-y-2 col-span-full lg:col-span-1">
                                 <p className="font-medium">Personal Inormation</p>
@@ -119,7 +148,7 @@ const viewprofile = () => {
                                 </div>
                                 <div className="col-span-full">
                                     <label for="bio" className="text-sm">Bio</label>
-                                    <textarea id="bio" placeholder="" className="w-full rounded-md focus:ring focus:ring-opacity-75 focus:ring-violet-400 dark:border-gray-700 dark:text-gray-900" spellcheck="false"></textarea>
+                                    <textarea name='bio' id="bio" placeholder="" className="w-full rounded-md focus:ring focus:ring-opacity-75 focus:ring-violet-400 dark:border-gray-700 dark:text-gray-900" spellcheck="false"></textarea>
                                 </div>
                                 <div className="col-span-full">
                                     <label for="bio" className="text-sm">Photo</label>
@@ -130,6 +159,7 @@ const viewprofile = () => {
                                 </div>
                             </div>
                         </fieldset>
+                        <button className='btn btn-outline btn-success'>Update</button>
                     </form>
                 </section>
                 {/* upload section */}
