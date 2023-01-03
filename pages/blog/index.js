@@ -4,7 +4,7 @@ import { ToastContainer, toast } from "react-toastify";
 import useAuth from "../../hook/useAuth";
 
 const index = ({ blogs }) => {
-  console.log(blogs[0]._id);
+  // console.log(blogs[0]._id);
   const { user, loading, setLoading, loggedToken, setLoggedToken } = useAuth();
 
   const handleSubmit = (e) => {
@@ -387,7 +387,7 @@ const index = ({ blogs }) => {
 
                       <Link
                         className="text-cyan-500 font-semibold"
-                        href={`blog/${ blog._id }`}
+                        href={`blog/${blog._id}`}
                       >
                         Learn more
                       </Link>
