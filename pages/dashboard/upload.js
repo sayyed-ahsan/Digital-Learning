@@ -1,12 +1,61 @@
 import Link from "next/link";
 import { useState } from "react";
-import Widget from "../../components/PhotoUploadWidget/Widget";
 import Dashboard from "./index";
 
 const Upload = () => {
 
   const handleAddProduct = (event) => {
     event.preventDefault();
+    const form = event.target;
+    const courseThumbnail = form.courseThumbnail.value;
+    const courseTitle = form.courseTitle.value;
+    const courseDescription = form.courseDescription.value;
+    const coursePrice = form.coursePrice.value;
+    const courseCategory = form.courseCategory.value;
+    const courseSubCategory = form.courseSubCategory.value;
+    const courseDificultyLevel = form.courseDificultyLevel.value;
+    const courseTags = form.courseTags.value;
+    const learnersAccessibility = form.learnersAccessibility.value;
+    const videoThumbnail = form.videoThumbnail.value;
+    const lessonName = form.lessonName.value;
+    const lessonDescription = form.lessonDescription.value;
+
+    const courseData = {
+      courseThumbnail,
+      courseTitle,
+      courseDescription,
+      coursePrice,
+      courseCategory,
+      courseSubCategory,
+      courseDificultyLevel,
+      courseTags,
+      learnersAccessibility,
+      videoThumbnail,
+      lessonName,
+      lessonDescription
+    };
+
+    console.log(courseData);
+
+    const url = 'http://localhost:3000/api/courses/uploadcourse';
+
+    fetch(url, {
+      method: 'POST',
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(courseData),
+    })
+      .then(response => response.json())
+      .then(data => {
+        if(data.acknowledged){
+          //toast here
+          console.log('uploaded successfully');
+
+        }
+        console.log(data)
+      })
+      .catch(err => console.log(err))
 
   };
 
@@ -39,9 +88,10 @@ const Upload = () => {
           <form onSubmit={handleAddProduct}>
             <div className="flex flex-col lg:flex-row gap-4 items-center pb-7">
               <p className="font-semibold w-64">Course Thumbnail</p>
-              <Widget
-                upload={setCourseThumbnail}
-              />
+              <input type="text"
+                placeholder="Type the url of thumbnail"
+                name="courseThumbnail"
+                className="input input-bordered focus:outline-secondary w-full" />
             </div>
             <div className="flex flex-col lg:flex-row gap-4 items-center pb-7">
               <p className="font-semibold w-64">Course Title</p>
@@ -142,8 +192,7 @@ const Upload = () => {
             <div className="flex flex-col lg:flex-row gap-4 items-center pb-7">
               <p className="font-semibold w-64">Video Thumbnail</p>
               <input
-                type="file"
-                onChange={changeHandler2}
+                type="text"
                 name="videoThumbnail"
                 className="file-input file-input-bordered file-input-primary w-full"
               />
