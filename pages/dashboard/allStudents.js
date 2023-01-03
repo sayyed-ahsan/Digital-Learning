@@ -2,7 +2,8 @@ import Link from 'next/link';
 import React from 'react';
 import Dashboard from '.';
 
-const allStudents = () => {
+const allStudents = ({ allStudent }) => {
+    console.log(allStudent)
     return (
         <Dashboard>
             <div className="pt-5 lg:pt-10 px-5 lg:px-40 mt-10 bg-neutral text-black">
@@ -28,39 +29,31 @@ const allStudents = () => {
                 </div>
                 {/* upload section */}
                 <section>
-                    <div className="overflow-x-auto">
+                    <div className="overflow-x-auto pb-10">
                         <table className="table w-full">
                             {/* <!-- head --> */}
                             <thead>
                                 <tr>
-                                    <th></th>
                                     <th>Name</th>
-                                    <th>Job</th>
-                                    <th>Favorite Color</th>
+                                    <th>Email</th>
+                                    <th>Acction</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                {/* <!-- row 1 --> */}
-                                <tr>
-                                    <th>1</th>
-                                    <td>Cy Ganderton</td>
-                                    <td>Quality Control Specialist</td>
-                                    <td>Blue</td>
-                                </tr>
-                                {/* <!-- row 2 --> */}
-                                <tr className="hover">
-                                    <th>2</th>
-                                    <td>Hart Hagerty</td>
-                                    <td>Desktop Support Technician</td>
-                                    <td>Purple</td>
-                                </tr>
-                                {/* <!-- row 3 --> */}
-                                <tr>
-                                    <th>3</th>
-                                    <td>Brice Swyre</td>
-                                    <td>Tax Accountant</td>
-                                    <td>Red</td>
-                                </tr>
+
+                                {
+                                    allStudent.map(student => <tr>
+                                        <td>{student.name}</td>
+                                        <td>{student.email}</td>
+                                        <td>
+                                            <button className="btn btn-circle btn-outline">
+                                                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    )
+                                }
+
                             </tbody>
                         </table>
                     </div>
@@ -71,5 +64,14 @@ const allStudents = () => {
         </Dashboard>
     );
 };
+
+export async function getServerSideProps() {
+    // Fetch data from external API
+    const res = await fetch(`http://localhost:3000/api/users/allStudent`);
+    const allStudent = await res.json();
+    // Pass data to the page via props
+    return { props: { allStudent } };
+}
+
 
 export default allStudents;

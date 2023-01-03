@@ -118,7 +118,8 @@ const index = ({ allCourses }) => {
                                             {category}
                                         </div>
                                         <div className="flex items-center gap-2 font-bold text-amber-500 my-5">
-                                            <span>{details[0].rating}</span>
+                                            {details && <span>{details[0]?.rating}</span>
+                                            }
                                             <div className="flex gap-1">
                                                 <BsFillStarFill />
                                                 <BsFillStarFill />

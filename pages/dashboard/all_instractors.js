@@ -2,7 +2,8 @@ import Link from 'next/link';
 import React from 'react';
 import Dashboard from '.';
 
-const all_instractors = () => {
+const all_instractors = ({ allInstractors }) => {
+    // console.log(allInstractors)
     return (
         <Dashboard>
             <div className="pt-5 lg:pt-10 px-5 lg:px-40 mt-10 bg-neutral text-black">
@@ -27,154 +28,48 @@ const all_instractors = () => {
                     </div>
                 </div>
                 {/* upload section */}
-                <div className="overflow-x-auto w-full">
+                <div className="overflow-x-auto w-full  pb-10">
                     <table className="table w-full">
                         {/* <!-- head --> */}
                         <thead>
                             <tr>
-                                <th>
-                                    <label>
-                                        <input type="checkbox" className="checkbox" />
-                                    </label>
-                                </th>
-                                <th>Name</th>
-                                <th>Job</th>
-                                <th>Favorite Color</th>
-                                <th></th>
+                                <th>Image</th>
+                                <th>InsTractors Name</th>
+                                <th>Delet</th>
+                                <th>Acction</th>
+
                             </tr>
                         </thead>
                         <tbody>
-                            {/* <!-- row 1 --> */}
-                            <tr>
-                                <th>
-                                    <label>
-                                        <input type="checkbox" className="checkbox" />
-                                    </label>
-                                </th>
-                                <td>
-                                    <div className="flex items-center space-x-3">
-                                        <div className="avatar">
-                                            <div className="mask mask-squircle w-12 h-12">
-                                                <img src="/tailwind-css-component-profile-2@56w.png" alt="Avatar Tailwind CSS Component" />
+                            {
+                                allInstractors.map(instrator => <tr key={instrator._id}>
+                                    <td>
+                                        <div className="flex items-center space-x-3">
+                                            <div className="avatar placeholder">
+                                                <div className="bg-neutral-focus text-neutral-content rounded-full w-12">
+                                                    <span>MX</span>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div>
-                                            <div className="font-bold">Hart Hagerty</div>
-                                            <div className="text-sm opacity-50">United States</div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    Zemlak, Daniel and Leannon
-                                    <br />
-                                    <span className="badge badge-ghost badge-sm">Desktop Support Technician</span>
-                                </td>
-                                <td>Purple</td>
-                                <th>
-                                    <button className="btn btn-ghost btn-xs">details</button>
-                                </th>
-                            </tr>
-                            {/* <!-- row 2 --> */}
-                            <tr>
-                                <th>
-                                    <label>
-                                        <input type="checkbox" className="checkbox" />
-                                    </label>
-                                </th>
-                                <td>
-                                    <div className="flex items-center space-x-3">
-                                        <div className="avatar">
-                                            <div className="mask mask-squircle w-12 h-12">
-                                                <img src="/tailwind-css-component-profile-3@56w.png" alt="Avatar Tailwind CSS Component" />
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <div className="font-bold">Brice Swyre</div>
-                                            <div className="text-sm opacity-50">China</div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    Carroll Group
-                                    <br />
-                                    <span className="badge badge-ghost badge-sm">Tax Accountant</span>
-                                </td>
-                                <td>Red</td>
-                                <th>
-                                    <button className="btn btn-ghost btn-xs">details</button>
-                                </th>
-                            </tr>
-                            {/* <!-- row 3 --> */}
-                            <tr>
-                                <th>
-                                    <label>
-                                        <input type="checkbox" className="checkbox" />
-                                    </label>
-                                </th>
-                                <td>
-                                    <div className="flex items-center space-x-3">
-                                        <div className="avatar">
-                                            <div className="mask mask-squircle w-12 h-12">
-                                                <img src="/tailwind-css-component-profile-4@56w.png" alt="Avatar Tailwind CSS Component" />
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <div className="font-bold">Marjy Ferencz</div>
-                                            <div className="text-sm opacity-50">Russia</div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    Rowe-Schoen
-                                    <br />
-                                    <span className="badge badge-ghost badge-sm">Office Assistant I</span>
-                                </td>
-                                <td>Crimson</td>
-                                <th>
-                                    <button className="btn btn-ghost btn-xs">details</button>
-                                </th>
-                            </tr>
-                            {/* <!-- row 4 --> */}
-                            <tr>
-                                <th>
-                                    <label>
-                                        <input type="checkbox" className="checkbox" />
-                                    </label>
-                                </th>
-                                <td>
-                                    <div className="flex items-center space-x-3">
-                                        <div className="avatar">
-                                            <div className="mask mask-squircle w-12 h-12">
-                                                <img src="/tailwind-css-component-profile-5@56w.png" alt="Avatar Tailwind CSS Component" />
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <div className="font-bold">Yancy Tear</div>
-                                            <div className="text-sm opacity-50">Brazil</div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    Wyman-Ledner
-                                    <br />
-                                    <span className="badge badge-ghost badge-sm">Community Outreach Specialist</span>
-                                </td>
-                                <td>Indigo</td>
-                                <th>
-                                    <button className="btn btn-ghost btn-xs">details</button>
-                                </th>
-                            </tr>
+                                    </td>
+                                    <td>
+                                        {instrator?.name}
+                                        <br />
+                                        <span className="badge badge-ghost badge-sm">{instrator?.email}</span>
+                                    </td>
+                                    <td>
+                                        <button className="btn btn-sm btn-outline btn-error">Remove</button>
+                                    </td>
+                                    <th>
+                                        <button className="btn btn-ghost btn-xs">details</button>
+                                    </th>
+                                </tr>)
+                            }
+
+
                         </tbody>
                         {/* <!-- foot --> */}
-                        <tfoot>
-                            <tr>
-                                <th></th>
-                                <th>Name</th>
-                                <th>Job</th>
-                                <th>Favorite Color</th>
-                                <th></th>
-                            </tr>
-                        </tfoot>
+
 
                     </table>
                 </div>
@@ -183,5 +78,13 @@ const all_instractors = () => {
         </Dashboard>
     );
 };
+
+export async function getServerSideProps() {
+    // Fetch data from external API
+    const res = await fetch(`http://localhost:3000/api/users/all_instractors`);
+    const allInstractors = await res.json();
+    // Pass data to the page via props
+    return { props: { allInstractors } };
+}
 
 export default all_instractors;
