@@ -1,8 +1,4 @@
 import clientPromise from '../../../middleware/database'
-
-
-
-
 export default async (req, res) => {
     const { blogId } = req.query
 

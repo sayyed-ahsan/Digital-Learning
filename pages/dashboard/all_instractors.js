@@ -4,6 +4,25 @@ import Dashboard from '.';
 
 const all_instractors = ({ allInstractors }) => {
     // console.log(allInstractors)
+
+    const handleDelete = (id) => {
+        console.log(id)
+        const url = `http://localhost:3000/api/users/${id}`;
+        fetch(url, {
+            method: 'DELETE',
+            headers: {
+                "Content-Type": "application/json",
+            },
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Delte kora hoiya gese');
+                console.log(data);
+            })
+            .catch(err => console.log(err))
+    }
+
+
     return (
         <Dashboard>
             <div className="pt-5 lg:pt-10 px-5 lg:px-40 mt-10 bg-neutral text-black">
@@ -58,7 +77,7 @@ const all_instractors = ({ allInstractors }) => {
                                         <span className="badge badge-ghost badge-sm">{instrator?.email}</span>
                                     </td>
                                     <td>
-                                        <button className="btn btn-sm btn-outline btn-error">Remove</button>
+                                        <button onClick={()=> handleDelete(instructor._id)} className="btn btn-sm btn-outline btn-error">Remove</button>
                                     </td>
                                     <th>
                                         <button className="btn btn-ghost btn-xs">details</button>

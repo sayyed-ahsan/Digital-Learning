@@ -1,9 +1,6 @@
 import { ObjectId } from 'mongodb';
 import clientPromise from '../../../middleware/database'
 
-
-
-
 export default async (req, res) => {
     const { courseId } = req.query
 
