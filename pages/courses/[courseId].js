@@ -19,14 +19,16 @@ const CourseDetails = ({ singleCourse }) => {
     console.log(user)
 
     const handleEnroll = () => {
+        // console.log('working');
         const postData = async () => {
             const enrollCourse = {
                 price: price,
                 course_name: title,
-                customer_name: user?.name,
-                customer_email: user?.email,
-                payment_status: false
+                customer_name: user.name,
+                customer_email: user.email,
+                payment_status: false,
             }
+            console.log(enrollCourse)
             const res = await fetch(`/api/payment/enroll`, {
                 method: 'POST',
                 body: JSON.stringify(enrollCourse),
@@ -35,7 +37,7 @@ const CourseDetails = ({ singleCourse }) => {
         }
         postData().then(data => {
             console.log(data);
-            window.location.replace(data.url)
+            window?.location?.replace(data.url)
         })
 
     }
