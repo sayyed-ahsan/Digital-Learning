@@ -15,7 +15,8 @@ const enrollmentsCollection = client.db('partsala').collection('enrollments')
 
 export default async (req, res) => {
     const enroll = JSON.parse(req.body);
-    // console.log(enroll.price)
+
+    console.log(enroll)
     // console.log(enroll.course_name)
 
     // {
