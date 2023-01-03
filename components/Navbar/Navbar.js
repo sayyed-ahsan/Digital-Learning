@@ -18,7 +18,7 @@ const Navbar = () => {
       <div className="navbar bg-base-100 font-semibold w-11/12 mx-auto">
         <div className="navbar-start">
           <Link href="/">
-            <img className='w-24' src='pathshala-logo.png' alt="logo" />
+            <img className='w-24' src='https://i.ibb.co/0X3LtH0/pathshala-logo.png' alt="logo" />
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
