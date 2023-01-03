@@ -2,13 +2,9 @@ const AboutWebsite = () => {
   return (
     <div>
       <section>
-        <div className="hero min-h-screen bg-neutral">
-          <div className="hero-content flex-col lg:flex-row">
-            <img
-              src="https://i.ibb.co/LS9qqS1/Screen-Shot-2022-12-26-at-1-24-21-PM.png"
-              className="max-w-sm rounded-lg shadow-2xl"
-            />
-            <div className='text-black'>
+        <div className="w-9/12 mx-auto min-h-screen">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 min-h-screen">
+            <div className="text-black flex flex-col justify-center w-3/4">
               <h1 className="font-semibold text-2xl">About our Website</h1>
               <h1 className="text-5xl font-bold">
                 Grow your skills learn with us <br /> from anywhere
@@ -18,6 +14,12 @@ const AboutWebsite = () => {
                 assumenda excepturi exercitationem quasi. In deleniti eaque aut
                 repudiandae et a id nisi.
               </p>
+              <button className="btn btn-primary py-4 px-2 rounded-sm w-40">
+                Sign up for free
+              </button>
+            </div>
+            <div className="flex justify-center items-center">
+              <img src="../../../about.gif" className="rounded-lg w-full" />
             </div>
           </div>
         </div>
@@ -67,8 +69,8 @@ const AboutWebsite = () => {
               </div>
               <p className="text-sm text-gray-900">
                 Check the “prep time” and “total time” listed at the top to be
-                sure you have enough time to complete the recipe. Look for hints,
-                such as the words “meanwhile” .
+                sure you have enough time to complete the recipe. Look for
+                hints, such as the words “meanwhile” .
               </p>
             </div>
             <div className="rounded lg:p-5 lg:transition lg:duration-300 lg:hover:bg-indigo-50">
@@ -79,9 +81,9 @@ const AboutWebsite = () => {
                 <p className="text-lg font-semibold sm:text-base">Plan ahead</p>
               </div>
               <p className="text-sm text-gray-900">
-                Missing a prep instruction can leave you scrambling in the middle
-                of a recipe. Keep your eyes peeled for time-consuming steps and be
-                careful.
+                Missing a prep instruction can leave you scrambling in the
+                middle of a recipe. Keep your eyes peeled for time-consuming
+                steps and be careful.
               </p>
             </div>
           </div>
