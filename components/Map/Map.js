@@ -15,7 +15,7 @@ const Map = () => {
     popupAnchor: [2, -40],
   });
   return (
-    <div className="mt-8">
+    <div className="">
       <MapContainer
         className={style.map}
         center={position}
