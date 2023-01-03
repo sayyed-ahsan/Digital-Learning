@@ -1,8 +1,17 @@
 import Link from "next/link";
-import React from "react";
+import React, { use } from "react";
 import Dashboard from ".";
+import useAuth from '../../hook/useAuth'
+
 
 const publishBlog = () => {
+  const { user, loggedToken, setLoggedToken } = useAuth();
+  const publisher_email = user.email;
+  const publisher_name = user.name;
+  const publish_Date = new Date();
+
+  console.log(user, publisher_name, publisher_email, publish_Date)
+
   return (
     <Dashboard>
       <div>
@@ -250,7 +259,8 @@ const publishBlog = () => {
               </div>
             </fieldset>
           </form>
-          {/* <div className="flex justify-center">
+          {/* ------------ */}
+          <div className="flex justify-center">
             <div className="w-full max-w-xl p-8 space-y-3 rounded bg-cyan-300 dark:text-gray-100">
               <h1 className="text-2xl font-bold text-cente">Publish a New Blog</h1>
               <form novalidate="" action="" className="space-y-6 ng-untouched ng-pristine ng-valid">
@@ -293,7 +303,7 @@ const publishBlog = () => {
                 <a rel="noopener noreferrer" href="#" className="underline dark:text-gray-100">Sign up</a>
               </p>
             </div>
-          </div> */}
+          </div>
         </section>
         {/* ------------------------------------ */}
         <section></section>
