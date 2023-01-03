@@ -5,6 +5,7 @@ import { AiFillStar } from "react-icons/ai";
 import { VscMortarBoard } from "react-icons/vsc";
 import { BsBarChartLine, BsClock, BsFillFileTextFill, BsFillTrophyFill, BsFillCartFill, BsYoutube } from "react-icons/bs";
 import useAuth from '../../hook/useAuth';
+import ReactPlayer from 'react-player';
 
 
 
@@ -260,15 +261,12 @@ const CourseDetails = ({ singleCourse }) => {
                 {/* single course Left side */}
                 <div className='lg:absolute lg:right-0 lg:-top-52'>
                     <div className="bg-base-100 shadow-xl">
-                        {/*
                         <ReactPlayer
                             width='100%'
                             height='350px'
                             controls={true}
                             url='https://www.youtube.com/watch?v=v0ir_CwypVk' >
                         </ReactPlayer>
-                        */}
-
                         <div className='m-5'>
                             <h2 className="text-3xl font-bold">${price}</h2>
                             {/* featured section */}
