@@ -10,7 +10,7 @@ const Signup = ({ handleSubmit }) => {
           className="space-y-6 ng-untouched ng-pristine ng-valid w-[80%] lg:w-[100%]"
         >
           <div className="space-y-1 text-sm">
-            <label htmlFor="fullname" className="block text-gray-400">
+            <label htmlhtmlFor="fullname" className="block text-gray-400">
               Full Name
             </label>
             <input
@@ -22,7 +22,7 @@ const Signup = ({ handleSubmit }) => {
             />
           </div>
           <div className="space-y-1 text-sm">
-            <label htmlFor="photoURL" className="block text-gray-400">
+            <label htmlhtmlFor="photoURL" className="block text-gray-400">
               Select Role
             </label>
             <select name="role" className="select select-bordered w-full">
@@ -31,7 +31,7 @@ const Signup = ({ handleSubmit }) => {
             </select>
           </div>
           <div className="space-y-1 text-sm">
-            <label htmlFor="email" className="block text-gray-400">
+            <label htmlhtmlFor="email" className="block text-gray-400">
               Email
             </label>
             <input
@@ -43,7 +43,7 @@ const Signup = ({ handleSubmit }) => {
             />
           </div>
           <div className="space-y-1 text-sm">
-            <label htmlFor="password" className="block text-gray-400">
+            <label htmlhtmlFor="password" className="block text-gray-400">
               Password
             </label>
             <input

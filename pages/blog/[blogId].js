@@ -2,9 +2,9 @@ import { useRouter } from "next/router";
 import React from "react";
 
 const blogId = ({ singleBlogs }) => {
-  console.log(singleBlogs);
   const router = useRouter();
   const id = router.query.blogId;
+
   return (
     <div>
       <h1 className="text-4xl text-center">Welcome to Blog page</h1>
@@ -222,7 +222,7 @@ const blogId = ({ singleBlogs }) => {
 export async function getServerSideProps(context) {
   const { blogId } = context.query;
   // Fetch data from external API
-  const res = await fetch(`http://localhost:3000/api/blogs/${blogId}`);
+  const res = await fetch(`http://localhost:3000/api/blogs/${ blogId }`);
   const singleBlogs = await res.json();
   // Pass data to the page via props
   return { props: { singleBlogs } };

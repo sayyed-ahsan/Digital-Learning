@@ -1,12 +1,11 @@
-import clientPromise from '../../middleware/database';
+import clientPromise from '../../../middleware/database'
 
 export default async (req, res) => {
     try {
         const client = await clientPromise;
         const db = client.db("partsala");
-        const courses = await db.collection("courses").find({}).toArray();
-        res.json(courses);
-
+        const categories = await db.collection("categories").find({}).toArray();
+        res.json(categories);
     } catch (e) {
         console.error(e);
         throw new Error(e).message;

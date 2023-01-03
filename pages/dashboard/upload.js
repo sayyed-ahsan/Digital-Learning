@@ -1,43 +1,14 @@
 import Link from "next/link";
 import { useState } from "react";
+import Widget from "../../components/PhotoUploadWidget/Widget";
 import Dashboard from "./index";
 
 const Upload = () => {
 
-  const [courseThumbnail, setCourseThumbnail] = useState();
-  const [videoThumbnail, setVideoThumbnail] = useState();
-  const imageHostKey = 'daca22f0c17c23df6ad52e1276d485e8';
-
-  const changeHandler = (event) => {
-    setCourseThumbnail(event.target.files[0]);
-  };
-
-  const changeHandler2 = (event) => {
-    setVideoThumbnail(event.target.files[0]);
-  };
-
-  const handleAddProduct = event => {
-    // console.log(courseThumbnail)
+  const handleAddProduct = (event) => {
     event.preventDefault();
-    const form = event.target;
-    const formData = new FormData();
-    formData.append('courseThumbnail', courseThumbnail);
-    console.log(formData)
-    // formData.append('videoThumbnail', videoThumbnail);
-    console.log('adding product')
-    // setLoading(true);
-    // upload to imgbb -> eto slow ken bhai
-    const url = `https://api.imgbb.com/1/upload?key=${imageHostKey}`
-    fetch(url, {
-      method: 'POST',
-      body: formData
-    })
-      .then(res => res.json())
-      .then(imgData => {
-        console.log(imgData)
-      })
-      .catch(err => console.log(err))
-  }
+
+  };
 
 
   return (
@@ -68,11 +39,8 @@ const Upload = () => {
           <form onSubmit={handleAddProduct}>
             <div className="flex flex-col lg:flex-row gap-4 items-center pb-7">
               <p className="font-semibold w-64">Course Thumbnail</p>
-              <input
-                type="file"
-                onChange={changeHandler}
-                name="courseThumbnail"
-                className="file-input file-input-bordered file-input-primary w-full"
+              <Widget
+                upload={setCourseThumbnail}
               />
             </div>
             <div className="flex flex-col lg:flex-row gap-4 items-center pb-7">

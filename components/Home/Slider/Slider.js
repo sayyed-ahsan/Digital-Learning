@@ -55,14 +55,14 @@ const Slider = () => {
                         <div className='absolute top-0 left-0 right-0 bottom-0 bg-black/40 z-[2]' />
 
                         <div className='absolute top-[50%] left-[50%] -translate-x-2/4 -translate-y-2/4 space-y-6 text-center z-10'>
-                            <h1 className='text-7xl font-semibold text-white  mb-0'>From Starters To Pro... </h1>
+                            <h1 className='lg:text-5xl text-4xl font-semibold text-white  mb-0'>New year, new career moves</h1>
 
                             <div className='w-full text-center'>
-                                <p className='text-[16px]   text-white w-3/4 inline-block
-                            '>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat fuga recusandae maiores id quasi rem impedit. Beatae quis incidunt nemo.</p>
+                                <p className='text-base text-white lg:w-3/4 w-full inline-block
+                            '>Discover what employers are looking for in 2023 and how to level up with our skills guide — yours free when you buy a course.</p>
                             </div>
 
-                            <button className="btn btn-primary">Shop Now</button>
+                            <button className="btn btn-secondary text-white">Explore More</button>
                         </div>
                     </div>
                 ))}
