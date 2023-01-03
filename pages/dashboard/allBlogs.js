@@ -2,7 +2,8 @@ import React from 'react';
 import Dashboard from '.';
 import Link from 'next/link';
 
-const allBlogs = () => {
+const allBlogs = ({ blogs }) => {
+    console.log(blogs)
     return (
         <Dashboard>
             <div className="pt-5 lg:pt-10 px-5 lg:px-40 mt-10 bg-neutral text-black">
@@ -209,5 +210,14 @@ const allBlogs = () => {
         </Dashboard>
     );
 };
+
+export async function getServerSideProps() {
+    // Fetch data from external API
+    const res = await fetch(`http://localhost:3000/api/blogs/blogs`);
+    const blogs = await res.json();
+    // Pass data to the page via props
+    return { props: { blogs } };
+}
+
 
 export default allBlogs;
