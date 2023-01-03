@@ -39,7 +39,7 @@ const Navbar = () => {
               <Link href="/contactus">Contact Us</Link>
             </li>
             <li>
-              <Link href="/dashboard">Dashboard</Link>
+              <Link href="/dashboard/viewprofile">Dashboard</Link>
             </li>
           </ul>
         </div>
@@ -53,7 +53,7 @@ const Navbar = () => {
               </label>
               <ul tabIndex={0} className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
                 <li className='list-none'><button className='select-none btn-disabled'>{user?.name}</button></li>
-                <li><button className="justify-between">Profile</button></li>
+                <li><Link href="/dashboard/viewprofile" className="justify-between">Profile</Link></li>
                 <li className='list-none'><button onClick={handleLogout} className="btn btn-md rounded-md btn-outline btn-primary">Logout</button></li>
               </ul>
             </div>

@@ -2,7 +2,27 @@ import Link from 'next/link';
 import React from 'react';
 import Dashboard from '.';
 
-const allStudents = () => {
+const allStudents = ({ allStudent }) => {
+    console.log(allStudent)
+
+    const handleDelete = (id) => {
+        console.log(id)
+        const url = `http://localhost:3000/api/users/${id}`;
+        fetch(url, {
+            method: 'DELETE',
+            headers: {
+                "Content-Type": "application/json",
+            },
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Delte kora hoiya gese');
+                console.log(data);
+            })
+            .catch(err => console.log(err))
+    }
+
+
     return (
         <Dashboard>
             <div className="pt-5 lg:pt-10 px-5 lg:px-40 mt-10 bg-neutral text-black">
@@ -27,11 +47,50 @@ const allStudents = () => {
                     </div>
                 </div>
                 {/* upload section */}
+                <section>
+                    <div className="overflow-x-auto pb-10">
+                        <table className="table w-full">
+                            {/* <!-- head --> */}
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Acction</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                {
+                                    allStudent.map((student,i) => <tr key={i}>
+                                        <td>{student.name}</td>
+                                        <td>{student.email}</td>
+                                        <td>
+                                            <button onClick={()=>handleDelete(student._id)} className="btn btn-circle btn-outline">
+                                                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    )
+                                }
+
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
                 {/* upload section */}
 
             </div>
         </Dashboard>
     );
 };
+
+export async function getServerSideProps() {
+    // Fetch data from external API
+    const res = await fetch(`http://localhost:3000/api/users/allStudent`);
+    const allStudent = await res.json();
+    // Pass data to the page via props
+    return { props: { allStudent } };
+}
+
 
 export default allStudents;
