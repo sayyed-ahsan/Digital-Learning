@@ -222,7 +222,9 @@ const blogId = ({ singleBlogs }) => {
 export async function getServerSideProps(context) {
   const { blogId } = context.query;
   // Fetch data from external API
-  const res = await fetch(`http://localhost:3000/api/blogs/${blogId}`);
+  const res = await fetch(
+    `https://digital-learning-ruddy.vercel.app/api/blogs/${blogId}`
+  );
   const singleBlogs = await res.json();
   // Pass data to the page via props
   return { props: { singleBlogs } };

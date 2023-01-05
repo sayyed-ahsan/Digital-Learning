@@ -12,7 +12,7 @@ const index = ({ allCourses }) => {
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/api/categories/categories")
+    fetch("api/categories/categories")
       .then((res) => res.json())
       .then((data) => setCategories(data));
   }, []);
@@ -170,7 +170,9 @@ const index = ({ allCourses }) => {
 
 export async function getServerSideProps() {
   // Fetch data from external API
-  const res = await fetch("http://localhost:3000/api/courses/courses");
+  const res = await fetch(
+    "https://digital-learning-ruddy.vercel.app/api/courses/courses"
+  );
   const allCourses = await res.json();
 
   // Pass data to the page via props
