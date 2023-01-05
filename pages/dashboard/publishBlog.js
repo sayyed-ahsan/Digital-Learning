@@ -74,7 +74,10 @@ const publishBlog = () => {
                 Publish a New Blog
               </h2>
               <p className="py-2 mb-5 w-28 lg:w-full text-xs lg:text-base">
-                Welcome to PathShala, Here is all of your Reviews.
+                Welcome to PathShala,
+              </p>
+              <p className="py-2 mb-5 w-28 lg:w-full text-xs lg:text-base">
+                Here is all of your Reviews.
               </p>
             </div>
             <div className="text-xs lg:text-sm breadcrumbs">

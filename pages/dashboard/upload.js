@@ -3,7 +3,6 @@ import { useState } from "react";
 import Dashboard from "./index";
 
 const Upload = () => {
-
   const handleAddProduct = (event) => {
     event.preventDefault();
     const form = event.target;
@@ -32,33 +31,31 @@ const Upload = () => {
       learnersAccessibility,
       videoThumbnail,
       lessonName,
-      lessonDescription
+      lessonDescription,
     };
 
     console.log(courseData);
 
-    const url = 'http://localhost:3000/api/courses/uploadcourse';
+    const url =
+      "https://digital-learning-ruddy.vercel.app/api/courses/uploadcourse";
 
     fetch(url, {
-      method: 'POST',
+      method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(courseData),
     })
-      .then(response => response.json())
-      .then(data => {
-        if(data.acknowledged){
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.acknowledged) {
           //toast here
-          console.log('uploaded successfully');
-
+          console.log("uploaded successfully");
         }
-        console.log(data)
+        console.log(data);
       })
-      .catch(err => console.log(err))
-
+      .catch((err) => console.log(err));
   };
-
 
   return (
     <Dashboard>
@@ -88,10 +85,12 @@ const Upload = () => {
           <form onSubmit={handleAddProduct}>
             <div className="flex flex-col lg:flex-row gap-4 items-center pb-7">
               <p className="font-semibold w-64">Course Thumbnail</p>
-              <input type="text"
+              <input
+                type="text"
                 placeholder="Type the url of thumbnail"
                 name="courseThumbnail"
-                className="input input-bordered focus:outline-secondary w-full" />
+                className="input input-bordered focus:outline-secondary w-full"
+              />
             </div>
             <div className="flex flex-col lg:flex-row gap-4 items-center pb-7">
               <p className="font-semibold w-64">Course Title</p>
@@ -122,12 +121,15 @@ const Upload = () => {
             </div>
             <div className="flex flex-col lg:flex-row gap-4 items-center pb-7 ">
               <p className="font-semibold w-64">Course Category</p>
-              <select className="select select-bordered w-1/2" name='courseCategory'>
+              <select
+                className="select select-bordered w-1/2"
+                name="courseCategory"
+              >
                 <option disabled selected>
                   Select a category
                 </option>
-                <option value='JavaScript'>Java Script</option>
-                <option value='ReactJS'>React Js</option>
+                <option value="JavaScript">Java Script</option>
+                <option value="ReactJS">React Js</option>
               </select>
             </div>
             <div className="flex flex-col lg:flex-row gap-4 items-center pb-7">
@@ -142,13 +144,16 @@ const Upload = () => {
             <div className="divider"></div>
             <div className="flex flex-col lg:flex-row gap-4 items-center pb-7">
               <p className="font-semibold w-64">Course Dificulty Level</p>
-              <select className="select select-bordered w-1/2" name="courseDificultyLevel">
+              <select
+                className="select select-bordered w-1/2"
+                name="courseDificultyLevel"
+              >
                 <option disabled selected>
                   Select a category
                 </option>
-                <option value='Beginner'>Beginner</option>
-                <option value='Basic'>Basic</option>
-                <option value='Advance'>Advance</option>
+                <option value="Beginner">Beginner</option>
+                <option value="Basic">Basic</option>
+                <option value="Advance">Advance</option>
               </select>
             </div>
             <div className="flex flex-col lg:flex-row gap-4 items-center pb-7">
@@ -172,20 +177,22 @@ const Upload = () => {
             <div className="divider"></div>
             <div className="flex flex-col lg:flex-row gap-4 items-center pb-7">
               <p className="font-semibold w-64">Learner's Accessibility</p>
-              <select className="select select-bordered w-1/2" name="learnersAccessibility">
+              <select
+                className="select select-bordered w-1/2"
+                name="learnersAccessibility"
+              >
                 <option disabled selected>
                   Select an access type
                 </option>
-                <option value='Public'>Public</option>
-                <option value='Private'>Private</option>
-                <option value='Premium'>Premium</option>
+                <option value="Public">Public</option>
+                <option value="Private">Private</option>
+                <option value="Premium">Premium</option>
               </select>
             </div>
             <div className="flex flex-col lg:flex-row gap-4 items-center pb-7">
               <p className="font-semibold w-64">Lesson Video</p>
               <input
                 type="file"
-
                 className="file-input file-input-bordered file-input-primary w-full"
               />
             </div>
