@@ -11,20 +11,18 @@ import {
   BsFillCartFill,
   BsYoutube,
 } from "react-icons/bs";
-import ReactPlayer from "react-player/lazy";
 import useAuth from "../../hook/useAuth";
+import ReactPlayer from "react-player";
 
 const CourseDetails = ({ singleCourse }) => {
   const router = useRouter();
   const id = router.query.courseId;
-  const { title, subtitle, thumbnail, details, price } = singleCourse;
+  const { title, subtitle, details, price } = singleCourse;
   const { lists } = singleCourse.details[1];
 
   const { user } = useAuth();
-  console.log(user);
 
   const handleEnroll = () => {
-    // console.log('working');
     const postData = async () => {
       const enrollCourse = {
         price: price,
@@ -273,7 +271,6 @@ const CourseDetails = ({ singleCourse }) => {
               controls={true}
               url="https://www.youtube.com/watch?v=v0ir_CwypVk"
             ></ReactPlayer>
-
             <div className="m-5">
               <h2 className="text-3xl font-bold">${price}</h2>
               {/* featured section */}

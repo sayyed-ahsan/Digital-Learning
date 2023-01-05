@@ -34,6 +34,7 @@ const Featured = () => {
     </div>
   );
 };
+
 // export async function getStaticProps() {
 //   // Fetch data from external API
 //   const res = await fetch(`https://digital-learning-ruddy.vercel.app/api/categories/categories`);

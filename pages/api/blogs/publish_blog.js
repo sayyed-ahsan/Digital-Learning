@@ -6,11 +6,12 @@ export default async (req, res) => {
         return;
     }
     try {
-        const newCourse = req.body;
+        const newBlog = req.body;
+        console.log(newBlog)
         const client = await clientPromise;
         const db = client.db("partsala");
-        const result = await db.collection("courses").insertOne(newCourse);
-        res.send(result);
+        const result = await db.collection("blogs").insertOne(newBlog);
+        res.send('result');
     } catch (e) {
         console.error(e);
         throw new Error(e).message;
